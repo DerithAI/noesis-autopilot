@@ -1,137 +1,92 @@
 [
   {
     "cycle": 1,
-    "timestamp": "2026-06-21T22:21:41.709572+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.308,
-    "energy": 199.98,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:43:52.183482+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.32,
+    "energy": 200.0,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 2,
-    "timestamp": "2026-06-21T22:21:44.717426+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.477,
-    "energy": 199.96,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:43:54.255378+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.531,
+    "energy": 200.0,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 3,
-    "timestamp": "2026-06-21T22:21:47.724729+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.48,
-    "energy": 199.94,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:43:56.281132+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.533,
+    "energy": 199.98,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 4,
-    "timestamp": "2026-06-21T22:21:50.731376+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.482,
-    "energy": 199.92,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:43:58.326587+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.536,
+    "energy": 199.95,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 5,
-    "timestamp": "2026-06-21T22:21:53.739200+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.485,
-    "energy": 199.9,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:44:00.360984+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.538,
+    "energy": 199.93,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 6,
-    "timestamp": "2026-06-21T22:21:56.746925+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.487,
-    "energy": 199.88,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:44:02.402753+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.541,
+    "energy": 199.9,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 7,
-    "timestamp": "2026-06-21T22:21:59.754417+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.49,
-    "energy": 199.86,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:44:04.446868+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.543,
+    "energy": 199.88,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 8,
-    "timestamp": "2026-06-21T22:22:02.761804+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.492,
-    "energy": 199.84,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:44:06.479832+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.546,
+    "energy": 199.85,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 9,
-    "timestamp": "2026-06-21T22:22:05.769222+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.495,
-    "energy": 199.82,
-    "action": "renewal",
-    "files": 2
+    "timestamp": "2026-06-21T22:44:08.515493+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.548,
+    "energy": 199.83,
+    "action": "unknown",
+    "files": 0
   },
   {
     "cycle": 10,
-    "timestamp": "2026-06-21T22:22:08.783398+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.497,
+    "timestamp": "2026-06-21T22:44:10.551010+00:00",
+    "event_type": "engine_cycle",
+    "coherence": 0.551,
     "energy": 199.8,
-    "action": "renewal",
-    "files": 2
-  },
-  {
-    "cycle": 11,
-    "timestamp": "2026-06-21T22:22:11.790550+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.5,
-    "energy": 200.0,
-    "action": "execute",
-    "files": 2
-  },
-  {
-    "cycle": 12,
-    "timestamp": "2026-06-21T22:22:14.798399+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.502,
-    "energy": 200.0,
-    "action": "execute",
-    "files": 2
-  },
-  {
-    "cycle": 13,
-    "timestamp": "2026-06-21T22:22:17.806976+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.505,
-    "energy": 200.0,
-    "action": "execute",
-    "files": 2
-  },
-  {
-    "cycle": 14,
-    "timestamp": "2026-06-21T22:22:20.814613+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.507,
-    "energy": 200.0,
-    "action": "execute",
-    "files": 2
-  },
-  {
-    "cycle": 15,
-    "timestamp": "2026-06-21T22:22:23.822021+00:00",
-    "event_type": "autopilot_cycle",
-    "coherence": 0.51,
-    "energy": 200.0,
-    "action": "execute",
-    "files": 2
+    "action": "unknown",
+    "files": 0
   }
 ]
