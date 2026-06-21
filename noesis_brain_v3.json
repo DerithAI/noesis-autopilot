@@ -1,0 +1,12 @@
+{
+  "exported": true,
+  "path": "noesis_brain_export.json",
+  "stats": {
+    "episodes": 85,
+    "avg_coherence": 0.606,
+    "avg_energy": 199.55,
+    "active_goals": 0,
+    "executed_actions": 0,
+    "prediction_error": 26.6934
+  }
+}

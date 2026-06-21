@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-06-21T23:53:01.071832",
+  "exported_at": "2026-06-22T00:26:06.926837",
   "tables": {
     "episodes": [
       {
@@ -111,6 +111,831 @@
         "coherence": 0.551,
         "energy": 199.8,
         "prediction": 0.4332777777777777
+      },
+      {
+        "id": 11,
+        "timestamp": "2026-06-21T22:53:09.379482+00:00",
+        "cycle": 1,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"20b1955ccd0a543b\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 217.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:09.363586\", \"coherence\": 0.345}, \"predictions\": {\"coherence\": 0.44246666666666673, \"energy\": 199.93242105263158}, \"actions\": [\"renewal\"], \"executed\": [{\"action\": {\"type\": \"renewal\", \"reason\": \"Coherence 0.34 below threshold, suggesting checkpoint\", \"priority\": 0.9}, \"result\": \"Checkpoint suggested (renewal mode)\"}], \"goals\": []}",
+        "coherence": 0.345,
+        "energy": 199.98,
+        "prediction": 0.44246666666666673
+      },
+      {
+        "id": 12,
+        "timestamp": "2026-06-21T22:53:11.424400+00:00",
+        "cycle": 2,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"4614b4cc1cfce1f4\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 217.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:11.402800\", \"coherence\": 0.556}, \"predictions\": {\"coherence\": 0.38159999999999994, \"energy\": 199.94715789473685}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.556,
+        "energy": 199.95,
+        "prediction": 0.38159999999999994
+      },
+      {
+        "id": 13,
+        "timestamp": "2026-06-21T22:53:13.474689+00:00",
+        "cycle": 3,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"c8e9a08f41ec575b\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 217.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:13.461174\", \"coherence\": 0.558}, \"predictions\": {\"coherence\": 0.38826666666666665, \"energy\": 199.95515789473686}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.558,
+        "energy": 199.93,
+        "prediction": 0.38826666666666665
+      },
+      {
+        "id": 14,
+        "timestamp": "2026-06-21T22:53:15.507771+00:00",
+        "cycle": 4,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"f4ec89a41dbf9e4c\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 217.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:15.507771\", \"coherence\": 0.561}, \"predictions\": {\"coherence\": 0.3924666666666667, \"energy\": 199.95947368421054}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.561,
+        "energy": 199.9,
+        "prediction": 0.3924666666666667
+      },
+      {
+        "id": 15,
+        "timestamp": "2026-06-21T22:53:17.555308+00:00",
+        "cycle": 5,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"6d71e53d40d35bb3\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:17.550309\", \"coherence\": 0.563}, \"predictions\": {\"coherence\": 0.39340000000000014, \"energy\": 199.95968421052632}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.563,
+        "energy": 199.88,
+        "prediction": 0.39340000000000014
+      },
+      {
+        "id": 16,
+        "timestamp": "2026-06-21T22:53:25.434732+00:00",
+        "cycle": 1,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"68ae966463278275\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:25.429610\", \"coherence\": 0.357}, \"predictions\": {\"coherence\": 0.39066666666666666, \"energy\": 199.9581052631579}, \"actions\": [\"renewal\"], \"executed\": [{\"action\": {\"type\": \"renewal\", \"reason\": \"Coherence 0.36 below threshold, suggesting checkpoint\", \"priority\": 0.9}, \"result\": \"Checkpoint suggested (renewal mode)\"}], \"goals\": []}",
+        "coherence": 0.357,
+        "energy": 199.98,
+        "prediction": 0.39066666666666666
+      },
+      {
+        "id": 17,
+        "timestamp": "2026-06-21T22:53:27.478878+00:00",
+        "cycle": 2,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"b29aeab66648c3e1\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:27.472063\", \"coherence\": 0.568}, \"predictions\": {\"coherence\": 0.34086666666666665, \"energy\": 199.96336842105262}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.568,
+        "energy": 199.95,
+        "prediction": 0.34086666666666665
+      },
+      {
+        "id": 18,
+        "timestamp": "2026-06-21T22:53:29.518400+00:00",
+        "cycle": 3,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"df298e32ebad387c\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:29.511574\", \"coherence\": 0.571}, \"predictions\": {\"coherence\": 0.3487333333333333, \"energy\": 199.96694736842105}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.571,
+        "energy": 199.93,
+        "prediction": 0.3487333333333333
+      },
+      {
+        "id": 19,
+        "timestamp": "2026-06-21T22:53:31.557848+00:00",
+        "cycle": 4,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"d10410a780a93f78\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:31.550258\", \"coherence\": 0.573}, \"predictions\": {\"coherence\": 0.3458, \"energy\": 199.96568421052632}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.573,
+        "energy": 199.9,
+        "prediction": 0.3458
+      },
+      {
+        "id": 20,
+        "timestamp": "2026-06-21T22:53:33.598068+00:00",
+        "cycle": 5,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"054bce8591ef063a\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:33.590598\", \"coherence\": 0.576}, \"predictions\": {\"coherence\": 0.3433999999999999, \"energy\": 199.96568421052632}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.576,
+        "energy": 199.88,
+        "prediction": 0.3433999999999999
+      },
+      {
+        "id": 21,
+        "timestamp": "2026-06-21T22:53:35.637063+00:00",
+        "cycle": 6,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"37f9a1d8b6dddc3f\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 221.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:35.630286\", \"coherence\": 0.578}, \"predictions\": {\"coherence\": 0.3433999999999999, \"energy\": 199.96568421052632}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.578,
+        "energy": 199.85,
+        "prediction": 0.3433999999999999
+      },
+      {
+        "id": 22,
+        "timestamp": "2026-06-21T22:53:37.676564+00:00",
+        "cycle": 7,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"eac547e184b1eb78\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 225.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:37.669599\", \"coherence\": 0.581}, \"predictions\": {\"coherence\": 0.3920666666666666, \"energy\": 199.95936842105263}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.581,
+        "energy": 199.83,
+        "prediction": 0.3920666666666666
+      },
+      {
+        "id": 23,
+        "timestamp": "2026-06-21T22:53:39.715281+00:00",
+        "cycle": 8,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"323125c4053171f4\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 225.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:39.709224\", \"coherence\": 0.583}, \"predictions\": {\"coherence\": 0.46493333333333337, \"energy\": 199.95484210526317}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.583,
+        "energy": 199.8,
+        "prediction": 0.46493333333333337
+      },
+      {
+        "id": 24,
+        "timestamp": "2026-06-21T22:53:41.741929+00:00",
+        "cycle": 9,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"b7c2c0cfe3da8041\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 225.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:41.741929\", \"coherence\": 0.586}, \"predictions\": {\"coherence\": 0.5541999999999999, \"energy\": 199.94315789473686}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.586,
+        "energy": 199.78,
+        "prediction": 0.5541999999999999
+      },
+      {
+        "id": 25,
+        "timestamp": "2026-06-21T22:53:43.799164+00:00",
+        "cycle": 10,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"a2f242a84cac0412\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 59, \"directories\": 35, \"size_kb\": 225.1, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:53:43.789777\", \"coherence\": 0.588}, \"predictions\": {\"coherence\": 0.5473999999999999, \"energy\": 199.93810526315787}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.588,
+        "energy": 199.75,
+        "prediction": 0.5473999999999999
+      },
+      {
+        "id": 26,
+        "timestamp": "2026-06-21T23:06:37.790500+00:00",
+        "cycle": 1,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"b71e12b70d269833\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 235.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:37.771143\", \"coherence\": 0.387}, \"predictions\": {\"coherence\": 0.5508666666666666, \"energy\": 199.93494736842106}, \"actions\": [\"renewal\"], \"executed\": [{\"action\": {\"type\": \"renewal\", \"reason\": \"Coherence 0.39 below threshold, suggesting checkpoint\", \"priority\": 0.9}, \"result\": \"Checkpoint suggested (renewal mode)\"}], \"goals\": []}",
+        "coherence": 0.387,
+        "energy": 199.97,
+        "prediction": 0.5508666666666666
+      },
+      {
+        "id": 27,
+        "timestamp": "2026-06-21T23:06:38.837217+00:00",
+        "cycle": 2,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"909ee6f0a2d7daaa\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 235.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:38.826085\", \"coherence\": 0.603}, \"predictions\": {\"coherence\": 0.5508666666666666, \"energy\": 199.93494736842106}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.603,
+        "energy": 199.95,
+        "prediction": 0.5508666666666666
+      },
+      {
+        "id": 28,
+        "timestamp": "2026-06-21T23:06:39.886999+00:00",
+        "cycle": 3,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"e359340c76b7f939\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 235.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:39.873772\", \"coherence\": 0.606}, \"predictions\": {\"coherence\": 0.5508666666666666, \"energy\": 199.93494736842106}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.606,
+        "energy": 199.92,
+        "prediction": 0.5508666666666666
+      },
+      {
+        "id": 29,
+        "timestamp": "2026-06-21T23:06:40.933880+00:00",
+        "cycle": 4,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"dd5dc30cc5ed219f\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:40.925820\", \"coherence\": 0.608}, \"predictions\": {\"coherence\": 0.5808666666666666, \"energy\": 199.92315789473685}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.608,
+        "energy": 199.89,
+        "prediction": 0.5808666666666666
+      },
+      {
+        "id": 30,
+        "timestamp": "2026-06-21T23:06:41.975958+00:00",
+        "cycle": 5,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"5ae71d33e78e9735\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:41.968850\", \"coherence\": 0.611}, \"predictions\": {\"coherence\": 0.5708666666666667, \"energy\": 199.92052631578946}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.611,
+        "energy": 199.87,
+        "prediction": 0.5708666666666667
+      },
+      {
+        "id": 31,
+        "timestamp": "2026-06-21T23:06:43.028595+00:00",
+        "cycle": 6,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"3adc5bd30d3bcbb5\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:43.014447\", \"coherence\": 0.613}, \"predictions\": {\"coherence\": 0.5670666666666667, \"energy\": 199.9151578947368}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.613,
+        "energy": 199.84,
+        "prediction": 0.5670666666666667
+      },
+      {
+        "id": 32,
+        "timestamp": "2026-06-21T23:06:44.078389+00:00",
+        "cycle": 7,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"7000ab9562d53ea4\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:44.065265\", \"coherence\": 0.616}, \"predictions\": {\"coherence\": 0.5611999999999999, \"energy\": 199.90842105263158}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.616,
+        "energy": 199.81,
+        "prediction": 0.5611999999999999
+      },
+      {
+        "id": 33,
+        "timestamp": "2026-06-21T23:06:45.129819+00:00",
+        "cycle": 8,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"08ad00a81a5a2efd\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:45.122441\", \"coherence\": 0.618}, \"predictions\": {\"coherence\": 0.5776666666666668, \"energy\": 199.89336842105263}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.618,
+        "energy": 199.78,
+        "prediction": 0.5776666666666668
+      },
+      {
+        "id": 34,
+        "timestamp": "2026-06-21T23:06:46.181096+00:00",
+        "cycle": 9,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"aa8dfb02cef259c3\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:46.171884\", \"coherence\": 0.621}, \"predictions\": {\"coherence\": 0.5695333333333334, \"energy\": 199.89378947368425}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.621,
+        "energy": 199.76,
+        "prediction": 0.5695333333333334
+      },
+      {
+        "id": 35,
+        "timestamp": "2026-06-21T23:06:47.225413+00:00",
+        "cycle": 10,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"21538c088ef54fe0\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 239.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:47.218294\", \"coherence\": 0.623}, \"predictions\": {\"coherence\": 0.5582666666666666, \"energy\": 199.888}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.623,
+        "energy": 199.73,
+        "prediction": 0.5582666666666666
+      },
+      {
+        "id": 36,
+        "timestamp": "2026-06-21T23:06:48.269311+00:00",
+        "cycle": 11,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"c3abe973b43689ae\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:48.261119\", \"coherence\": 0.626}, \"predictions\": {\"coherence\": 0.5624666666666664, \"energy\": 199.88231578947364}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.626,
+        "energy": 199.7,
+        "prediction": 0.5624666666666664
+      },
+      {
+        "id": 37,
+        "timestamp": "2026-06-21T23:06:49.311615+00:00",
+        "cycle": 12,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"64b2eeda9fca5aa4\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:49.304554\", \"coherence\": 0.628}, \"predictions\": {\"coherence\": 0.5872666666666665, \"energy\": 199.87063157894738}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.628,
+        "energy": 199.68,
+        "prediction": 0.5872666666666665
+      },
+      {
+        "id": 38,
+        "timestamp": "2026-06-21T23:06:50.354156+00:00",
+        "cycle": 13,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"9648788f6d394c86\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:50.347645\", \"coherence\": 0.631}, \"predictions\": {\"coherence\": 0.5625333333333333, \"energy\": 199.86557894736842}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.631,
+        "energy": 199.65,
+        "prediction": 0.5625333333333333
+      },
+      {
+        "id": 39,
+        "timestamp": "2026-06-21T23:06:51.398491+00:00",
+        "cycle": 14,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"cb73bc0256c66f88\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:51.391078\", \"coherence\": 0.633}, \"predictions\": {\"coherence\": 0.5616, \"energy\": 199.85905263157892}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.633,
+        "energy": 199.62,
+        "prediction": 0.5616
+      },
+      {
+        "id": 40,
+        "timestamp": "2026-06-21T23:06:52.439978+00:00",
+        "cycle": 15,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"fcd49fd6ea8835a4\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:52.432878\", \"coherence\": 0.636}, \"predictions\": {\"coherence\": 0.5746000000000001, \"energy\": 199.85431578947367}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.636,
+        "energy": 199.6,
+        "prediction": 0.5746000000000001
+      },
+      {
+        "id": 41,
+        "timestamp": "2026-06-21T23:06:53.481362+00:00",
+        "cycle": 16,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"300b5a295bf2b063\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:53.474311\", \"coherence\": 0.638}, \"predictions\": {\"coherence\": 0.5831333333333333, \"energy\": 199.8366315789474}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.638,
+        "energy": 199.57,
+        "prediction": 0.5831333333333333
+      },
+      {
+        "id": 42,
+        "timestamp": "2026-06-21T23:06:54.522863+00:00",
+        "cycle": 17,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"58bf6862d841538a\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 243.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:54.515863\", \"coherence\": 0.641}, \"predictions\": {\"coherence\": 0.5691999999999999, \"energy\": 199.83242105263156}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.641,
+        "energy": 199.54,
+        "prediction": 0.5691999999999999
+      },
+      {
+        "id": 43,
+        "timestamp": "2026-06-21T23:06:55.561341+00:00",
+        "cycle": 18,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"a3e32dcc45ebf2bf\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:55.554515\", \"coherence\": 0.643}, \"predictions\": {\"coherence\": 0.5773999999999999, \"energy\": 199.82863157894735}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.643,
+        "energy": 199.52,
+        "prediction": 0.5773999999999999
+      },
+      {
+        "id": 44,
+        "timestamp": "2026-06-21T23:06:56.602046+00:00",
+        "cycle": 19,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"62957df26aa38fe1\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:56.594950\", \"coherence\": 0.646}, \"predictions\": {\"coherence\": 0.5858666666666668, \"energy\": 199.8114736842105}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.646,
+        "energy": 199.49,
+        "prediction": 0.5858666666666668
+      },
+      {
+        "id": 45,
+        "timestamp": "2026-06-21T23:06:57.642760+00:00",
+        "cycle": 20,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"17f0012c365f653e\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:57.635186\", \"coherence\": 0.648}, \"predictions\": {\"coherence\": 0.5718, \"energy\": 199.80778947368424}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.648,
+        "energy": 199.46,
+        "prediction": 0.5718
+      },
+      {
+        "id": 46,
+        "timestamp": "2026-06-21T23:06:58.683880+00:00",
+        "cycle": 21,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"ac354fd411c5a7da\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:58.676812\", \"coherence\": 0.651}, \"predictions\": {\"coherence\": 0.5796, \"energy\": 199.80294736842103}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.651,
+        "energy": 199.44,
+        "prediction": 0.5796
+      },
+      {
+        "id": 47,
+        "timestamp": "2026-06-21T23:06:59.728867+00:00",
+        "cycle": 22,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"9511b5a97d2472df\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:06:59.721723\", \"coherence\": 0.653}, \"predictions\": {\"coherence\": 0.5881333333333334, \"energy\": 199.78463157894737}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.653,
+        "energy": 199.41,
+        "prediction": 0.5881333333333334
+      },
+      {
+        "id": 48,
+        "timestamp": "2026-06-21T23:07:00.775359+00:00",
+        "cycle": 23,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"2ef2a7e9f8547d9a\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 247.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:00.767900\", \"coherence\": 0.656}, \"predictions\": {\"coherence\": 0.5668000000000001, \"energy\": 199.77915789473684}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.656,
+        "energy": 199.38,
+        "prediction": 0.5668000000000001
+      },
+      {
+        "id": 49,
+        "timestamp": "2026-06-21T23:07:01.819982+00:00",
+        "cycle": 24,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"f640f7743a0a0b92\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 255.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:01.812842\", \"coherence\": 0.658}, \"predictions\": {\"coherence\": 0.5618666666666667, \"energy\": 199.76789473684212}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.658,
+        "energy": 199.35,
+        "prediction": 0.5618666666666667
+      },
+      {
+        "id": 50,
+        "timestamp": "2026-06-21T23:07:02.866196+00:00",
+        "cycle": 25,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"519971a7fdb5f9eb\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:02.858993\", \"coherence\": 0.661}, \"predictions\": {\"coherence\": 0.577, \"energy\": 199.74557894736844}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.661,
+        "energy": 199.33,
+        "prediction": 0.577
+      },
+      {
+        "id": 51,
+        "timestamp": "2026-06-21T23:07:03.913002+00:00",
+        "cycle": 26,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"1d74d4be05881635\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:03.905492\", \"coherence\": 0.663}, \"predictions\": {\"coherence\": 0.5623333333333334, \"energy\": 199.734}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.663,
+        "energy": 199.3,
+        "prediction": 0.5623333333333334
+      },
+      {
+        "id": 52,
+        "timestamp": "2026-06-21T23:07:04.957593+00:00",
+        "cycle": 27,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"f67bd1e1f05e500d\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:04.950293\", \"coherence\": 0.666}, \"predictions\": {\"coherence\": 0.5646000000000001, \"energy\": 199.71599999999998}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.666,
+        "energy": 199.27,
+        "prediction": 0.5646000000000001
+      },
+      {
+        "id": 53,
+        "timestamp": "2026-06-21T23:07:06.008543+00:00",
+        "cycle": 28,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"613530e4b2cff245\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:05.997479\", \"coherence\": 0.668}, \"predictions\": {\"coherence\": 0.5874666666666668, \"energy\": 199.6863157894737}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.668,
+        "energy": 199.25,
+        "prediction": 0.5874666666666668
+      },
+      {
+        "id": 54,
+        "timestamp": "2026-06-21T23:07:07.056716+00:00",
+        "cycle": 29,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"aca167ad5b079f10\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:07.049039\", \"coherence\": 0.671}, \"predictions\": {\"coherence\": 0.5811333333333334, \"energy\": 199.6683157894737}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.671,
+        "energy": 199.22,
+        "prediction": 0.5811333333333334
+      },
+      {
+        "id": 55,
+        "timestamp": "2026-06-21T23:07:08.111297+00:00",
+        "cycle": 30,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"805321d7a02bf4bf\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:08.103231\", \"coherence\": 0.673}, \"predictions\": {\"coherence\": 0.5918666666666668, \"energy\": 199.64336842105263}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.673,
+        "energy": 199.19,
+        "prediction": 0.5918666666666668
+      },
+      {
+        "id": 56,
+        "timestamp": "2026-06-21T23:07:09.153563+00:00",
+        "cycle": 31,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"60891fa94a8eb094\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 259.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:09.145561\", \"coherence\": 0.676}, \"predictions\": {\"coherence\": 0.6233333333333334, \"energy\": 199.6062105263158}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.676,
+        "energy": 199.17,
+        "prediction": 0.6233333333333334
+      },
+      {
+        "id": 57,
+        "timestamp": "2026-06-21T23:07:10.196926+00:00",
+        "cycle": 32,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"bba0950158d9a58b\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:10.189346\", \"coherence\": 0.678}, \"predictions\": {\"coherence\": 0.6256666666666667, \"energy\": 199.5802105263158}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.678,
+        "energy": 199.14,
+        "prediction": 0.6256666666666667
+      },
+      {
+        "id": 58,
+        "timestamp": "2026-06-21T23:07:11.240332+00:00",
+        "cycle": 33,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"416705c32dc6e3b5\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:11.231715\", \"coherence\": 0.681}, \"predictions\": {\"coherence\": 0.6283333333333333, \"energy\": 199.55305263157894}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.681,
+        "energy": 199.11,
+        "prediction": 0.6283333333333333
+      },
+      {
+        "id": 59,
+        "timestamp": "2026-06-21T23:07:12.282635+00:00",
+        "cycle": 34,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"705adf507cc1a344\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:12.275633\", \"coherence\": 0.683}, \"predictions\": {\"coherence\": 0.6306666666666667, \"energy\": 199.52621052631577}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.683,
+        "energy": 199.09,
+        "prediction": 0.6306666666666667
+      },
+      {
+        "id": 60,
+        "timestamp": "2026-06-21T23:07:13.324781+00:00",
+        "cycle": 35,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"112b76d0e61774c6\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:13.316662\", \"coherence\": 0.686}, \"predictions\": {\"coherence\": 0.6333333333333333, \"energy\": 199.49968421052634}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.686,
+        "energy": 199.06,
+        "prediction": 0.6333333333333333
+      },
+      {
+        "id": 61,
+        "timestamp": "2026-06-21T23:07:14.367064+00:00",
+        "cycle": 36,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"c4cbdafe34ea8131\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:14.358958\", \"coherence\": 0.688}, \"predictions\": {\"coherence\": 0.6356666666666666, \"energy\": 199.47242105263157}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.688,
+        "energy": 199.03,
+        "prediction": 0.6356666666666666
+      },
+      {
+        "id": 62,
+        "timestamp": "2026-06-21T23:07:15.423680+00:00",
+        "cycle": 37,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"0708b1fa1467ba72\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:15.415213\", \"coherence\": 0.691}, \"predictions\": {\"coherence\": 0.6383333333333332, \"energy\": 199.44547368421053}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.691,
+        "energy": 199.0,
+        "prediction": 0.6383333333333332
+      },
+      {
+        "id": 63,
+        "timestamp": "2026-06-21T23:07:16.465501+00:00",
+        "cycle": 38,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"d538db7abff4df80\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 263.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:16.458898\", \"coherence\": 0.693}, \"predictions\": {\"coherence\": 0.6406666666666666, \"energy\": 199.41884210526317}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.693,
+        "energy": 198.98,
+        "prediction": 0.6406666666666666
+      },
+      {
+        "id": 64,
+        "timestamp": "2026-06-21T23:07:17.504905+00:00",
+        "cycle": 39,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"35f224a37c0888ac\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:17.497784\", \"coherence\": 0.693}, \"predictions\": {\"coherence\": 0.6433333333333332, \"energy\": 199.39147368421052}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.693,
+        "energy": 198.95,
+        "prediction": 0.6433333333333332
+      },
+      {
+        "id": 65,
+        "timestamp": "2026-06-21T23:07:18.546489+00:00",
+        "cycle": 40,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"de15e40d91218e0c\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:18.538337\", \"coherence\": 0.695}, \"predictions\": {\"coherence\": 0.6456666666666665, \"energy\": 199.3644210526316}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.695,
+        "energy": 198.92,
+        "prediction": 0.6456666666666665
+      },
+      {
+        "id": 66,
+        "timestamp": "2026-06-21T23:07:19.588144+00:00",
+        "cycle": 41,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"52616f229e612c61\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:19.581025\", \"coherence\": 0.698}, \"predictions\": {\"coherence\": 0.6483333333333334, \"energy\": 199.33768421052633}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.698,
+        "energy": 198.9,
+        "prediction": 0.6483333333333334
+      },
+      {
+        "id": 67,
+        "timestamp": "2026-06-21T23:07:20.629407+00:00",
+        "cycle": 42,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"072b7e46aa0df2aa\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:20.622350\", \"coherence\": 0.7}, \"predictions\": {\"coherence\": 0.6506666666666667, \"energy\": 199.31021052631579}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.7,
+        "energy": 198.87,
+        "prediction": 0.6506666666666667
+      },
+      {
+        "id": 68,
+        "timestamp": "2026-06-21T23:07:21.673408+00:00",
+        "cycle": 43,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"14978d3fa12c739a\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:21.665323\", \"coherence\": 0.703}, \"predictions\": {\"coherence\": 0.6533333333333334, \"energy\": 199.28305263157898}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.703,
+        "energy": 198.84,
+        "prediction": 0.6533333333333334
+      },
+      {
+        "id": 69,
+        "timestamp": "2026-06-21T23:07:22.715929+00:00",
+        "cycle": 44,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"9eafd4726cea1e19\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:22.707930\", \"coherence\": 0.705}, \"predictions\": {\"coherence\": 0.6556666666666667, \"energy\": 199.25621052631578}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.705,
+        "energy": 198.82,
+        "prediction": 0.6556666666666667
+      },
+      {
+        "id": 70,
+        "timestamp": "2026-06-21T23:07:23.763767+00:00",
+        "cycle": 45,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"f27a6412360199df\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 267.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:23.757673\", \"coherence\": 0.708}, \"predictions\": {\"coherence\": 0.6583333333333333, \"energy\": 199.23021052631577}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.708,
+        "energy": 198.79,
+        "prediction": 0.6583333333333333
+      },
+      {
+        "id": 71,
+        "timestamp": "2026-06-21T23:07:24.805851+00:00",
+        "cycle": 46,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"a32cea7a785411eb\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 271.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:24.798734\", \"coherence\": 0.71}, \"predictions\": {\"coherence\": 0.6606666666666667, \"energy\": 199.20305263157897}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.71,
+        "energy": 198.76,
+        "prediction": 0.6606666666666667
+      },
+      {
+        "id": 72,
+        "timestamp": "2026-06-21T23:07:25.850804+00:00",
+        "cycle": 47,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"235df0d6ed27354d\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 271.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:25.843744\", \"coherence\": 0.713}, \"predictions\": {\"coherence\": 0.6633333333333336, \"energy\": 199.1762105263158}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.713,
+        "energy": 198.74,
+        "prediction": 0.6633333333333336
+      },
+      {
+        "id": 73,
+        "timestamp": "2026-06-21T23:07:26.893495+00:00",
+        "cycle": 48,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"a42ce985d13a2870\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 271.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:26.885495\", \"coherence\": 0.715}, \"predictions\": {\"coherence\": 0.6656666666666669, \"energy\": 199.14968421052635}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.715,
+        "energy": 198.71,
+        "prediction": 0.6656666666666669
+      },
+      {
+        "id": 74,
+        "timestamp": "2026-06-21T23:07:27.936529+00:00",
+        "cycle": 49,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"f6c6cedebc0b76d3\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 271.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:27.928389\", \"coherence\": 0.718}, \"predictions\": {\"coherence\": 0.6683333333333334, \"energy\": 199.12242105263158}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.718,
+        "energy": 198.68,
+        "prediction": 0.6683333333333334
+      },
+      {
+        "id": 75,
+        "timestamp": "2026-06-21T23:07:28.980533+00:00",
+        "cycle": 50,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"21e0c8611c6391b2\", \"observation\": {\"root\": \".\", \"py_files\": 6, \"total_files\": 66, \"directories\": 41, \"size_kb\": 271.0, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:07:28.973502\", \"coherence\": 0.72}, \"predictions\": {\"coherence\": 0.6712666666666667, \"energy\": 199.09547368421053}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.72,
+        "energy": 198.66,
+        "prediction": 0.6712666666666667
+      },
+      {
+        "id": 76,
+        "timestamp": "2026-06-21T23:25:01.861094+00:00",
+        "cycle": 1,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"8dd0c43d30c2f8b8\", \"observation\": {\"root\": \".\", \"py_files\": 7, \"total_files\": 67, \"directories\": 41, \"size_kb\": 289.6, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\"], \"timestamp\": \"2026-06-22T00:25:01.841598\", \"coherence\": 0.515}, \"actions\": [\"file_create\", \"file_create\"], \"executed\": [{\"action\": {\"type\": \"file_create\", \"file\": \"requirements.txt\", \"content\": \"# Auto-detected requirements by NOESIS v2.1\\n\\n# Detected module: autopilot\\n# Detected module: hermes_live_sync\\n# Detected module: noesis_autopilot\\n# Detected module: noesis_dashboard\\n# Detected module: noesis_engine\\n# Detected module: noesis_engine_v21\\n# Detected module: noesis_insights\\n\\n# Core dependencies (detected by import scan)\\npytest>=7.0\\ntyper>=0.9\\nrich>=13.0\\nhttpx>=0.24\", \"reason\": \"Requirements file empty (30 bytes), filling with detected deps\", \"priority\": 0.9}, \"result\": \"Created requirements.txt (379 bytes)\"}, {\"action\": {\"type\": \"file_create\", \"file\": \"tests\\\\test_system.py\", \"content\": \"# Auto-generated tests by NOESIS v2.1\\nimport pytest\\n\\n# Test suite for 7 detected modules\\n\\nclass TestSystemIntegrity:\\n    def test_system_loads(self):\\n        assert True, \\\"System integrity check passed\\\"\\n\\n    def test_memory_exists(self):\\n        import sqlite3\\n        conn = sqlite3.connect(\\\"nexus_memory.db\\\")\\n        result = conn.execute(\\\"SELECT COUNT(*) FROM episodes\\\").fetchone()\\n        assert result[0] > 0, \\\"No episodes found\\\"\\n        conn.close()\\n\\n    def test_coherence_range(self):\\n        import sqlite3\\n        conn = sqlite3.connect(\\\"nexus_memory.db\\\")\\n        result = conn.execute(\\\"SELECT AVG(coherence) FROM episodes\\\").fetchone()\\n        assert result[0] is not None, \\\"Coherence data missing\\\"\\n        assert 0.0 <= result[0] <= 1.0, \\\"Coherence out of range\\\"\\n        conn.close()\", \"reason\": \"tests/ directory empty, generating initial test suite\", \"priority\": 0.85}, \"result\": \"Created tests\\\\test_system.py (794 bytes)\"}]}",
+        "coherence": 0.515,
+        "energy": 200.0,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 77,
+        "timestamp": "2026-06-21T23:25:02.901796+00:00",
+        "cycle": 2,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"e21248baa44c805f\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 294.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:02.895164\", \"coherence\": 0.522}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.522,
+        "energy": 199.97,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 78,
+        "timestamp": "2026-06-21T23:25:03.942076+00:00",
+        "cycle": 3,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"735bf948b94489d9\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 294.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:03.934981\", \"coherence\": 0.524}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.524,
+        "energy": 199.94,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 79,
+        "timestamp": "2026-06-21T23:25:04.983999+00:00",
+        "cycle": 4,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"a573ed7683909ab4\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 294.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:04.976712\", \"coherence\": 0.527}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.527,
+        "energy": 199.91,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 80,
+        "timestamp": "2026-06-21T23:25:06.050462+00:00",
+        "cycle": 5,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"5874a374666d4c75\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 294.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:06.041971\", \"coherence\": 0.529}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.529,
+        "energy": 199.88,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 81,
+        "timestamp": "2026-06-21T23:25:07.094222+00:00",
+        "cycle": 6,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"6b7e1c61abedb781\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 294.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:07.087100\", \"coherence\": 0.532}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.532,
+        "energy": 199.85,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 82,
+        "timestamp": "2026-06-21T23:25:08.140165+00:00",
+        "cycle": 7,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"7e6f9460e771c611\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 298.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:08.127478\", \"coherence\": 0.534}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.534,
+        "energy": 199.82,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 83,
+        "timestamp": "2026-06-21T23:25:09.184034+00:00",
+        "cycle": 8,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"cfae55cba55a31e0\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 298.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:09.176858\", \"coherence\": 0.537}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.537,
+        "energy": 199.79,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 84,
+        "timestamp": "2026-06-21T23:25:10.230141+00:00",
+        "cycle": 9,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"3b05ff37e14c3a81\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 298.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:10.221742\", \"coherence\": 0.539}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.539,
+        "energy": 199.76,
+        "prediction": 0.6743333333333335
+      },
+      {
+        "id": 85,
+        "timestamp": "2026-06-21T23:25:11.273974+00:00",
+        "cycle": 10,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"ec1859551f7468b2\", \"observation\": {\"root\": \".\", \"py_files\": 8, \"total_files\": 68, \"directories\": 41, \"size_kb\": 298.7, \"modules\": [\"autopilot\", \"hermes_live_sync\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_engine_v21\", \"noesis_insights\", \"test_system\"], \"timestamp\": \"2026-06-22T00:25:11.264768\", \"coherence\": 0.542}, \"actions\": [], \"executed\": []}",
+        "coherence": 0.542,
+        "energy": 199.73,
+        "prediction": 0.6743333333333335
       }
     ],
     "goals": [
@@ -131,9 +956,9 @@
         "cycle": 1,
         "predicted_coherence": 0.5,
         "predicted_energy": 100.0,
-        "actual_coherence": 0.32,
+        "actual_coherence": 0.515,
         "actual_energy": 200.0,
-        "error": 100.18
+        "error": 50.159333333333336
       },
       {
         "id": 2,
@@ -141,9 +966,9 @@
         "cycle": 2,
         "predicted_coherence": 0.32,
         "predicted_energy": 200.0,
-        "actual_coherence": 0.531,
-        "actual_energy": 200.0,
-        "error": 0.21100000000000002
+        "actual_coherence": 0.522,
+        "actual_energy": 199.97,
+        "error": 50.12233333333333
       },
       {
         "id": 3,
@@ -151,9 +976,9 @@
         "cycle": 3,
         "predicted_coherence": 0.10899999999999999,
         "predicted_energy": 199.99999999999997,
-        "actual_coherence": 0.533,
-        "actual_energy": 199.98,
-        "error": 0.44399999999998185
+        "actual_coherence": 0.524,
+        "actual_energy": 199.94,
+        "error": 50.090333333333334
       },
       {
         "id": 4,
@@ -161,9 +986,9 @@
         "cycle": 4,
         "predicted_coherence": 0.2483333333333334,
         "predicted_energy": 199.99444444444444,
-        "actual_coherence": 0.536,
-        "actual_energy": 199.95,
-        "error": 0.332111111111118
+        "actual_coherence": 0.527,
+        "actual_energy": 199.91,
+        "error": 50.05733333333333
       },
       {
         "id": 5,
@@ -171,9 +996,9 @@
         "cycle": 5,
         "predicted_coherence": 0.31750000000000006,
         "predicted_energy": 199.98576923076922,
-        "actual_coherence": 0.538,
-        "actual_energy": 199.93,
-        "error": 0.276269230769215
+        "actual_coherence": 0.529,
+        "actual_energy": 199.88,
+        "error": 50.02533333333333
       },
       {
         "id": 6,
@@ -181,9 +1006,9 @@
         "cycle": 6,
         "predicted_coherence": 0.35930000000000006,
         "predicted_energy": 199.9774285714286,
-        "actual_coherence": 0.541,
-        "actual_energy": 199.9,
-        "error": 0.2591285714285838
+        "actual_coherence": 0.532,
+        "actual_energy": 199.85,
+        "error": 49.99233333333333
       },
       {
         "id": 7,
@@ -191,9 +1016,9 @@
         "cycle": 7,
         "predicted_coherence": 0.38693333333333335,
         "predicted_energy": 199.9682222222222,
-        "actual_coherence": 0.543,
-        "actual_energy": 199.88,
-        "error": 0.24428888888888067
+        "actual_coherence": 0.534,
+        "actual_energy": 199.82,
+        "error": 49.960333333333324
       },
       {
         "id": 8,
@@ -201,9 +1026,9 @@
         "cycle": 8,
         "predicted_coherence": 0.40685714285714286,
         "predicted_energy": 199.95946428571432,
-        "actual_coherence": 0.546,
-        "actual_energy": 199.85,
-        "error": 0.24860714285718138
+        "actual_coherence": 0.537,
+        "actual_energy": 199.79,
+        "error": 49.92733333333332
       },
       {
         "id": 9,
@@ -211,9 +1036,9 @@
         "cycle": 9,
         "predicted_coherence": 0.42164285714285715,
         "predicted_energy": 199.95029411764708,
-        "actual_coherence": 0.548,
-        "actual_energy": 199.83,
-        "error": 0.246651260504206
+        "actual_coherence": 0.539,
+        "actual_energy": 199.76,
+        "error": 49.895333333333326
       },
       {
         "id": 10,
@@ -221,9 +1046,759 @@
         "cycle": 10,
         "predicted_coherence": 0.4332777777777777,
         "predicted_energy": 199.9414814814815,
-        "actual_coherence": 0.551,
-        "actual_energy": 199.8,
-        "error": 0.2592037037037141
+        "actual_coherence": 0.542,
+        "actual_energy": 199.73,
+        "error": 49.862333333333325
+      },
+      {
+        "id": 11,
+        "timestamp": "2026-06-21T22:53:09.363586+00:00",
+        "cycle": 1,
+        "predicted_coherence": 0.44246666666666673,
+        "predicted_energy": 199.93242105263158,
+        "actual_coherence": 0.515,
+        "actual_energy": 200.0,
+        "error": 50.159333333333336
+      },
+      {
+        "id": 12,
+        "timestamp": "2026-06-21T22:53:11.402800+00:00",
+        "cycle": 2,
+        "predicted_coherence": 0.38159999999999994,
+        "predicted_energy": 199.94715789473685,
+        "actual_coherence": 0.522,
+        "actual_energy": 199.97,
+        "error": 50.12233333333333
+      },
+      {
+        "id": 13,
+        "timestamp": "2026-06-21T22:53:13.461174+00:00",
+        "cycle": 3,
+        "predicted_coherence": 0.38826666666666665,
+        "predicted_energy": 199.95515789473686,
+        "actual_coherence": 0.524,
+        "actual_energy": 199.94,
+        "error": 50.090333333333334
+      },
+      {
+        "id": 14,
+        "timestamp": "2026-06-21T22:53:15.507771+00:00",
+        "cycle": 4,
+        "predicted_coherence": 0.3924666666666667,
+        "predicted_energy": 199.95947368421054,
+        "actual_coherence": 0.527,
+        "actual_energy": 199.91,
+        "error": 50.05733333333333
+      },
+      {
+        "id": 15,
+        "timestamp": "2026-06-21T22:53:17.550309+00:00",
+        "cycle": 5,
+        "predicted_coherence": 0.39340000000000014,
+        "predicted_energy": 199.95968421052632,
+        "actual_coherence": 0.529,
+        "actual_energy": 199.88,
+        "error": 50.02533333333333
+      },
+      {
+        "id": 16,
+        "timestamp": "2026-06-21T22:53:25.429610+00:00",
+        "cycle": 1,
+        "predicted_coherence": 0.39066666666666666,
+        "predicted_energy": 199.9581052631579,
+        "actual_coherence": 0.515,
+        "actual_energy": 200.0,
+        "error": 50.159333333333336
+      },
+      {
+        "id": 17,
+        "timestamp": "2026-06-21T22:53:27.473064+00:00",
+        "cycle": 2,
+        "predicted_coherence": 0.34086666666666665,
+        "predicted_energy": 199.96336842105262,
+        "actual_coherence": 0.522,
+        "actual_energy": 199.97,
+        "error": 50.12233333333333
+      },
+      {
+        "id": 18,
+        "timestamp": "2026-06-21T22:53:29.511574+00:00",
+        "cycle": 3,
+        "predicted_coherence": 0.3487333333333333,
+        "predicted_energy": 199.96694736842105,
+        "actual_coherence": 0.524,
+        "actual_energy": 199.94,
+        "error": 50.090333333333334
+      },
+      {
+        "id": 19,
+        "timestamp": "2026-06-21T22:53:31.551254+00:00",
+        "cycle": 4,
+        "predicted_coherence": 0.3458,
+        "predicted_energy": 199.96568421052632,
+        "actual_coherence": 0.527,
+        "actual_energy": 199.91,
+        "error": 50.05733333333333
+      },
+      {
+        "id": 20,
+        "timestamp": "2026-06-21T22:53:33.591597+00:00",
+        "cycle": 5,
+        "predicted_coherence": 0.3433999999999999,
+        "predicted_energy": 199.96568421052632,
+        "actual_coherence": 0.529,
+        "actual_energy": 199.88,
+        "error": 50.02533333333333
+      },
+      {
+        "id": 21,
+        "timestamp": "2026-06-21T22:53:35.630286+00:00",
+        "cycle": 6,
+        "predicted_coherence": 0.3433999999999999,
+        "predicted_energy": 199.96568421052632,
+        "actual_coherence": 0.532,
+        "actual_energy": 199.85,
+        "error": 49.99233333333333
+      },
+      {
+        "id": 22,
+        "timestamp": "2026-06-21T22:53:37.670599+00:00",
+        "cycle": 7,
+        "predicted_coherence": 0.3920666666666666,
+        "predicted_energy": 199.95936842105263,
+        "actual_coherence": 0.534,
+        "actual_energy": 199.82,
+        "error": 49.960333333333324
+      },
+      {
+        "id": 23,
+        "timestamp": "2026-06-21T22:53:39.709224+00:00",
+        "cycle": 8,
+        "predicted_coherence": 0.46493333333333337,
+        "predicted_energy": 199.95484210526317,
+        "actual_coherence": 0.537,
+        "actual_energy": 199.79,
+        "error": 49.92733333333332
+      },
+      {
+        "id": 24,
+        "timestamp": "2026-06-21T22:53:41.741929+00:00",
+        "cycle": 9,
+        "predicted_coherence": 0.5541999999999999,
+        "predicted_energy": 199.94315789473686,
+        "actual_coherence": 0.539,
+        "actual_energy": 199.76,
+        "error": 49.895333333333326
+      },
+      {
+        "id": 25,
+        "timestamp": "2026-06-21T22:53:43.789777+00:00",
+        "cycle": 10,
+        "predicted_coherence": 0.5473999999999999,
+        "predicted_energy": 199.93810526315787,
+        "actual_coherence": 0.542,
+        "actual_energy": 199.73,
+        "error": 49.862333333333325
+      },
+      {
+        "id": 26,
+        "timestamp": "2026-06-21T23:06:37.771143+00:00",
+        "cycle": 1,
+        "predicted_coherence": 0.5508666666666666,
+        "predicted_energy": 199.93494736842106,
+        "actual_coherence": 0.515,
+        "actual_energy": 200.0,
+        "error": 50.159333333333336
+      },
+      {
+        "id": 27,
+        "timestamp": "2026-06-21T23:06:38.827085+00:00",
+        "cycle": 2,
+        "predicted_coherence": 0.5508666666666666,
+        "predicted_energy": 199.93494736842106,
+        "actual_coherence": 0.522,
+        "actual_energy": 199.97,
+        "error": 50.12233333333333
+      },
+      {
+        "id": 28,
+        "timestamp": "2026-06-21T23:06:39.873772+00:00",
+        "cycle": 3,
+        "predicted_coherence": 0.5508666666666666,
+        "predicted_energy": 199.93494736842106,
+        "actual_coherence": 0.524,
+        "actual_energy": 199.94,
+        "error": 50.090333333333334
+      },
+      {
+        "id": 29,
+        "timestamp": "2026-06-21T23:06:40.926820+00:00",
+        "cycle": 4,
+        "predicted_coherence": 0.5808666666666666,
+        "predicted_energy": 199.92315789473685,
+        "actual_coherence": 0.527,
+        "actual_energy": 199.91,
+        "error": 50.05733333333333
+      },
+      {
+        "id": 30,
+        "timestamp": "2026-06-21T23:06:41.968850+00:00",
+        "cycle": 5,
+        "predicted_coherence": 0.5708666666666667,
+        "predicted_energy": 199.92052631578946,
+        "actual_coherence": 0.529,
+        "actual_energy": 199.88,
+        "error": 50.02533333333333
+      },
+      {
+        "id": 31,
+        "timestamp": "2026-06-21T23:06:43.015486+00:00",
+        "cycle": 6,
+        "predicted_coherence": 0.5670666666666667,
+        "predicted_energy": 199.9151578947368,
+        "actual_coherence": 0.532,
+        "actual_energy": 199.85,
+        "error": 49.99233333333333
+      },
+      {
+        "id": 32,
+        "timestamp": "2026-06-21T23:06:44.066267+00:00",
+        "cycle": 7,
+        "predicted_coherence": 0.5611999999999999,
+        "predicted_energy": 199.90842105263158,
+        "actual_coherence": 0.534,
+        "actual_energy": 199.82,
+        "error": 49.960333333333324
+      },
+      {
+        "id": 33,
+        "timestamp": "2026-06-21T23:06:45.122969+00:00",
+        "cycle": 8,
+        "predicted_coherence": 0.5776666666666668,
+        "predicted_energy": 199.89336842105263,
+        "actual_coherence": 0.537,
+        "actual_energy": 199.79,
+        "error": 49.92733333333332
+      },
+      {
+        "id": 34,
+        "timestamp": "2026-06-21T23:06:46.172884+00:00",
+        "cycle": 9,
+        "predicted_coherence": 0.5695333333333334,
+        "predicted_energy": 199.89378947368425,
+        "actual_coherence": 0.539,
+        "actual_energy": 199.76,
+        "error": 49.895333333333326
+      },
+      {
+        "id": 35,
+        "timestamp": "2026-06-21T23:06:47.218294+00:00",
+        "cycle": 10,
+        "predicted_coherence": 0.5582666666666666,
+        "predicted_energy": 199.888,
+        "actual_coherence": 0.542,
+        "actual_energy": 199.73,
+        "error": 49.862333333333325
+      },
+      {
+        "id": 36,
+        "timestamp": "2026-06-21T23:06:48.262119+00:00",
+        "cycle": 11,
+        "predicted_coherence": 0.5624666666666664,
+        "predicted_energy": 199.88231578947364,
+        "actual_coherence": 0.626,
+        "actual_energy": 199.7,
+        "error": 0.2458491228069818
+      },
+      {
+        "id": 37,
+        "timestamp": "2026-06-21T23:06:49.305615+00:00",
+        "cycle": 12,
+        "predicted_coherence": 0.5872666666666665,
+        "predicted_energy": 199.87063157894738,
+        "actual_coherence": 0.628,
+        "actual_energy": 199.68,
+        "error": 0.23136491228070866
+      },
+      {
+        "id": 38,
+        "timestamp": "2026-06-21T23:06:50.347645+00:00",
+        "cycle": 13,
+        "predicted_coherence": 0.5625333333333333,
+        "predicted_energy": 199.86557894736842,
+        "actual_coherence": 0.631,
+        "actual_energy": 199.65,
+        "error": 0.28404561403508044
+      },
+      {
+        "id": 39,
+        "timestamp": "2026-06-21T23:06:51.391078+00:00",
+        "cycle": 14,
+        "predicted_coherence": 0.5616,
+        "predicted_energy": 199.85905263157892,
+        "actual_coherence": 0.633,
+        "actual_energy": 199.62,
+        "error": 0.31045263157891456
+      },
+      {
+        "id": 40,
+        "timestamp": "2026-06-21T23:06:52.432878+00:00",
+        "cycle": 15,
+        "predicted_coherence": 0.5746000000000001,
+        "predicted_energy": 199.85431578947367,
+        "actual_coherence": 0.636,
+        "actual_energy": 199.6,
+        "error": 0.3157157894736793
+      },
+      {
+        "id": 41,
+        "timestamp": "2026-06-21T23:06:53.474311+00:00",
+        "cycle": 16,
+        "predicted_coherence": 0.5831333333333333,
+        "predicted_energy": 199.8366315789474,
+        "actual_coherence": 0.638,
+        "actual_energy": 199.57,
+        "error": 0.3214982456140637
+      },
+      {
+        "id": 42,
+        "timestamp": "2026-06-21T23:06:54.516864+00:00",
+        "cycle": 17,
+        "predicted_coherence": 0.5691999999999999,
+        "predicted_energy": 199.83242105263156,
+        "actual_coherence": 0.641,
+        "actual_energy": 199.54,
+        "error": 0.3642210526315677
+      },
+      {
+        "id": 43,
+        "timestamp": "2026-06-21T23:06:55.554515+00:00",
+        "cycle": 18,
+        "predicted_coherence": 0.5773999999999999,
+        "predicted_energy": 199.82863157894735,
+        "actual_coherence": 0.643,
+        "actual_energy": 199.52,
+        "error": 0.3742315789473418
+      },
+      {
+        "id": 44,
+        "timestamp": "2026-06-21T23:06:56.594950+00:00",
+        "cycle": 19,
+        "predicted_coherence": 0.5858666666666668,
+        "predicted_energy": 199.8114736842105,
+        "actual_coherence": 0.646,
+        "actual_energy": 199.49,
+        "error": 0.38160701754383586
+      },
+      {
+        "id": 45,
+        "timestamp": "2026-06-21T23:06:57.635754+00:00",
+        "cycle": 20,
+        "predicted_coherence": 0.5718,
+        "predicted_energy": 199.80778947368424,
+        "actual_coherence": 0.648,
+        "actual_energy": 199.46,
+        "error": 0.42398947368423023
+      },
+      {
+        "id": 46,
+        "timestamp": "2026-06-21T23:06:58.677810+00:00",
+        "cycle": 21,
+        "predicted_coherence": 0.5796,
+        "predicted_energy": 199.80294736842103,
+        "actual_coherence": 0.651,
+        "actual_energy": 199.44,
+        "error": 0.4343473684210325
+      },
+      {
+        "id": 47,
+        "timestamp": "2026-06-21T23:06:59.721723+00:00",
+        "cycle": 22,
+        "predicted_coherence": 0.5881333333333334,
+        "predicted_energy": 199.78463157894737,
+        "actual_coherence": 0.653,
+        "actual_energy": 199.41,
+        "error": 0.4394982456140393
+      },
+      {
+        "id": 48,
+        "timestamp": "2026-06-21T23:07:00.768901+00:00",
+        "cycle": 23,
+        "predicted_coherence": 0.5668000000000001,
+        "predicted_energy": 199.77915789473684,
+        "actual_coherence": 0.656,
+        "actual_energy": 199.38,
+        "error": 0.4883578947368452
+      },
+      {
+        "id": 49,
+        "timestamp": "2026-06-21T23:07:01.812842+00:00",
+        "cycle": 24,
+        "predicted_coherence": 0.5618666666666667,
+        "predicted_energy": 199.76789473684212,
+        "actual_coherence": 0.658,
+        "actual_energy": 199.35,
+        "error": 0.5140280701754624
+      },
+      {
+        "id": 50,
+        "timestamp": "2026-06-21T23:07:02.859992+00:00",
+        "cycle": 25,
+        "predicted_coherence": 0.577,
+        "predicted_energy": 199.74557894736844,
+        "actual_coherence": 0.661,
+        "actual_energy": 199.33,
+        "error": 0.4995789473684309
+      },
+      {
+        "id": 51,
+        "timestamp": "2026-06-21T23:07:03.906494+00:00",
+        "cycle": 26,
+        "predicted_coherence": 0.5623333333333334,
+        "predicted_energy": 199.734,
+        "actual_coherence": 0.663,
+        "actual_energy": 199.3,
+        "error": 0.5346666666666642
+      },
+      {
+        "id": 52,
+        "timestamp": "2026-06-21T23:07:04.950293+00:00",
+        "cycle": 27,
+        "predicted_coherence": 0.5646000000000001,
+        "predicted_energy": 199.71599999999998,
+        "actual_coherence": 0.666,
+        "actual_energy": 199.27,
+        "error": 0.5473999999999695
+      },
+      {
+        "id": 53,
+        "timestamp": "2026-06-21T23:07:05.997479+00:00",
+        "cycle": 28,
+        "predicted_coherence": 0.5874666666666668,
+        "predicted_energy": 199.6863157894737,
+        "actual_coherence": 0.668,
+        "actual_energy": 199.25,
+        "error": 0.516849122807029
+      },
+      {
+        "id": 54,
+        "timestamp": "2026-06-21T23:07:07.050038+00:00",
+        "cycle": 29,
+        "predicted_coherence": 0.5811333333333334,
+        "predicted_energy": 199.6683157894737,
+        "actual_coherence": 0.671,
+        "actual_energy": 199.22,
+        "error": 0.5381824561403629
+      },
+      {
+        "id": 55,
+        "timestamp": "2026-06-21T23:07:08.104231+00:00",
+        "cycle": 30,
+        "predicted_coherence": 0.5918666666666668,
+        "predicted_energy": 199.64336842105263,
+        "actual_coherence": 0.673,
+        "actual_energy": 199.19,
+        "error": 0.5345017543859636
+      },
+      {
+        "id": 56,
+        "timestamp": "2026-06-21T23:07:09.146567+00:00",
+        "cycle": 31,
+        "predicted_coherence": 0.6233333333333334,
+        "predicted_energy": 199.6062105263158,
+        "actual_coherence": 0.676,
+        "actual_energy": 199.17,
+        "error": 0.4888771929824851
+      },
+      {
+        "id": 57,
+        "timestamp": "2026-06-21T23:07:10.189346+00:00",
+        "cycle": 32,
+        "predicted_coherence": 0.6256666666666667,
+        "predicted_energy": 199.5802105263158,
+        "actual_coherence": 0.678,
+        "actual_energy": 199.14,
+        "error": 0.4925438596491425
+      },
+      {
+        "id": 58,
+        "timestamp": "2026-06-21T23:07:11.232716+00:00",
+        "cycle": 33,
+        "predicted_coherence": 0.6283333333333333,
+        "predicted_energy": 199.55305263157894,
+        "actual_coherence": 0.681,
+        "actual_energy": 199.11,
+        "error": 0.495719298245589
+      },
+      {
+        "id": 59,
+        "timestamp": "2026-06-21T23:07:12.276631+00:00",
+        "cycle": 34,
+        "predicted_coherence": 0.6306666666666667,
+        "predicted_energy": 199.52621052631577,
+        "actual_coherence": 0.683,
+        "actual_energy": 199.09,
+        "error": 0.48854385964909497
+      },
+      {
+        "id": 60,
+        "timestamp": "2026-06-21T23:07:13.317663+00:00",
+        "cycle": 35,
+        "predicted_coherence": 0.6333333333333333,
+        "predicted_energy": 199.49968421052634,
+        "actual_coherence": 0.686,
+        "actual_energy": 199.06,
+        "error": 0.4923508771930042
+      },
+      {
+        "id": 61,
+        "timestamp": "2026-06-21T23:07:14.359959+00:00",
+        "cycle": 36,
+        "predicted_coherence": 0.6356666666666666,
+        "predicted_energy": 199.47242105263157,
+        "actual_coherence": 0.688,
+        "actual_energy": 199.03,
+        "error": 0.4947543859649066
+      },
+      {
+        "id": 62,
+        "timestamp": "2026-06-21T23:07:15.415213+00:00",
+        "cycle": 37,
+        "predicted_coherence": 0.6383333333333332,
+        "predicted_energy": 199.44547368421053,
+        "actual_coherence": 0.691,
+        "actual_energy": 199.0,
+        "error": 0.498140350877193
+      },
+      {
+        "id": 63,
+        "timestamp": "2026-06-21T23:07:16.459906+00:00",
+        "cycle": 38,
+        "predicted_coherence": 0.6406666666666666,
+        "predicted_energy": 199.41884210526317,
+        "actual_coherence": 0.693,
+        "actual_energy": 198.98,
+        "error": 0.49117543859651036
+      },
+      {
+        "id": 64,
+        "timestamp": "2026-06-21T23:07:17.497784+00:00",
+        "cycle": 39,
+        "predicted_coherence": 0.6433333333333332,
+        "predicted_energy": 199.39147368421052,
+        "actual_coherence": 0.693,
+        "actual_energy": 198.95,
+        "error": 0.4911403508772023
+      },
+      {
+        "id": 65,
+        "timestamp": "2026-06-21T23:07:18.539336+00:00",
+        "cycle": 40,
+        "predicted_coherence": 0.6456666666666665,
+        "predicted_energy": 199.3644210526316,
+        "actual_coherence": 0.695,
+        "actual_energy": 198.92,
+        "error": 0.4937543859649447
+      },
+      {
+        "id": 66,
+        "timestamp": "2026-06-21T23:07:19.581025+00:00",
+        "cycle": 41,
+        "predicted_coherence": 0.6483333333333334,
+        "predicted_energy": 199.33768421052633,
+        "actual_coherence": 0.698,
+        "actual_energy": 198.9,
+        "error": 0.4873508771929944
+      },
+      {
+        "id": 67,
+        "timestamp": "2026-06-21T23:07:20.623404+00:00",
+        "cycle": 42,
+        "predicted_coherence": 0.6506666666666667,
+        "predicted_energy": 199.31021052631579,
+        "actual_coherence": 0.7,
+        "actual_energy": 198.87,
+        "error": 0.48954385964911395
+      },
+      {
+        "id": 68,
+        "timestamp": "2026-06-21T23:07:21.666826+00:00",
+        "cycle": 43,
+        "predicted_coherence": 0.6533333333333334,
+        "predicted_energy": 199.28305263157898,
+        "actual_coherence": 0.703,
+        "actual_energy": 198.84,
+        "error": 0.49271929824564564
+      },
+      {
+        "id": 69,
+        "timestamp": "2026-06-21T23:07:22.708930+00:00",
+        "cycle": 44,
+        "predicted_coherence": 0.6556666666666667,
+        "predicted_energy": 199.25621052631578,
+        "actual_coherence": 0.705,
+        "actual_energy": 198.82,
+        "error": 0.4855438596491233
+      },
+      {
+        "id": 70,
+        "timestamp": "2026-06-21T23:07:23.757673+00:00",
+        "cycle": 45,
+        "predicted_coherence": 0.6583333333333333,
+        "predicted_energy": 199.23021052631577,
+        "actual_coherence": 0.708,
+        "actual_energy": 198.79,
+        "error": 0.48987719298244736
+      },
+      {
+        "id": 71,
+        "timestamp": "2026-06-21T23:07:24.798734+00:00",
+        "cycle": 46,
+        "predicted_coherence": 0.6606666666666667,
+        "predicted_energy": 199.20305263157897,
+        "actual_coherence": 0.71,
+        "actual_energy": 198.76,
+        "error": 0.49238596491231235
+      },
+      {
+        "id": 72,
+        "timestamp": "2026-06-21T23:07:25.844805+00:00",
+        "cycle": 47,
+        "predicted_coherence": 0.6633333333333336,
+        "predicted_energy": 199.1762105263158,
+        "actual_coherence": 0.713,
+        "actual_energy": 198.74,
+        "error": 0.48587719298245646
+      },
+      {
+        "id": 73,
+        "timestamp": "2026-06-21T23:07:26.886500+00:00",
+        "cycle": 48,
+        "predicted_coherence": 0.6656666666666669,
+        "predicted_energy": 199.14968421052635,
+        "actual_coherence": 0.715,
+        "actual_energy": 198.71,
+        "error": 0.48901754385967056
+      },
+      {
+        "id": 74,
+        "timestamp": "2026-06-21T23:07:27.929394+00:00",
+        "cycle": 49,
+        "predicted_coherence": 0.6683333333333334,
+        "predicted_energy": 199.12242105263158,
+        "actual_coherence": 0.718,
+        "actual_energy": 198.68,
+        "error": 0.4920877192982398
+      },
+      {
+        "id": 75,
+        "timestamp": "2026-06-21T23:07:28.973502+00:00",
+        "cycle": 50,
+        "predicted_coherence": 0.6712666666666667,
+        "predicted_energy": 199.09547368421053,
+        "actual_coherence": 0.72,
+        "actual_energy": 198.66,
+        "error": 0.48420701754386863
+      },
+      {
+        "id": 76,
+        "timestamp": "2026-06-21T23:25:01.841598+00:00",
+        "cycle": 1,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.515,
+        "actual_energy": 200.0,
+        "error": 50.159333333333336
+      },
+      {
+        "id": 77,
+        "timestamp": "2026-06-21T23:25:02.895164+00:00",
+        "cycle": 2,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.522,
+        "actual_energy": 199.97,
+        "error": 50.12233333333333
+      },
+      {
+        "id": 78,
+        "timestamp": "2026-06-21T23:25:03.935983+00:00",
+        "cycle": 3,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.524,
+        "actual_energy": 199.94,
+        "error": 50.090333333333334
+      },
+      {
+        "id": 79,
+        "timestamp": "2026-06-21T23:25:04.976712+00:00",
+        "cycle": 4,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.527,
+        "actual_energy": 199.91,
+        "error": 50.05733333333333
+      },
+      {
+        "id": 80,
+        "timestamp": "2026-06-21T23:25:06.041971+00:00",
+        "cycle": 5,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.529,
+        "actual_energy": 199.88,
+        "error": 50.02533333333333
+      },
+      {
+        "id": 81,
+        "timestamp": "2026-06-21T23:25:07.088101+00:00",
+        "cycle": 6,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.532,
+        "actual_energy": 199.85,
+        "error": 49.99233333333333
+      },
+      {
+        "id": 82,
+        "timestamp": "2026-06-21T23:25:08.127478+00:00",
+        "cycle": 7,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.534,
+        "actual_energy": 199.82,
+        "error": 49.960333333333324
+      },
+      {
+        "id": 83,
+        "timestamp": "2026-06-21T23:25:09.177920+00:00",
+        "cycle": 8,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.537,
+        "actual_energy": 199.79,
+        "error": 49.92733333333332
+      },
+      {
+        "id": 84,
+        "timestamp": "2026-06-21T23:25:10.221742+00:00",
+        "cycle": 9,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.539,
+        "actual_energy": 199.76,
+        "error": 49.895333333333326
+      },
+      {
+        "id": 85,
+        "timestamp": "2026-06-21T23:25:11.264768+00:00",
+        "cycle": 10,
+        "predicted_coherence": 0.6743333333333335,
+        "predicted_energy": 150.0,
+        "actual_coherence": 0.542,
+        "actual_energy": 199.73,
+        "error": 49.862333333333325
       }
     ],
     "actions": [
@@ -262,15 +1837,60 @@
         "description": "No .gitignore found",
         "executed": 0,
         "result": null
+      },
+      {
+        "id": 5,
+        "timestamp": "2026-06-21T22:53:09.373482+00:00",
+        "cycle": 1,
+        "action_type": "renewal",
+        "description": "Coherence 0.34 below threshold, suggesting checkpoint",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 6,
+        "timestamp": "2026-06-21T22:53:25.434732+00:00",
+        "cycle": 1,
+        "action_type": "renewal",
+        "description": "Coherence 0.36 below threshold, suggesting checkpoint",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 7,
+        "timestamp": "2026-06-21T23:06:37.785494+00:00",
+        "cycle": 1,
+        "action_type": "renewal",
+        "description": "Coherence 0.39 below threshold, suggesting checkpoint",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 8,
+        "timestamp": "2026-06-21T23:25:01.849212+00:00",
+        "cycle": 1,
+        "action_type": "file_create",
+        "description": "Requirements file empty (30 bytes), filling with detected deps",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 9,
+        "timestamp": "2026-06-21T23:25:01.855302+00:00",
+        "cycle": 1,
+        "action_type": "file_create",
+        "description": "tests/ directory empty, generating initial test suite",
+        "executed": 0,
+        "result": null
       }
     ]
   },
   "stats": {
-    "episodes": 10,
-    "avg_coherence": 0.519,
-    "avg_energy": 199.912,
+    "episodes": 85,
+    "avg_coherence": 0.606,
+    "avg_energy": 199.55,
     "active_goals": 0,
     "executed_actions": 0,
-    "prediction_error": 10.2701
+    "prediction_error": 26.6934
   }
 }

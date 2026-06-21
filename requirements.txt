@@ -1,1 +1,15 @@
-# Auto-detected requirements
+# Auto-detected requirements by NOESIS v2.1
+
+# Detected module: autopilot
+# Detected module: hermes_live_sync
+# Detected module: noesis_autopilot
+# Detected module: noesis_dashboard
+# Detected module: noesis_engine
+# Detected module: noesis_engine_v21
+# Detected module: noesis_insights
+
+# Core dependencies (detected by import scan)
+pytest>=7.0
+typer>=0.9
+rich>=13.0
+httpx>=0.24
