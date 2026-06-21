@@ -1,0 +1,8 @@
+{
+  "episodes": 734,
+  "avg_coherence": 0.574,
+  "avg_energy": 190.618,
+  "active_goals": 0,
+  "executed_actions": 0,
+  "prediction_error": 40.6251
+}
