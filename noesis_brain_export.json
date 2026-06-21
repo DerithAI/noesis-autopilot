@@ -1,0 +1,276 @@
+{
+  "exported_at": "2026-06-21T23:53:01.071832",
+  "tables": {
+    "episodes": [
+      {
+        "id": 1,
+        "timestamp": "2026-06-21T22:43:52.183482+00:00",
+        "cycle": 1,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"d279828e8a96fabf\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 47, \"directories\": 26, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:43:52.166749\", \"coherence\": 0.32}, \"predictions\": {\"coherence\": 0.5, \"energy\": 100.0}, \"actions\": [\"renewal\", \"dir_create\", \"file_create\", \"file_create\"], \"executed\": [{\"action\": {\"type\": \"renewal\", \"reason\": \"Coherence 0.32 below threshold, suggesting checkpoint\", \"priority\": 0.9}, \"result\": \"Checkpoint suggested (renewal mode)\"}, {\"action\": {\"type\": \"dir_create\", \"dir\": \"tests\", \"reason\": \"Project has 5 files but no tests/\", \"priority\": 0.8}, \"result\": \"Created dir tests\"}], \"goals\": [{\"name\": \"test coverage\", \"target\": 80.0, \"current\": 0.0, \"status\": \"active\"}]}",
+        "coherence": 0.32,
+        "energy": 200.0,
+        "prediction": 0.5
+      },
+      {
+        "id": 2,
+        "timestamp": "2026-06-21T22:43:54.255378+00:00",
+        "cycle": 2,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"5542baaa3d9a37ad\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 47, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:43:54.222554\", \"coherence\": 0.531}, \"predictions\": {\"coherence\": 0.32, \"energy\": 200.0}, \"actions\": [\"file_create\", \"file_create\"], \"executed\": [{\"action\": {\"type\": \"file_create\", \"file\": \"requirements.txt\", \"content\": \"# Auto-detected requirements\\n\", \"reason\": \"Project has 5 Python files but no requirements.txt\", \"priority\": 0.7}, \"result\": \"Created requirements.txt\"}, {\"action\": {\"type\": \"file_create\", \"file\": \".gitignore\", \"content\": \"__pycache__/\\n*.pyc\\n*.db\\n.env\\n\", \"reason\": \"No .gitignore found\", \"priority\": 0.6}, \"result\": \"Created .gitignore\"}], \"goals\": [{\"name\": \"test coverage\", \"target\": 80.0, \"current\": 80.0, \"status\": \"complete\"}]}",
+        "coherence": 0.531,
+        "energy": 200.0,
+        "prediction": 0.32
+      },
+      {
+        "id": 3,
+        "timestamp": "2026-06-21T22:43:56.281132+00:00",
+        "cycle": 3,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"c556af85ecda3c17\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:43:56.281132\", \"coherence\": 0.533}, \"predictions\": {\"coherence\": 0.10899999999999999, \"energy\": 199.99999999999997}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.533,
+        "energy": 199.98,
+        "prediction": 0.10899999999999999
+      },
+      {
+        "id": 4,
+        "timestamp": "2026-06-21T22:43:58.326587+00:00",
+        "cycle": 4,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"6a4939ccdc0217d3\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:43:58.308271\", \"coherence\": 0.536}, \"predictions\": {\"coherence\": 0.2483333333333334, \"energy\": 199.99444444444444}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.536,
+        "energy": 199.95,
+        "prediction": 0.2483333333333334
+      },
+      {
+        "id": 5,
+        "timestamp": "2026-06-21T22:44:00.360984+00:00",
+        "cycle": 5,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"15579ee7a53544e0\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:00.360984\", \"coherence\": 0.538}, \"predictions\": {\"coherence\": 0.31750000000000006, \"energy\": 199.98576923076922}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.538,
+        "energy": 199.93,
+        "prediction": 0.31750000000000006
+      },
+      {
+        "id": 6,
+        "timestamp": "2026-06-21T22:44:02.402753+00:00",
+        "cycle": 6,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"86af3b9e4da66ca8\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:02.392651\", \"coherence\": 0.541}, \"predictions\": {\"coherence\": 0.35930000000000006, \"energy\": 199.9774285714286}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.541,
+        "energy": 199.9,
+        "prediction": 0.35930000000000006
+      },
+      {
+        "id": 7,
+        "timestamp": "2026-06-21T22:44:04.446868+00:00",
+        "cycle": 7,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"0a075934231c1935\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 181.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:04.438942\", \"coherence\": 0.543}, \"predictions\": {\"coherence\": 0.38693333333333335, \"energy\": 199.9682222222222}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.543,
+        "energy": 199.88,
+        "prediction": 0.38693333333333335
+      },
+      {
+        "id": 8,
+        "timestamp": "2026-06-21T22:44:06.479832+00:00",
+        "cycle": 8,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"4393c2a8fb8628ea\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 189.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:06.472729\", \"coherence\": 0.546}, \"predictions\": {\"coherence\": 0.40685714285714286, \"energy\": 199.95946428571432}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.546,
+        "energy": 199.85,
+        "prediction": 0.40685714285714286
+      },
+      {
+        "id": 9,
+        "timestamp": "2026-06-21T22:44:08.515493+00:00",
+        "cycle": 9,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"bc41ed24ccf4bae0\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 189.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:08.508445\", \"coherence\": 0.548}, \"predictions\": {\"coherence\": 0.42164285714285715, \"energy\": 199.95029411764708}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.548,
+        "energy": 199.83,
+        "prediction": 0.42164285714285715
+      },
+      {
+        "id": 10,
+        "timestamp": "2026-06-21T22:44:10.551010+00:00",
+        "cycle": 10,
+        "project": "main",
+        "event_type": "engine_cycle",
+        "content": "{\"hash\": \"5f274bffa7a9fed7\", \"observation\": {\"root\": \".\", \"py_files\": 5, \"total_files\": 49, \"directories\": 27, \"size_kb\": 189.7, \"modules\": [\"autopilot\", \"noesis_autopilot\", \"noesis_dashboard\", \"noesis_engine\", \"noesis_insights\"], \"timestamp\": \"2026-06-21T23:44:10.544417\", \"coherence\": 0.551}, \"predictions\": {\"coherence\": 0.4332777777777777, \"energy\": 199.9414814814815}, \"actions\": [], \"executed\": [], \"goals\": []}",
+        "coherence": 0.551,
+        "energy": 199.8,
+        "prediction": 0.4332777777777777
+      }
+    ],
+    "goals": [
+      {
+        "id": 1,
+        "created": "2026-06-21T22:43:52.145902+00:00",
+        "name": "test coverage",
+        "target": 80.0,
+        "current": 80.0,
+        "status": "complete",
+        "project": "main"
+      }
+    ],
+    "predictions": [
+      {
+        "id": 1,
+        "timestamp": "2026-06-21T22:43:52.166749+00:00",
+        "cycle": 1,
+        "predicted_coherence": 0.5,
+        "predicted_energy": 100.0,
+        "actual_coherence": 0.32,
+        "actual_energy": 200.0,
+        "error": 100.18
+      },
+      {
+        "id": 2,
+        "timestamp": "2026-06-21T22:43:54.223063+00:00",
+        "cycle": 2,
+        "predicted_coherence": 0.32,
+        "predicted_energy": 200.0,
+        "actual_coherence": 0.531,
+        "actual_energy": 200.0,
+        "error": 0.21100000000000002
+      },
+      {
+        "id": 3,
+        "timestamp": "2026-06-21T22:43:56.281132+00:00",
+        "cycle": 3,
+        "predicted_coherence": 0.10899999999999999,
+        "predicted_energy": 199.99999999999997,
+        "actual_coherence": 0.533,
+        "actual_energy": 199.98,
+        "error": 0.44399999999998185
+      },
+      {
+        "id": 4,
+        "timestamp": "2026-06-21T22:43:58.320629+00:00",
+        "cycle": 4,
+        "predicted_coherence": 0.2483333333333334,
+        "predicted_energy": 199.99444444444444,
+        "actual_coherence": 0.536,
+        "actual_energy": 199.95,
+        "error": 0.332111111111118
+      },
+      {
+        "id": 5,
+        "timestamp": "2026-06-21T22:44:00.360984+00:00",
+        "cycle": 5,
+        "predicted_coherence": 0.31750000000000006,
+        "predicted_energy": 199.98576923076922,
+        "actual_coherence": 0.538,
+        "actual_energy": 199.93,
+        "error": 0.276269230769215
+      },
+      {
+        "id": 6,
+        "timestamp": "2026-06-21T22:44:02.392651+00:00",
+        "cycle": 6,
+        "predicted_coherence": 0.35930000000000006,
+        "predicted_energy": 199.9774285714286,
+        "actual_coherence": 0.541,
+        "actual_energy": 199.9,
+        "error": 0.2591285714285838
+      },
+      {
+        "id": 7,
+        "timestamp": "2026-06-21T22:44:04.438942+00:00",
+        "cycle": 7,
+        "predicted_coherence": 0.38693333333333335,
+        "predicted_energy": 199.9682222222222,
+        "actual_coherence": 0.543,
+        "actual_energy": 199.88,
+        "error": 0.24428888888888067
+      },
+      {
+        "id": 8,
+        "timestamp": "2026-06-21T22:44:06.473787+00:00",
+        "cycle": 8,
+        "predicted_coherence": 0.40685714285714286,
+        "predicted_energy": 199.95946428571432,
+        "actual_coherence": 0.546,
+        "actual_energy": 199.85,
+        "error": 0.24860714285718138
+      },
+      {
+        "id": 9,
+        "timestamp": "2026-06-21T22:44:08.508445+00:00",
+        "cycle": 9,
+        "predicted_coherence": 0.42164285714285715,
+        "predicted_energy": 199.95029411764708,
+        "actual_coherence": 0.548,
+        "actual_energy": 199.83,
+        "error": 0.246651260504206
+      },
+      {
+        "id": 10,
+        "timestamp": "2026-06-21T22:44:10.544417+00:00",
+        "cycle": 10,
+        "predicted_coherence": 0.4332777777777777,
+        "predicted_energy": 199.9414814814815,
+        "actual_coherence": 0.551,
+        "actual_energy": 199.8,
+        "error": 0.2592037037037141
+      }
+    ],
+    "actions": [
+      {
+        "id": 1,
+        "timestamp": "2026-06-21T22:43:52.174701+00:00",
+        "cycle": 1,
+        "action_type": "renewal",
+        "description": "Coherence 0.32 below threshold, suggesting checkpoint",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 2,
+        "timestamp": "2026-06-21T22:43:52.179330+00:00",
+        "cycle": 1,
+        "action_type": "dir_create",
+        "description": "Project has 5 files but no tests/",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 3,
+        "timestamp": "2026-06-21T22:43:54.242081+00:00",
+        "cycle": 2,
+        "action_type": "file_create",
+        "description": "Project has 5 Python files but no requirements.txt",
+        "executed": 0,
+        "result": null
+      },
+      {
+        "id": 4,
+        "timestamp": "2026-06-21T22:43:54.248476+00:00",
+        "cycle": 2,
+        "action_type": "file_create",
+        "description": "No .gitignore found",
+        "executed": 0,
+        "result": null
+      }
+    ]
+  },
+  "stats": {
+    "episodes": 10,
+    "avg_coherence": 0.519,
+    "avg_energy": 199.912,
+    "active_goals": 0,
+    "executed_actions": 0,
+    "prediction_error": 10.2701
+  }
+}
