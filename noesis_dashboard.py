@@ -39,7 +39,7 @@ class BrainConnector:
             for r in rows:
                 try:
                     r["content"] = json.loads(r["content"])
-                except:
+                except Exception:
                     pass
             return rows
         finally:
