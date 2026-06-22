@@ -13563,5 +13563,3015 @@
         "auto_fixable": false
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-22T00:58:23.369520+00:00",
+    "files_scanned": 5,
+    "issues_found": 83,
+    "fixes_generated": 83,
+    "fixes_applied": 0,
+    "issues": [
+      {
+        "file": "noesis_engine.py",
+        "line": 68,
+        "type": "missing_docstring",
+        "msg": "Function 'save_episode' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 78,
+        "type": "missing_docstring",
+        "msg": "Function 'get_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 87,
+        "type": "missing_docstring",
+        "msg": "Function 'get_all_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 95,
+        "type": "missing_docstring",
+        "msg": "Function 'set_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 103,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 109,
+        "type": "missing_docstring",
+        "msg": "Function 'update_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 117,
+        "type": "missing_docstring",
+        "msg": "Function 'save_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 125,
+        "type": "missing_docstring",
+        "msg": "Function 'update_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 140,
+        "type": "missing_docstring",
+        "msg": "Function 'save_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 148,
+        "type": "missing_docstring",
+        "msg": "Function 'mark_action_executed' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 153,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 196,
+        "type": "missing_docstring",
+        "msg": "Function 'predict' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 213,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_coherence' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 216,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_energy' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 237,
+        "type": "missing_docstring",
+        "msg": "Function 'add' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 241,
+        "type": "missing_docstring",
+        "msg": "Function 'edge' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 245,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 247,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 260,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 264,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 267,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 280,
+        "type": "missing_docstring",
+        "msg": "Function 'scan_all' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 283,
+        "type": "missing_docstring",
+        "msg": "Function 'scan_one' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 310,
+        "type": "missing_docstring",
+        "msg": "Function 'propose_actions' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 400,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 437,
+        "type": "missing_docstring",
+        "msg": "Function 'check_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 508,
+        "type": "missing_docstring",
+        "msg": "Function 'run_cycle' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 613,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 636,
+        "type": "missing_docstring",
+        "msg": "Function 'shutdown' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 59,
+        "type": "missing_docstring",
+        "msg": "Function 'save_episode' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 69,
+        "type": "missing_docstring",
+        "msg": "Function 'get_all_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 75,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 84,
+        "type": "missing_docstring",
+        "msg": "Function 'save_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 90,
+        "type": "missing_docstring",
+        "msg": "Function 'save_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 97,
+        "type": "missing_docstring",
+        "msg": "Function 'update_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 107,
+        "type": "missing_docstring",
+        "msg": "Function 'set_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 113,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_coherence' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 136,
+        "type": "missing_docstring",
+        "msg": "Function 'propose_actions' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 234,
+        "type": "missing_docstring",
+        "msg": "Function 'execute_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 252,
+        "type": "missing_docstring",
+        "msg": "Function 'add' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 255,
+        "type": "missing_docstring",
+        "msg": "Function 'edge' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 258,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 260,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 265,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 267,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 268,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 273,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 298,
+        "type": "missing_docstring",
+        "msg": "Function 'scan' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 320,
+        "type": "missing_docstring",
+        "msg": "Function 'run_cycle' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 374,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 33,
+        "type": "missing_docstring",
+        "msg": "Function 'get_latest' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 48,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 57,
+        "type": "missing_docstring",
+        "msg": "Function 'get_predictions' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 67,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 85,
+        "type": "missing_docstring",
+        "msg": "Function 'export_json' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'start' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 126,
+        "type": "missing_docstring",
+        "msg": "Function 'stop' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 150,
+        "type": "missing_docstring",
+        "msg": "Function 'log_message' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 166,
+        "type": "missing_docstring",
+        "msg": "Function 'do_GET' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 354,
+        "type": "missing_docstring",
+        "msg": "Function 'start' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 372,
+        "type": "missing_docstring",
+        "msg": "Function 'stop' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 43,
+        "type": "missing_docstring",
+        "msg": "Function 'create' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 51,
+        "type": "missing_docstring",
+        "msg": "Function 'count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 56,
+        "type": "missing_docstring",
+        "msg": "Function 'get_recent' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 64,
+        "type": "missing_docstring",
+        "msg": "Function 'summary' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 88,
+        "type": "missing_docstring",
+        "msg": "Function 'add_node' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 91,
+        "type": "missing_docstring",
+        "msg": "Function 'add_edge' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 94,
+        "type": "missing_docstring",
+        "msg": "Function 'get_node' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 98,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 102,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 116,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 123,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 141,
+        "type": "missing_docstring",
+        "msg": "Function 'scan' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 172,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 280,
+        "type": "missing_docstring",
+        "msg": "Function 'run_once' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 338,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 360,
+        "type": "missing_docstring",
+        "msg": "Function 'shutdown' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 18,
+        "type": "missing_docstring",
+        "msg": "Function 'get_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 24,
+        "type": "missing_docstring",
+        "msg": "Function 'generate_timeline' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 41,
+        "type": "missing_docstring",
+        "msg": "Function 'generate_insights' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 151,
+        "type": "missing_docstring",
+        "msg": "Function 'print_report' has no docstring"
+      }
+    ],
+    "fixes": [
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 68,
+          "type": "missing_docstring",
+          "msg": "Function 'save_episode' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 68",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 78,
+          "type": "missing_docstring",
+          "msg": "Function 'get_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 78",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 87,
+          "type": "missing_docstring",
+          "msg": "Function 'get_all_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 87",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 95,
+          "type": "missing_docstring",
+          "msg": "Function 'set_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 95",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 103,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 103",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 109,
+          "type": "missing_docstring",
+          "msg": "Function 'update_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 109",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 117,
+          "type": "missing_docstring",
+          "msg": "Function 'save_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 117",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 125,
+          "type": "missing_docstring",
+          "msg": "Function 'update_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 125",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 140,
+          "type": "missing_docstring",
+          "msg": "Function 'save_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 140",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 148,
+          "type": "missing_docstring",
+          "msg": "Function 'mark_action_executed' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 148",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 153,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 153",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 196,
+          "type": "missing_docstring",
+          "msg": "Function 'predict' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 196",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 213,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_coherence' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 213",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 216,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_energy' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 216",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 237,
+          "type": "missing_docstring",
+          "msg": "Function 'add' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 237",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 241,
+          "type": "missing_docstring",
+          "msg": "Function 'edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 241",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 245,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 245",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 247,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 247",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 260,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 260",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 264,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 264",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 267,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 267",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 280,
+          "type": "missing_docstring",
+          "msg": "Function 'scan_all' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 280",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 283,
+          "type": "missing_docstring",
+          "msg": "Function 'scan_one' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 283",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 310,
+          "type": "missing_docstring",
+          "msg": "Function 'propose_actions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 310",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 400,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 400",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 437,
+          "type": "missing_docstring",
+          "msg": "Function 'check_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 437",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 508,
+          "type": "missing_docstring",
+          "msg": "Function 'run_cycle' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 508",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 613,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 613",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 636,
+          "type": "missing_docstring",
+          "msg": "Function 'shutdown' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 636",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 59,
+          "type": "missing_docstring",
+          "msg": "Function 'save_episode' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 59",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 69,
+          "type": "missing_docstring",
+          "msg": "Function 'get_all_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 69",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 75,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 75",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 84,
+          "type": "missing_docstring",
+          "msg": "Function 'save_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 84",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 90,
+          "type": "missing_docstring",
+          "msg": "Function 'save_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 90",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 97,
+          "type": "missing_docstring",
+          "msg": "Function 'update_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 97",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 107,
+          "type": "missing_docstring",
+          "msg": "Function 'set_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 107",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 113,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 113",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_coherence' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 136,
+          "type": "missing_docstring",
+          "msg": "Function 'propose_actions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 136",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 234,
+          "type": "missing_docstring",
+          "msg": "Function 'execute_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 234",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 252,
+          "type": "missing_docstring",
+          "msg": "Function 'add' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 252",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 255,
+          "type": "missing_docstring",
+          "msg": "Function 'edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 255",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 258,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 258",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 260,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 260",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 265,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 265",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 267,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 267",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 268,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 268",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 273,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 273",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 298,
+          "type": "missing_docstring",
+          "msg": "Function 'scan' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 298",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 320,
+          "type": "missing_docstring",
+          "msg": "Function 'run_cycle' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 320",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 374,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 374",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 33,
+          "type": "missing_docstring",
+          "msg": "Function 'get_latest' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 33",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 48,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 48",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 57,
+          "type": "missing_docstring",
+          "msg": "Function 'get_predictions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 57",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 67,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 67",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 85,
+          "type": "missing_docstring",
+          "msg": "Function 'export_json' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 85",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'start' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 126,
+          "type": "missing_docstring",
+          "msg": "Function 'stop' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 126",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 150,
+          "type": "missing_docstring",
+          "msg": "Function 'log_message' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 150",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 166,
+          "type": "missing_docstring",
+          "msg": "Function 'do_GET' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 166",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 354,
+          "type": "missing_docstring",
+          "msg": "Function 'start' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 354",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 372,
+          "type": "missing_docstring",
+          "msg": "Function 'stop' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 372",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 43,
+          "type": "missing_docstring",
+          "msg": "Function 'create' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 43",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 51,
+          "type": "missing_docstring",
+          "msg": "Function 'count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 51",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 56,
+          "type": "missing_docstring",
+          "msg": "Function 'get_recent' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 56",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 64,
+          "type": "missing_docstring",
+          "msg": "Function 'summary' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 64",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 88,
+          "type": "missing_docstring",
+          "msg": "Function 'add_node' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 88",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 91,
+          "type": "missing_docstring",
+          "msg": "Function 'add_edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 91",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 94,
+          "type": "missing_docstring",
+          "msg": "Function 'get_node' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 94",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 98,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 98",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 102,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 102",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 116,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 116",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 123,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 123",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 141,
+          "type": "missing_docstring",
+          "msg": "Function 'scan' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 141",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 172,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 172",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 280,
+          "type": "missing_docstring",
+          "msg": "Function 'run_once' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 280",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 338,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 338",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 360,
+          "type": "missing_docstring",
+          "msg": "Function 'shutdown' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 360",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 18,
+          "type": "missing_docstring",
+          "msg": "Function 'get_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 18",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 24,
+          "type": "missing_docstring",
+          "msg": "Function 'generate_timeline' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 24",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 41,
+          "type": "missing_docstring",
+          "msg": "Function 'generate_insights' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 41",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 151,
+          "type": "missing_docstring",
+          "msg": "Function 'print_report' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T00:58:23.369520+00:00",
+        "suggestion": "Add docstring to function at line 151",
+        "auto_fixable": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-22T01:06:43.972084+00:00",
+    "files_scanned": 5,
+    "issues_found": 83,
+    "fixes_generated": 83,
+    "fixes_applied": 0,
+    "issues": [
+      {
+        "file": "noesis_engine.py",
+        "line": 68,
+        "type": "missing_docstring",
+        "msg": "Function 'save_episode' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 78,
+        "type": "missing_docstring",
+        "msg": "Function 'get_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 87,
+        "type": "missing_docstring",
+        "msg": "Function 'get_all_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 95,
+        "type": "missing_docstring",
+        "msg": "Function 'set_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 103,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 109,
+        "type": "missing_docstring",
+        "msg": "Function 'update_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 117,
+        "type": "missing_docstring",
+        "msg": "Function 'save_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 125,
+        "type": "missing_docstring",
+        "msg": "Function 'update_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 140,
+        "type": "missing_docstring",
+        "msg": "Function 'save_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 148,
+        "type": "missing_docstring",
+        "msg": "Function 'mark_action_executed' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 153,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 196,
+        "type": "missing_docstring",
+        "msg": "Function 'predict' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 213,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_coherence' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 216,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_energy' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 237,
+        "type": "missing_docstring",
+        "msg": "Function 'add' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 241,
+        "type": "missing_docstring",
+        "msg": "Function 'edge' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 245,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 247,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 260,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 264,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 267,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 280,
+        "type": "missing_docstring",
+        "msg": "Function 'scan_all' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 283,
+        "type": "missing_docstring",
+        "msg": "Function 'scan_one' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 310,
+        "type": "missing_docstring",
+        "msg": "Function 'propose_actions' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 400,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 437,
+        "type": "missing_docstring",
+        "msg": "Function 'check_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 508,
+        "type": "missing_docstring",
+        "msg": "Function 'run_cycle' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 613,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_engine.py",
+        "line": 636,
+        "type": "missing_docstring",
+        "msg": "Function 'shutdown' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 59,
+        "type": "missing_docstring",
+        "msg": "Function 'save_episode' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 69,
+        "type": "missing_docstring",
+        "msg": "Function 'get_all_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 75,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 84,
+        "type": "missing_docstring",
+        "msg": "Function 'save_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 90,
+        "type": "missing_docstring",
+        "msg": "Function 'save_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 97,
+        "type": "missing_docstring",
+        "msg": "Function 'update_prediction' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 107,
+        "type": "missing_docstring",
+        "msg": "Function 'set_goal' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 113,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'predict_coherence' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 136,
+        "type": "missing_docstring",
+        "msg": "Function 'propose_actions' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 234,
+        "type": "missing_docstring",
+        "msg": "Function 'execute_action' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 252,
+        "type": "missing_docstring",
+        "msg": "Function 'add' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 255,
+        "type": "missing_docstring",
+        "msg": "Function 'edge' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 258,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 260,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 265,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 267,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 268,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 273,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 298,
+        "type": "missing_docstring",
+        "msg": "Function 'scan' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 320,
+        "type": "missing_docstring",
+        "msg": "Function 'run_cycle' has no docstring"
+      },
+      {
+        "file": "noesis_engine_v21.py",
+        "line": 374,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 33,
+        "type": "missing_docstring",
+        "msg": "Function 'get_latest' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 48,
+        "type": "missing_docstring",
+        "msg": "Function 'get_goals' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 57,
+        "type": "missing_docstring",
+        "msg": "Function 'get_predictions' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 67,
+        "type": "missing_docstring",
+        "msg": "Function 'get_stats' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 85,
+        "type": "missing_docstring",
+        "msg": "Function 'export_json' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'start' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 126,
+        "type": "missing_docstring",
+        "msg": "Function 'stop' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 150,
+        "type": "missing_docstring",
+        "msg": "Function 'log_message' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 166,
+        "type": "missing_docstring",
+        "msg": "Function 'do_GET' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 354,
+        "type": "missing_docstring",
+        "msg": "Function 'start' has no docstring"
+      },
+      {
+        "file": "noesis_dashboard.py",
+        "line": 372,
+        "type": "missing_docstring",
+        "msg": "Function 'stop' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 43,
+        "type": "missing_docstring",
+        "msg": "Function 'create' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 51,
+        "type": "missing_docstring",
+        "msg": "Function 'count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 56,
+        "type": "missing_docstring",
+        "msg": "Function 'get_recent' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 64,
+        "type": "missing_docstring",
+        "msg": "Function 'summary' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 88,
+        "type": "missing_docstring",
+        "msg": "Function 'add_node' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 91,
+        "type": "missing_docstring",
+        "msg": "Function 'add_edge' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 94,
+        "type": "missing_docstring",
+        "msg": "Function 'get_node' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 98,
+        "type": "missing_docstring",
+        "msg": "Function 'node_count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 102,
+        "type": "missing_docstring",
+        "msg": "Function 'edge_count' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 116,
+        "type": "missing_docstring",
+        "msg": "Function 'consume' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 120,
+        "type": "missing_docstring",
+        "msg": "Function 'reward' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 123,
+        "type": "missing_docstring",
+        "msg": "Function 'status' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 141,
+        "type": "missing_docstring",
+        "msg": "Function 'scan' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 172,
+        "type": "missing_docstring",
+        "msg": "Function 'deliberate' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 280,
+        "type": "missing_docstring",
+        "msg": "Function 'run_once' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 338,
+        "type": "missing_docstring",
+        "msg": "Function 'run' has no docstring"
+      },
+      {
+        "file": "noesis_autopilot.py",
+        "line": 360,
+        "type": "missing_docstring",
+        "msg": "Function 'shutdown' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 18,
+        "type": "missing_docstring",
+        "msg": "Function 'get_episodes' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 24,
+        "type": "missing_docstring",
+        "msg": "Function 'generate_timeline' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 41,
+        "type": "missing_docstring",
+        "msg": "Function 'generate_insights' has no docstring"
+      },
+      {
+        "file": "noesis_insights.py",
+        "line": 151,
+        "type": "missing_docstring",
+        "msg": "Function 'print_report' has no docstring"
+      }
+    ],
+    "fixes": [
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 68,
+          "type": "missing_docstring",
+          "msg": "Function 'save_episode' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 68",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 78,
+          "type": "missing_docstring",
+          "msg": "Function 'get_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 78",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 87,
+          "type": "missing_docstring",
+          "msg": "Function 'get_all_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 87",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 95,
+          "type": "missing_docstring",
+          "msg": "Function 'set_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 95",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 103,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 103",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 109,
+          "type": "missing_docstring",
+          "msg": "Function 'update_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 109",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 117,
+          "type": "missing_docstring",
+          "msg": "Function 'save_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 117",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 125,
+          "type": "missing_docstring",
+          "msg": "Function 'update_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 125",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 140,
+          "type": "missing_docstring",
+          "msg": "Function 'save_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 140",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 148,
+          "type": "missing_docstring",
+          "msg": "Function 'mark_action_executed' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 148",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 153,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 153",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 196,
+          "type": "missing_docstring",
+          "msg": "Function 'predict' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 196",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 213,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_coherence' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 213",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 216,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_energy' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 216",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 237,
+          "type": "missing_docstring",
+          "msg": "Function 'add' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 237",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 241,
+          "type": "missing_docstring",
+          "msg": "Function 'edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 241",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 245,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 245",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 247,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 247",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 260,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 260",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 264,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 264",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 267,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 267",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 280,
+          "type": "missing_docstring",
+          "msg": "Function 'scan_all' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 280",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 283,
+          "type": "missing_docstring",
+          "msg": "Function 'scan_one' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 283",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 310,
+          "type": "missing_docstring",
+          "msg": "Function 'propose_actions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 310",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 400,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 400",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 437,
+          "type": "missing_docstring",
+          "msg": "Function 'check_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 437",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 508,
+          "type": "missing_docstring",
+          "msg": "Function 'run_cycle' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 508",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 613,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 613",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine.py",
+          "line": 636,
+          "type": "missing_docstring",
+          "msg": "Function 'shutdown' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 636",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 59,
+          "type": "missing_docstring",
+          "msg": "Function 'save_episode' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 59",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 69,
+          "type": "missing_docstring",
+          "msg": "Function 'get_all_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 69",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 75,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 75",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 84,
+          "type": "missing_docstring",
+          "msg": "Function 'save_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 84",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 90,
+          "type": "missing_docstring",
+          "msg": "Function 'save_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 90",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 97,
+          "type": "missing_docstring",
+          "msg": "Function 'update_prediction' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 97",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 107,
+          "type": "missing_docstring",
+          "msg": "Function 'set_goal' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 107",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 113,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 113",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'predict_coherence' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 136,
+          "type": "missing_docstring",
+          "msg": "Function 'propose_actions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 136",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 234,
+          "type": "missing_docstring",
+          "msg": "Function 'execute_action' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 234",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 252,
+          "type": "missing_docstring",
+          "msg": "Function 'add' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 252",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 255,
+          "type": "missing_docstring",
+          "msg": "Function 'edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 255",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 258,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 258",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 260,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 260",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 265,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 265",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 267,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 267",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 268,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 268",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 273,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 273",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 298,
+          "type": "missing_docstring",
+          "msg": "Function 'scan' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 298",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 320,
+          "type": "missing_docstring",
+          "msg": "Function 'run_cycle' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 320",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_engine_v21.py",
+          "line": 374,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 374",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 33,
+          "type": "missing_docstring",
+          "msg": "Function 'get_latest' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 33",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 48,
+          "type": "missing_docstring",
+          "msg": "Function 'get_goals' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 48",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 57,
+          "type": "missing_docstring",
+          "msg": "Function 'get_predictions' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 57",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 67,
+          "type": "missing_docstring",
+          "msg": "Function 'get_stats' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 67",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 85,
+          "type": "missing_docstring",
+          "msg": "Function 'export_json' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 85",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'start' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 126,
+          "type": "missing_docstring",
+          "msg": "Function 'stop' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 126",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 150,
+          "type": "missing_docstring",
+          "msg": "Function 'log_message' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 150",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 166,
+          "type": "missing_docstring",
+          "msg": "Function 'do_GET' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 166",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 354,
+          "type": "missing_docstring",
+          "msg": "Function 'start' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 354",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_dashboard.py",
+          "line": 372,
+          "type": "missing_docstring",
+          "msg": "Function 'stop' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 372",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 43,
+          "type": "missing_docstring",
+          "msg": "Function 'create' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 43",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 51,
+          "type": "missing_docstring",
+          "msg": "Function 'count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 51",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 56,
+          "type": "missing_docstring",
+          "msg": "Function 'get_recent' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 56",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 64,
+          "type": "missing_docstring",
+          "msg": "Function 'summary' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 64",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 88,
+          "type": "missing_docstring",
+          "msg": "Function 'add_node' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 88",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 91,
+          "type": "missing_docstring",
+          "msg": "Function 'add_edge' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 91",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 94,
+          "type": "missing_docstring",
+          "msg": "Function 'get_node' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 94",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 98,
+          "type": "missing_docstring",
+          "msg": "Function 'node_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 98",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 102,
+          "type": "missing_docstring",
+          "msg": "Function 'edge_count' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 102",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 116,
+          "type": "missing_docstring",
+          "msg": "Function 'consume' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 116",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 120,
+          "type": "missing_docstring",
+          "msg": "Function 'reward' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 120",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 123,
+          "type": "missing_docstring",
+          "msg": "Function 'status' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 123",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 141,
+          "type": "missing_docstring",
+          "msg": "Function 'scan' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 141",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 172,
+          "type": "missing_docstring",
+          "msg": "Function 'deliberate' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 172",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 280,
+          "type": "missing_docstring",
+          "msg": "Function 'run_once' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 280",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 338,
+          "type": "missing_docstring",
+          "msg": "Function 'run' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 338",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_autopilot.py",
+          "line": 360,
+          "type": "missing_docstring",
+          "msg": "Function 'shutdown' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 360",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 18,
+          "type": "missing_docstring",
+          "msg": "Function 'get_episodes' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 18",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 24,
+          "type": "missing_docstring",
+          "msg": "Function 'generate_timeline' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 24",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 41,
+          "type": "missing_docstring",
+          "msg": "Function 'generate_insights' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 41",
+        "auto_fixable": false
+      },
+      {
+        "issue": {
+          "file": "noesis_insights.py",
+          "line": 151,
+          "type": "missing_docstring",
+          "msg": "Function 'print_report' has no docstring"
+        },
+        "applied": false,
+        "timestamp": "2026-06-22T01:06:43.972084+00:00",
+        "suggestion": "Add docstring to function at line 151",
+        "auto_fixable": false
+      }
+    ]
   }
 ]
