@@ -1,0 +1,59 @@
+{
+  "seed": "ai assistant",
+  "ideas": [
+    "Personalized workout AI",
+    "Book recommendation engine",
+    "Virtual language tutor"
+  ],
+  "architecture": {
+    "product": "personalized_workout",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for personalized_workout\\app_app.py",
+    "forge-fastapi api for personalized_workout\\app_auth___init__.py",
+    "forge-fastapi api for personalized_workout\\app_middleware_logging.py",
+    "forge-fastapi api for personalized_workout\\app_routes_auth.py",
+    "forge-fastapi api for personalized_workout\\app_routes_workout.py",
+    "forge-fastapi api for personalized_workout\\app_schemas_workout.py",
+    "forge-fastapi api for personalized_workout\\README.md",
+    "forge-fastapi api for personalized_workout\\tests_test_workout.py",
+    "forge-react dashboard for personalized_workout\\dashboard.tsx",
+    "forge-react dashboard for personalized_workout\\README.md",
+    "forge-react dashboard for personalized_workout\\test_dashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 8,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 90.8461344242096,
+  "timestamp": "2026-07-03T21:58:56.648559"
+}

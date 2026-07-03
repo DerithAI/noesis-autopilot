@@ -1,0 +1,45 @@
+{
+  "seed": "crypto scraper",
+  "ideas": [
+    "Auto-fill private keys scanner",
+    "Crypto wallet vulnerability checker",
+    "Instant price fluctuation notifier"
+  ],
+  "architecture": {
+    "product": "Auto-fill private keys scanner",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": null,
+    "features": [
+      "Private key detection",
+      "Scan local files",
+      "Log findings"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/scanner"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Auto-fill private keys scanner\\app_main.py",
+    "forge-fastapi api for Auto-fill private keys scanner\\app_tests_test_main.py",
+    "forge-fastapi api for Auto-fill private keys scanner\\README.md"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 40.265690326690674,
+  "timestamp": "2026-07-03T21:56:06.217159"
+}

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  Auto-fill private keys scanner:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=host.docker.internal:11434

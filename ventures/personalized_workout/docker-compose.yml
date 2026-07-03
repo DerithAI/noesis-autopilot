@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  personalized_workout:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=host.docker.internal:11434
