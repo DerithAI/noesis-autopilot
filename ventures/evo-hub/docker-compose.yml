@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  evo-hub-backend:
+    build:
+      context: ../..
+      dockerfile: ventures/evo-hub/backend/Dockerfile
+    container_name: evo-hub-api
+    ports:
+      - "8000:8000"
+    environment:
+      - LUMEN_HOST=http://host.docker.internal:8002
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    volumes:
+      - ../../ventures:/app/ventures
+      - ../../autopilot_memory.db:/app/autopilot_memory.db
+      - ../../nexus_memory.db:/app/nexus_memory.db
+    networks:
+      - evo-net
+    restart: unless-stopped
+
+  evo-hub-frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: evo-hub-ui
+    ports:
+      - "3000:80"
+    depends_on:
+      - evo-hub-backend
+    networks:
+      - evo-net
+    restart: unless-stopped
+
+networks:
+  evo-net:
+    driver: bridge

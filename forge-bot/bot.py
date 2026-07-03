@@ -262,7 +262,6 @@ Examples:
                 for r in results:
                     print(f"- [{r['category']}] {r['content'][:80]}")
             elif args.mem_action == "stats":
-                import json
                 print(json.dumps(mem.stats(), indent=2))
             else:
                 print("Actions: store, search, list, stats")

@@ -40,6 +40,32 @@ These are newer additions that actually exist and are tested:
   ```
 - **`forge-bot/mcp_memory_server.py`** — MCP memory server (SQLite + optional semantic search). Dual mode: direct CLI or `--stdio` for MCP transport.
 
+## EVO-HUB (Master Dashboard + M-AI-SELF Bridge)
+
+The `ventures/evo-hub/` directory is a **live integration hub** combining:
+
+- **FastAPI backend** (`backend/main.py`, port 8000) with 19+ endpoints
+- **React frontend** (`frontend/src/App.tsx`, port 3000) with Dashboard + Council pages
+- **M-AI-SELF bridge** (`backend/m_ai_self_bridge.py`) — HTTP client for M-AI-SELF API on port 8002
+- **Hybrid memory** (`backend/memory_adapter.py`) — M-AI-SELF semantic search + local SQLite fallback
+- **OMEGA bridge** (`backend/omega_routes.py`) — probe for OMEGA gateway on port 8001
+- **Cognitive Council** (`agents/evo_agent.py`) — 4-voice deliberation (SUPERPOWERS L3)
+
+```bash
+# Start EVO-HUB backend
+cd ventures/evo-hub/backend && python -m uvicorn main:app --port 8000
+
+# Start EVO-HUB frontend
+cd ventures/evo-hub/frontend && npm start
+
+# Check all endpoints
+curl http://127.0.0.1:8000/health
+curl http://127.0.0.1:8000/api/mas/health      # M-AI-SELF bridge
+curl http://127.0.0.1:8000/api/memory2/status  # Hybrid memory
+curl http://127.0.0.1:8000/api/omega/health     # OMEGA bridge
+curl http://127.0.0.1:8000/api/council/voices   # Cognitive Council
+```
+
 ## Critical Repo Quirks
 
 ### Gitignore vs Reality
@@ -61,6 +87,9 @@ Everything else the README mentions (`core.py`, `bridge.py`, `db/`, `memory/`, `
 ### Ollama Dependency
 `forge-bot/`, `venture-swarm.py`, and `noesis_autopilot.py`'s Ollama bridge **require a running Ollama server** at `127.0.0.1:11434`. The `OLLAMA_HOST` env var is auto-fixed from `0.0.0.0` to `127.0.0.1` in bot code.
 
+### M-AI-SELF Dependency
+`ventures/evo-hub/backend/m_ai_self_bridge.py` and `memory_adapter.py` require M-AI-SELF running on port 8002. If unavailable, EVO-HUB falls back to local SQLite for memory operations.
+
 ### Tests
 ```bash
 # forge-bot tests (19 passing, includes bridge + MCP memory imports)
@@ -69,6 +98,9 @@ cd forge-bot && python -m pytest test_bot.py -v
 # noesis tests (require nexus_memory.db with episodes table)
 cd tests && python -m pytest test_system.py -v
 # ^ Will fail if nexus_memory.db missing or empty
+
+# EVO-HUB ITDD tests (8 passing)
+cd ventures/evo-hub && python -m pytest tests/test_itdd.py -v
 ```
 
 ### Generated Artifacts
@@ -84,19 +116,50 @@ cd tests && python -m pytest test_system.py -v
 | `forge-bot/telegram_bot.py` | `python-telegram-bot` (`pip install python-telegram-bot`) |
 | `forge-bot/mcp_memory_server.py` | `mcp` SDK (`pip install mcp`), optional `sentence-transformers` |
 | `venture-swarm.py` | `requests`, running Ollama, `~/.claude/skills/skill-forge/forge.py` |
+| `ventures/evo-hub/backend/` | `fastapi`, `uvicorn`, `pydantic`, `requests` |
+| `ventures/evo-hub/frontend/` | `node`, `npm`, `react-router-dom` |
+| `M-AI-SELF bridge` | M-AI-SELF running on port 8002 |
 
-`requirements.txt` in this repo is auto-generated and minimal (`pytest`, `typer`, `rich`, `httpx`). It does **not** cover forge-bot dependencies.
+`requirements.txt` in this repo is auto-generated and minimal (`pytest`, `typer`, `rich`, `httpx`). It does **not** cover forge-bot or EVO-HUB dependencies. See `ventures/evo-hub/backend/requirements.txt` for EVO-HUB backend deps.
 
 ## What to Run When Changing Code
 
 1. `cd forge-bot && python -m pytest test_bot.py -q` — always safe, always fast
-2. `python noesis_autopilot.py --cycles 5` — sanity check the core loop
-3. `python noesis_insights.py` — verify DB → report pipeline still works
+2. `cd ventures/evo-hub && python -m pytest tests/test_itdd.py -q` — EVO-HUB compliance
+3. `python noesis_autopilot.py --cycles 5` — sanity check the core loop
+4. `python noesis_insights.py` — verify DB → report pipeline still works
+5. `cd ventures/evo-hub/backend && python -c "from main import app; from fastapi.testclient import TestClient; c=TestClient(app); print('Health:', c.get('/health').status_code)"` — quick API smoke test
 
-## WOLF_AI / IMPULSE Integrations
+## WOLF_AI / IMPULSE / OMEGA Integrations
 
 These are **junctioned/symlinked** from `_VAULT_EXTRACT/`:
 - `C:\Users\Main\WOLF_AI` → `_VAULT_EXTRACT\WOLF_AI`
 - `F:\MANUS_PROJECT\...\IMPULSE_UNPACK\...` — hardcoded path in `impulse_bridge.py`
 
 If those junctions break, the bridges fail. Check with `TestBridges` in `forge-bot/test_bot.py`.
+
+### OMEGA Bridge
+`ventures/evo-hub/backend/omega_routes.py` probes OMEGA gateway on port 8001. If OMEGA is not running, the endpoint returns `{"available": false, "status": "offline"}` but does not crash. Start OMEGA gateway to activate.
+
+## CORS & Security Notes
+
+- EVO-HUB backend uses **CORS whitelist** (`localhost:3000,5173`), not `*`
+- Action endpoints have **rate limiting** (1 request per 10 seconds per IP per endpoint)
+- Docker HEALTHCHECK added to backend Dockerfile
+- `prefers-reduced-motion` media queries in both Dashboard and Council CSS
+
+## Key Files for New Agents
+
+| If you need to... | Look at / modify... |
+|-------------------|----------------------|
+| Add backend endpoint | `ventures/evo-hub/backend/main.py` + new `*_routes.py` |
+| Add frontend page | `ventures/evo-hub/frontend/src/App.tsx` + new `src_pages_*.tsx` |
+| Add sidebar nav | `ventures/evo-hub/frontend/src_components_Sidebar.tsx` |
+| Change design tokens | `ventures/evo-hub/frontend/src_pages_Dashboard.module.css` |
+| Modify cognitive loop | `ventures/evo-hub/agents/evo_agent.py` |
+| Add ITDD checks | `ventures/evo-hub/agents/itdd_agent.py` |
+| Bridge external system | `ventures/evo-hub/backend/*_bridge.py` + `*_routes.py` |
+
+## Runbook
+
+See `RUNBOOK.md` in repo root for full operational guide: startup sequences, troubleshooting, Docker Compose, environment variables, and daily commands.

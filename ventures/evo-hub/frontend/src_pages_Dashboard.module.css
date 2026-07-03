@@ -1,0 +1,536 @@
+.dashboard {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--evo-surface, #0f172a);
+  min-height: 100vh;
+  color: var(--evo-text, #f8fafc);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, var(--evo-primary, #0ea5e9), var(--evo-secondary, #8b5cf6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--evo-muted, #94a3b8);
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+/* Status Bar */
+.statusBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.statusCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(51, 65, 85, 0.5);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 8px;
+  transition: all 150ms ease-out;
+}
+
+.statusCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.statusCard.online {
+  border-color: var(--evo-success, #22c55e);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.statusCard.offline {
+  border-color: var(--evo-danger, #ef4444);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.statusIcon {
+  font-size: 24px;
+}
+
+.statusCard div {
+  display: flex;
+  flex-direction: column;
+}
+
+.statusCard strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.statusCard span {
+  font-size: 12px;
+  color: var(--evo-muted, #94a3b8);
+}
+
+/* Pipeline */
+.pipeline {
+  background: rgba(51, 65, 85, 0.3);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.pipeline h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pipelineSteps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.step {
+  padding: 8px 16px;
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--evo-border, #334155);
+}
+
+.step.active {
+  background: var(--evo-primary, #0ea5e9);
+  color: white;
+  border-color: var(--evo-primary, #0ea5e9);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Ventures */
+.venturesSection {
+  margin-bottom: 32px;
+}
+
+.venturesSection h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.venturesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.ventureCard {
+  background: rgba(51, 65, 85, 0.5);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 150ms ease-out;
+}
+
+.ventureCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--evo-primary, #0ea5e9);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+.ventureHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.ventureHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badgeLive {
+  background: var(--evo-success, #22c55e);
+  color: white;
+}
+
+.badgeDeployed {
+  background: var(--evo-primary, #0ea5e9);
+  color: white;
+}
+
+.ventureMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: var(--evo-muted, #94a3b8);
+}
+
+.ventureActions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.btnPrimary {
+  padding: 8px 16px;
+  background: var(--evo-primary, #0ea5e9);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.btnPrimary:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+}
+
+.btnSecondary {
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--evo-text, #f8fafc);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.btnSecondary:hover {
+  border-color: var(--evo-primary, #0ea5e9);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+/* Action Bar */
+.actionBar {
+  background: rgba(51, 65, 85, 0.3);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.actionBar h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnAction {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--evo-primary, #0ea5e9), var(--evo-secondary, #8b5cf6));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.btnAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+/* ITDD Scoreboard */
+.itddSection {
+  margin-bottom: 32px;
+}
+
+.itddSection h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.itddGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.itddCard {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--evo-border, #334155);
+  background: rgba(51, 65, 85, 0.5);
+  transition: all 150ms ease-out;
+}
+
+.itddGreen {
+  border-color: var(--evo-success, #22c55e);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.itddRed {
+  border-color: var(--evo-danger, #ef4444);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.itddGray {
+  border-color: var(--evo-border, #334155);
+  opacity: 0.7;
+}
+
+.itddHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.itddIcon {
+  font-size: 20px;
+}
+
+.itddName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.itddStats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--evo-muted, #94a3b8);
+}
+
+.itddFail {
+  color: var(--evo-danger, #ef4444);
+  font-weight: 600;
+}
+
+.itddNote {
+  font-style: italic;
+}
+
+/* ITDD mini badge inside venture card */
+.itddMini {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(51, 65, 85, 0.8);
+  border: 1px solid var(--evo-border, #334155);
+}
+
+.itddMiniGreen {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: var(--evo-success, #22c55e);
+  color: var(--evo-success, #22c55e);
+}
+
+.itddMiniRed {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: var(--evo-danger, #ef4444);
+  color: var(--evo-danger, #ef4444);
+}
+
+/* Result Banner */
+.resultBanner {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid var(--evo-success, #22c55e);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.resultBanner pre {
+  margin: 0;
+  flex: 1;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--evo-text, #f8fafc);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 18px;
+  color: var(--evo-muted, #94a3b8);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--evo-surface, #0f172a);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(51, 65, 85, 0.5);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 8px;
+  color: var(--evo-text, #f8fafc);
+  font-size: 14px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: border-color 150ms ease-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--evo-primary, #0ea5e9);
+}
+
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(51, 65, 85, 0.5);
+  border: 1px solid var(--evo-border, #334155);
+  border-radius: 8px;
+  color: var(--evo-text, #f8fafc);
+  font-size: 14px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Disabled states */
+.btnAction:disabled,
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .venturesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pipelineSteps {
+    justify-content: center;
+  }
+
+  .statusBar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .btnAction {
+    width: 100%;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .modalActions button {
+    width: 100%;
+  }
+}
+
+/* Accessibility: respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .statusCard,
+  .ventureCard,
+  .step,
+  .btnPrimary,
+  .btnSecondary,
+  .btnAction,
+  .modal {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .step.active {
+    animation: none !important;
+  }
+}
