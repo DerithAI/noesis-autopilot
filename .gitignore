@@ -43,6 +43,9 @@ yarn.lock
 !forge-bot/
 forge-*/
 
+# Venture-Swarm deploy packages
+!ventures/
+
 # Runtime artifacts
 brain_exports/
 .claude/

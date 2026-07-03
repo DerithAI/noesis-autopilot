@@ -1,0 +1,54 @@
+{
+  "seed": "todo app",
+  "ideas": [
+    "Task priority notifier",
+    "Calendar sync reminder",
+    "Growth streak tracker"
+  ],
+  "architecture": {
+    "product": "Task priority notifier",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": null,
+    "features": [
+      "Send notifications based on task priority",
+      "User authentication and management",
+      "Task creation and update tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Task priority notifier\\main.py",
+    "forge-fastapi api for Task priority notifier\\README.md",
+    "forge-fastapi api for Task priority notifier\\tests_test_main.py",
+    "forge-react dashboard for Task priority notifier\\README.md",
+    "forge-react dashboard for Task priority notifier\\TaskPriorityNotifier.test.tsx",
+    "forge-react dashboard for Task priority notifier\\TaskPriorityNotifier.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 81.0850920677185,
+  "timestamp": "2026-07-03T21:20:34.447904"
+}
