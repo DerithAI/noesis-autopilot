@@ -205,7 +205,8 @@ Examples:
             "calendar": "http://localhost:8000/calendar",
             "email_client": "http://localhost:8000/email",
             "forge": "python C:\\Users\\Main\\.claude\\skills\\skill-forge\\forge.py",
-            "wolf": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\wolf_bridge.py" if Path("C:\\Users\\Main\\WOLF_AI").exists() else "echo WOLF_AI not installed"
+            "wolf": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\wolf_bridge.py" if Path("C:\\Users\\Main\\WOLF_AI").exists() else "echo WOLF_AI not installed",
+            "impulse": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\impulse_bridge.py" if (Path(__file__).parent / "impulse_bridge.py").exists() else "echo IMPULSE not installed"
         },
         "personality_profile": {
             "name": "EVO-Bot",
