@@ -128,11 +128,14 @@ class Bot:
         
         # If hook is a command, run it
         try:
+            import shlex
+            cmd_parts = hook.split() + shlex.split(command)
             result = subprocess.run(
-                hook.split() + [command],
+                cmd_parts,
                 capture_output=True, text=True, timeout=30
             )
-            return f"✅ {tool_name}: {result.stdout[:500]}"
+            output = (result.stdout + result.stderr).strip()[:500]
+            return f"✅ {tool_name}: {output}"
         except Exception as e:
             return f"❌ {tool_name} exec error: {str(e)}"
     
@@ -183,7 +186,7 @@ Examples:
     # tool
     tool_cmd = sub.add_parser("tool", help="Execute a tool hook")
     tool_cmd.add_argument("tool_name", help="Tool name")
-    tool_cmd.add_argument("command", nargs="?", default="", help="Command to send")
+    tool_cmd.add_argument("tool_cmd_str", nargs="?", default="", help="Command to send")
     
     # interactive
     sub.add_parser("interactive", help="Run interactive chat session")
@@ -202,7 +205,7 @@ Examples:
             "calendar": "http://localhost:8000/calendar",
             "email_client": "http://localhost:8000/email",
             "forge": "python C:\\Users\\Main\\.claude\\skills\\skill-forge\\forge.py",
-            "wolf": "python C:\\Users\\Main\\WOLF_AI\\core\\main.py" if Path("C:\\Users\\Main\\WOLF_AI").exists() else "echo WOLF_AI not installed"
+            "wolf": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\wolf_bridge.py" if Path("C:\\Users\\Main\\WOLF_AI").exists() else "echo WOLF_AI not installed"
         },
         "personality_profile": {
             "name": "EVO-Bot",
@@ -227,7 +230,7 @@ Examples:
         print(json.dumps(status, indent=2, ensure_ascii=False))
     
     elif args.command == "tool":
-        result = bot.execute_tool_command(args.tool_name, args.command)
+        result = bot.execute_tool_command(args.tool_name, args.tool_cmd_str)
         print(result)
     
     elif args.command == "interactive":

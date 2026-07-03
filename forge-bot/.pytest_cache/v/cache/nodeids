@@ -1,0 +1,18 @@
+[
+  "test_bot.py::TestBot::test_execute_tool_http",
+  "test_bot.py::TestBot::test_execute_tool_not_found",
+  "test_bot.py::TestBot::test_get_status",
+  "test_bot.py::TestBot::test_init",
+  "test_bot.py::TestBot::test_respond",
+  "test_bot.py::TestBot::test_set_personality",
+  "test_bot.py::TestBotCLI::test_cli_chat",
+  "test_bot.py::TestOllamaClient::test_chat_no_requests",
+  "test_bot.py::TestOllamaClient::test_chat_success",
+  "test_bot.py::TestOllamaClient::test_host_strips_http",
+  "test_bot.py::TestOllamaClient::test_init_custom",
+  "test_bot.py::TestOllamaClient::test_init_default",
+  "test_bot.py::TestOllamaClient::test_list_models",
+  "test_bot.py::TestPersonality::test_custom_personality",
+  "test_bot.py::TestPersonality::test_default_personality",
+  "test_bot.py::TestPersonality::test_to_dict"
+]
