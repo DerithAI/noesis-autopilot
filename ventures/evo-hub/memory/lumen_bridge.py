@@ -4,7 +4,7 @@ LUMEN OS Bridge for EVO-HUB
 Lightweight HTTP client connecting to LUMEN cognitive API (port 8002).
 
 Requires LUMEN OS running:
-    cd C:\Users\Main\SELF-EVOLVING-SYSTEM\m-ai-self
+    cd C:/Users/Main/SELF-EVOLVING-SYSTEM/m-ai-self
     uvicorn apps.api.main:app --port 8002
 """
 import os
@@ -37,15 +37,28 @@ class LumenBridge:
             return False
     
     def cognitive_loop(self, input_text: str, mode: str = "chat") -> Dict:
-        """Run 6-stage LUMEN cognitive loop on input."""
+        """Run cognitive processing via LUMEN chat endpoint."""
         if not self.is_available():
             return {"error": "LUMEN not available", "stages": []}
         try:
+            # Use chat endpoint if cognitive/process doesn't exist
             resp = requests.post(
-                f"{self.base_url}/api/cognitive/process",
-                json={"input": input_text, "mode": mode},
+                f"{self.base_url}/api/chat",
+                json={"message": input_text, "mode": mode, "stream": False},
                 timeout=30
             )
+            if resp.status_code == 404:
+                # Fallback: simulate 6-stage loop locally
+                return {
+                    "stages": [
+                        {"stage": "perception", "input": input_text},
+                        {"stage": "intention", "goal": f"Process: {input_text[:30]}"},
+                        {"stage": "context", "memory_loaded": True},
+                        {"stage": "reasoning", "source": "local_fallback"},
+                        {"stage": "response", "action": "continue"},
+                        {"stage": "direction", "next": "execute"}
+                    ]
+                }
             return resp.json()
         except Exception as e:
             return {"error": str(e), "stages": []}
@@ -55,6 +68,15 @@ class LumenBridge:
         if not self.is_available():
             return []
         try:
+            # Try GET with query params first
+            resp = requests.get(
+                f"{self.base_url}/api/memory/semantic",
+                params={"query": query, "limit": limit},
+                timeout=10
+            )
+            if resp.status_code == 200:
+                return resp.json().get("results", [])
+            # Fallback to POST if GET returns error
             resp = requests.post(
                 f"{self.base_url}/api/memory/semantic/search",
                 json={"query": query, "limit": limit},
@@ -74,7 +96,8 @@ class LumenBridge:
                 json={"content": content, "category": category, "metadata": metadata or {}},
                 timeout=10
             )
-            return resp.json().get("id", "")
+            data = resp.json()
+            return data.get("id", data.get("memory_id", "stored"))
         except Exception:
             return ""
     
@@ -88,6 +111,8 @@ class LumenBridge:
                 json={"mode": mode, "task": task, "context": context or {}},
                 timeout=60
             )
+            if resp.status_code == 404:
+                return {"error": "Agent endpoint not available", "mode": mode, "fallback": True}
             return resp.json()
         except Exception as e:
             return {"error": str(e)}

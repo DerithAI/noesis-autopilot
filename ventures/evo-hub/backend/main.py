@@ -1,16 +1,21 @@
-```python
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
-from typing import List
-import logging
+from typing import Dict, List, Optional
+import sys
+from pathlib import Path
 
-app = FastAPI(title="Personalized Evo Learning Path API", version="1.0")
+# Add parent to path for memory bridge
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+try:
+    from memory.lumen_bridge import LumenBridge
+    LUMEN_AVAILABLE = True
+except ImportError:
+    LUMEN_AVAILABLE = False
 
-# Middleware setup
+app = FastAPI(title="EVO-HUB API", version="1.0.0")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,34 +24,51 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class User(BaseModel):
-    username: str
-    password: str
+class HealthResponse(BaseModel):
+    status: str
+    lumen_connected: bool
+    version: str
 
-class TokenData(BaseModel):
-    username: str = None
+class CognitiveRequest(BaseModel):
+    input: str
+    mode: str = "chat"
 
-@app.post("/token", response_model=TokenData)
-async def login(user: User):
-    # Placeholder for actual authentication logic
-    if user.username != "admin" or user.password != "password":
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-    
-    token_data = TokenData(username=user.username)
-    return token_data
+class CognitiveResponse(BaseModel):
+    stages: List[Dict]
+    lumen_available: bool
 
-@app.get("/users/me", response_model=TokenData)
-async def read_users_me(token: str = Depends(oauth2_scheme)):
-    # Placeholder for actual authorization logic
-    if not token:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-    
-    return {"username": "admin"}
+@app.get("/health", response_model=HealthResponse)
+async def health():
+    lumen = LumenBridge() if LUMEN_AVAILABLE else None
+    return {
+        "status": "healthy",
+        "lumen_connected": lumen.is_available() if lumen else False,
+        "version": "1.0.0"
+    }
 
-# Example route
-@app.get("/learnings/{learning_id}", response_model=str)
-async def get_learning(learning_id: int):
-    # Placeholder for actual learning retrieval logic
-    return f"Learning path {learning_id}"
+@app.post("/cognitive/loop", response_model=CognitiveResponse)
+async def cognitive_loop(req: CognitiveRequest):
+    if not LUMEN_AVAILABLE:
+        return {"stages": [], "lumen_available": False}
+    lumen = LumenBridge()
+    result = lumen.cognitive_loop(req.input, req.mode)
+    return {"stages": result.get("stages", []), "lumen_available": True}
 
-```
+@app.get("/memory/search")
+async def memory_search(query: str, limit: int = 5):
+    if not LUMEN_AVAILABLE:
+        return {"results": [], "lumen_available": False}
+    lumen = LumenBridge()
+    results = lumen.vector_search(query, limit=limit)
+    return {"results": results, "lumen_available": True}
+
+@app.get("/agents/status")
+async def agents_status():
+    if not LUMEN_AVAILABLE:
+        return {"status": "lumen_not_available"}
+    lumen = LumenBridge()
+    return lumen.get_status()
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
