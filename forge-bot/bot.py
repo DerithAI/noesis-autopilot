@@ -191,6 +191,14 @@ Examples:
     # interactive
     sub.add_parser("interactive", help="Run interactive chat session")
     
+    # memory
+    mem_cmd = sub.add_parser("memory", help="Memory operations")
+    mem_sub = mem_cmd.add_subparsers(dest="mem_action")
+    mem_sub.add_parser("store", help="Store a memory")
+    mem_sub.add_parser("search", help="Search memories")
+    mem_sub.add_parser("list", help="List memories")
+    mem_sub.add_parser("stats", help="Memory stats")
+    
     args = parser.parse_args()
     
     if not args.command:
@@ -206,7 +214,8 @@ Examples:
             "email_client": "http://localhost:8000/email",
             "forge": "python C:\\Users\\Main\\.claude\\skills\\skill-forge\\forge.py",
             "wolf": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\wolf_bridge.py" if Path("C:\\Users\\Main\\WOLF_AI").exists() else "echo WOLF_AI not installed",
-            "impulse": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\impulse_bridge.py" if (Path(__file__).parent / "impulse_bridge.py").exists() else "echo IMPULSE not installed"
+            "impulse": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\impulse_bridge.py" if (Path(__file__).parent / "impulse_bridge.py").exists() else "echo IMPULSE not installed",
+            "memory": "python C:\\Users\\Main\\OLLAMA_HERMES\\forge-bot\\mcp_memory_client.py" if (Path(__file__).parent / "mcp_memory_client.py").exists() else "echo MCP memory not installed"
         },
         "personality_profile": {
             "name": "EVO-Bot",
@@ -234,25 +243,31 @@ Examples:
         result = bot.execute_tool_command(args.tool_name, args.tool_cmd_str)
         print(result)
     
-    elif args.command == "interactive":
-        print("🤖 EVO-Bot Interactive Mode (type 'exit' to quit)")
-        print(f"   Model: {bot.ollama.model} | Host: {bot.ollama.base_url}")
-        print("-" * 50)
-        while True:
-            try:
-                user_input = input("🧠 You: ").strip()
-                if user_input.lower() in ("exit", "quit", "q"):
-                    print("👋 Goodbye!")
-                    break
-                if not user_input:
-                    continue
-                reply = bot.respond(user_input)
-                print(f"🤖 {bot.personality.name}: {reply}")
-            except KeyboardInterrupt:
-                print("\n👋 Goodbye!")
-                break
-            except EOFError:
-                break
+    elif args.command == "memory":
+        try:
+            from mcp_memory_client import MemoryClient
+            mem = MemoryClient()
+            if args.mem_action == "store":
+                content = input("Content: ")
+                category = input("Category [general]: ") or "general"
+                mid = mem.store(content, category)
+                print(f"✅ Stored: {mid}")
+            elif args.mem_action == "search":
+                query = input("Query: ")
+                results = mem.search(query)
+                for r in results:
+                    print(f"- {r['content'][:100]}")
+            elif args.mem_action == "list":
+                results = mem.list_recent()
+                for r in results:
+                    print(f"- [{r['category']}] {r['content'][:80]}")
+            elif args.mem_action == "stats":
+                import json
+                print(json.dumps(mem.stats(), indent=2))
+            else:
+                print("Actions: store, search, list, stats")
+        except ImportError:
+            print("❌ MCP memory not available")
 
 
 if __name__ == "__main__":

@@ -89,16 +89,45 @@ Copy `.env.example` to `.env` and configure:
 - `TELEGRAM_BOT_TOKEN` - From @BotFather
 - `TELEGRAM_ALLOWED_USERS` - Comma-separated user IDs
 
+## MCP Memory
+
+Persistent memory with semantic search:
+
+```bash
+# Store memory
+python bot.py memory store
+
+# Search memories
+python bot.py memory search
+
+# List recent
+python bot.py memory list
+
+# Stats
+python bot.py memory stats
+```
+
+Or direct API:
+```python
+from mcp_memory_client import MemoryClient
+mem = MemoryClient()
+mem.store("Important insight", category="research", tags=["ai"])
+results = mem.search("insight")
+```
+
 ## Architecture
 
 ```
 EVO-Bot
 ├── bot.py              # Core bot with OllamaClient
-├── wolf_bridge.py      # WOLF_AI pack connector
-├── impulse_bridge.py   # LUMENA CORE API connector
-├── telegram_bot.py     # Telegram interface
-├── setup_telegram.py   # Setup & launcher
-└── test_bot.py         # Unit tests (19 tests)
+├── wolf_bridge.py      # 🐺 WOLF_AI pack connector
+├── impulse_bridge.py  # 🌌 LUMENA CORE API connector
+├── mcp_memory_server.py # 🧠 MCP memory server
+├── mcp_memory_client.py # 🧠 MCP memory client
+├── mcp_skill.py       # 🧠 MCP skill interface
+├── telegram_bot.py    # 📱 Telegram interface
+├── setup_telegram.py  # 📱 Setup & launcher
+└── test_bot.py        # Unit tests (19 tests)
 ```
 
 ## Tests

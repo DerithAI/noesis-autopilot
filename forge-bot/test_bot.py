@@ -169,5 +169,49 @@ class TestBridges(unittest.TestCase):
             self.skipTest("telegram_bot not available")
 
 
+class TestMCPMemory(unittest.TestCase):
+    def test_memory_client_import(self):
+        try:
+            import mcp_memory_client
+            self.assertTrue(hasattr(mcp_memory_client, 'MemoryClient'))
+            self.assertTrue(hasattr(mcp_memory_client, 'DirectMemoryClient'))
+        except ImportError:
+            self.skipTest("mcp_memory_client not available")
+    
+    def test_memory_server_import(self):
+        try:
+            import mcp_memory_server
+            self.assertTrue(hasattr(mcp_memory_server, 'MemoryDatabase'))
+            self.assertTrue(hasattr(mcp_memory_server, 'MemoryMCPServer'))
+        except ImportError:
+            self.skipTest("mcp_memory_server not available")
+    
+    def test_memory_skill_import(self):
+        try:
+            import mcp_skill
+            self.assertTrue(hasattr(mcp_skill, 'memory_store'))
+            self.assertTrue(hasattr(mcp_skill, 'memory_search'))
+            self.assertEqual(len(mcp_skill.TOOLS), 4)
+        except ImportError:
+            self.skipTest("mcp_skill not available")
+    
+    def test_memory_operations(self):
+        try:
+            from mcp_memory_client import MemoryClient
+            mem = MemoryClient()
+            # Store
+            mid = mem.store("Test memory", category="test", tags=["unit"])
+            self.assertIsNotNone(mid)
+            self.assertGreater(len(mid), 0)
+            # Search
+            results = mem.search("test")
+            self.assertIsInstance(results, list)
+            # Stats
+            stats = mem.stats()
+            self.assertIn("total_memories", stats)
+        except ImportError:
+            self.skipTest("mcp_memory_client not available")
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

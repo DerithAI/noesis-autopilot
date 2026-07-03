@@ -1,0 +1,24 @@
+{
+  "name": "mcp-memory",
+  "description": "MCP memory server and client for EVO-FORGE ecosystem. Provides persistent memory storage with semantic search, categories, and tags. Integrates with SQLite and optional sentence-transformers embeddings.",
+  "version": "1.0.0",
+  "author": "EVO-FORGE",
+  "tools": [
+    "memory_store",
+    "memory_retrieve",
+    "memory_search",
+    "memory_list",
+    "memory_delete",
+    "memory_stats"
+  ],
+  "entrypoints": {
+    "server": "python mcp_memory_server.py --stdio",
+    "client": "python mcp_memory_client.py",
+    "demo": "python mcp_memory_client.py"
+  },
+  "dependencies": ["mcp", "sentence-transformers", "numpy"],
+  "integration": {
+    "bot": "forge-bot/bot.py (memory command)",
+    "skill": "forge-bot/mcp_skill.py"
+  }
+}
