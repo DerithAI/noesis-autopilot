@@ -240,12 +240,36 @@ class AutopilotKernel:
         # Seed lattice with root node
         self.lattice.add_node("project_root", "domain", "Project root directory")
 
+        # Previous observation snapshot — baseline for the stability component
+        self._prev_obs: Optional[dict] = None
+
     def _coherence(self, observation: dict) -> float:
         energy_ratio = self.energy.status()["ratio"]
         lattice_density = min(self.lattice.edge_count / max(self.lattice.node_count, 1), 1.0)
         memory_filled = min(self.memory.count() / 100, 1.0)
-        file_growth = min(observation["py_files"] / 50, 1.0) if observation["py_files"] else 0.0
-        return round((energy_ratio * 0.3 + lattice_density * 0.25 + memory_filled * 0.25 + file_growth * 0.2), 3)
+        stability = self._stability(observation)
+        return round((energy_ratio * 0.3 + lattice_density * 0.25 + memory_filled * 0.25 + stability * 0.2), 3)
+
+    def _stability(self, observation: dict) -> float:
+        """Reward a settled, consistent project state — not raw growth.
+
+        1.0 = nothing changed since the last cycle; decays toward 0.0 with churn.
+        Growth is not coherence: a project that doubles its file count in one
+        cycle is *less* coherent until the change has been observed and absorbed.
+        """
+        snapshot = {
+            "py_files": observation["py_files"],
+            "directories": observation["directories"],
+            "total_size_kb": observation["total_size_kb"],
+        }
+        prev, self._prev_obs = self._prev_obs, snapshot
+        if prev is None:
+            return 0.5  # first cycle: neutral, nothing to compare against
+        churn = 0.0
+        for key in ("py_files", "directories", "total_size_kb"):
+            base = max(float(prev[key]), 1.0)
+            churn += abs(float(snapshot[key]) - float(prev[key])) / base
+        return round(max(0.0, 1.0 - min(churn, 1.0)), 3)
 
     def _state_hash(self, obj: dict) -> str:
         return hashlib.md5(json.dumps(obj, sort_keys=True, default=str).encode()).hexdigest()[:16]

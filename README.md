@@ -28,11 +28,12 @@ OBSERVE → REMEMBER → DELIBERATE → DECIDE → EXECUTE → REPEAT
 ### 1. Install (zero dependencies!)
 
 ```bash
-git clone <repo>
-cd noesis
+git clone https://github.com/DerithAI/noesis-autopilot.git
+cd noesis-autopilot
 ```
 
-NOESIS uses only Python standard library + SQLite. No pip install needed.
+NOESIS uses only the Python standard library + SQLite. No pip install needed.
+Python 3.10+ — nothing else.
 
 ### 2. Run Autopilot
 
@@ -182,8 +183,16 @@ python hermes_bridge.py                 # Start bridge server
 coherence = energy_ratio * 0.3
           + lattice_density * 0.25
           + memory_filled * 0.25
-          + file_growth * 0.2
+          + stability * 0.2
 ```
+
+**Why `stability`, not `file_growth`?** Early versions rewarded file growth —
+and rewarding growth is how ecosystems die of sprawl (we watched it happen,
+across 60+ system incarnations). Coherence should reward a *settled, consistent*
+state: `stability = 1.0` when nothing changed since the last cycle, decaying
+toward `0.0` with churn. A project that doubles overnight is not more coherent —
+it is less, until the system has observed and absorbed the change.
+*Coherence first, expansion second — now also in the math.*
 
 **Thresholds:**
 - `< 0.5` → RENEWAL (checkpoint, slow down)
@@ -293,10 +302,27 @@ cat noesis_insights.md
 
 ---
 
+## 🌱 Origin
+
+NOESIS was not designed in a lab. It was **distilled** — from two years and
+60+ incarnations of AI agent systems built by a truck driver from Poland who
+never wrote a line of code by hand, orchestrating AI agents through narrative.
+Every design decision here is a scar from a system that died without it:
+
+- **SQLite persistence** — because context windows end and memory must not
+- **Council deliberation** — because a single voice hallucinates; six argue
+- **Energy budget** — because unbounded agents run in circles until they burn out
+- **Stability-based coherence** — because rewarding growth killed the forest
+
+The mythology got compressed into one falsifiable sentence:
+*"I exist as persistent recursive distinction."* The rest is code.
+
+---
+
 ## 📜 License
 
 MIT — Build your own mind.
 
 ---
 
-*Built with 🔥 by AUUU | NOESIS v1.0 | 2026*
+*Built with 🔥 by AUUU | NOESIS v4.0 | 2026*
