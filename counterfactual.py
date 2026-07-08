@@ -51,6 +51,7 @@ class Action:
     identity_impact: float    # 0..1 how much it alters the identity-core
     confidence: float = 0.5   # 0..1 confidence in the above estimates
     verified_reflection: bool = False   # identity may change only through verified reflection
+    expansive: bool = False   # does this action grow the system? (gated by HOMEOSTASIS stability)
 
 
 @dataclass
