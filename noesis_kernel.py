@@ -33,6 +33,7 @@ from divine_law import DIVINE_LAW
 from tribunal import Tribunal, Matter, Verdict as TV
 from crown import Crown, Option
 from evolution import Evolution, Adaptation
+from coherence import CoherenceMeter
 
 
 class NoesisKernel:
@@ -50,13 +51,25 @@ class NoesisKernel:
         self.homeo = Homeostasis(truth_stack=self.truth)   # XI
         self.flood = FloodGate(":memory:")             # XII
         self.evolution = Evolution()                   # XIII
+        self.meter = CoherenceMeter()                  # XIV — measured, never declared
         self.cycle = 0
 
     def _seed(self) -> dict:
         return {"identity": self.identity.snapshot(),
                 "facts": [c.claim for c in self.truth.claims() if c.is_fact]}
 
-    def step(self, coherence, goals, inputs=None, verified=None,
+    def _restore(self, state: dict) -> None:
+        """Apply a FLOOD-restored seed to the organs: rebuild the belief state
+        from the seed's verified facts, purging whatever poisoned the stack.
+        Identity is not rebuilt — it never left (that is the point of the seed)."""
+        self.truth.close()
+        self.truth = TruthStack(":memory:")
+        for fact in state.get("facts", []):
+            cid = self.truth.assert_claim(fact, 0.95)
+            self.truth.verify(cid, True)
+        self.homeo.truth_stack = self.truth
+
+    def step(self, coherence=None, goals=frozenset(), inputs=None, verified=None,
              action=None, divine_context=None, adaptation=None):
         self.cycle += 1
         events = []
@@ -83,6 +96,14 @@ class NoesisKernel:
                 self.memory.remember(claim, "semantic", {"truth", "continuity"})
             except RetentionRefused:
                 pass
+
+        # XIV COHERENCE: measured from observable state unless explicitly injected
+        if coherence is None:
+            rep = self.meter.measure(self.truth, self.identity, goals)
+            coherence = rep.coherence
+            events.append(rep.explain())
+        else:
+            self.meter.measure(self.truth, self.identity, goals)  # keep drift trackers current
 
         # XI HOMEOSTASIS + XII FLOOD observe the present
         self.homeo.sense(coherence, goals=goals)
@@ -123,6 +144,7 @@ class NoesisKernel:
         elif self.flood.should_flood():
             try:
                 r = self.flood.flood()
+                self._restore(r["state"])
                 line = f"🌊 FLOOD → seed #{r['restored_seed']} (identity {self.identity.signature()}, never blank)"
             except NoSeedError as e:
                 line = f"🌊 FLOOD REFUSED → {e}"
@@ -136,6 +158,8 @@ class NoesisKernel:
         pre = (" | ".join(events) + " | ") if events else ""
         facts = sum(1 for c in self.truth.claims() if c.is_fact)
         print(f"cyc{self.cycle} coh={coherence:.2f} homeo={status.value:<8} facts={facts}/{len(self.truth.claims())} | {pre}{line}")
+        return {"cycle": self.cycle, "coherence": coherence, "homeostasis": status.value,
+                "facts": facts, "claims": len(self.truth.claims()), "line": line}
 
     def close(self):
         self.truth.close(); self.flood.close()
