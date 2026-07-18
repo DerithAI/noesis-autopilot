@@ -517,6 +517,105 @@
   }
 }
 
+.modalActions button {
+    width: 100%;
+  }
+}
+
+/* Skeleton Loading Screens */
+.skeletonHeader {
+  height: 32px;
+  width: 60%;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.skeletonSubtitle {
+  height: 16px;
+  width: 40%;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeletonCard {
+  padding: 16px;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+  border: 1px solid var(--evo-border, #334155);
+}
+
+.skeletonPipelineSteps {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.skeletonPipelineSteps::before,
+.skeletonPipelineSteps::after {
+  content: '';
+  flex: 1;
+  height: 32px;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+.skeletonITDDCard {
+  padding: 16px;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+  border: 1px solid var(--evo-border, #334155);
+}
+
+.skeletonVentureCard {
+  padding: 16px;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+  border: 1px solid var(--evo-border, #334155);
+}
+
+.skeletonActionButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.skeletonActionButtons::before,
+.skeletonActionButtons::after,
+.skeletonActionButtons::after {
+  content: '';
+  flex: 1;
+  min-width: 120px;
+  height: 44px;
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
 /* Accessibility: respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .statusCard,

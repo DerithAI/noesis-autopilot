@@ -1,8 +1,9 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, List, Optional
 import sys
+import time
 from pathlib import Path
 
 # Add parent to path for memory bridge
@@ -14,7 +15,27 @@ try:
 except ImportError:
     LUMEN_AVAILABLE = False
 
+# Import logging
+from logging_config import get_logger
+
+logger = get_logger("main")
+
 app = FastAPI(title="EVO-HUB API", version="1.0.0")
+
+# Logging middleware
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+    response = await call_next(request)
+    duration_ms = (time.time() - start_time) * 1000
+    logger.api_request(
+        method=request.method,
+        path=request.url.path,
+        status_code=response.status_code,
+        duration_ms=duration_ms,
+        client_host=request.client.host if request.client else "unknown"
+    )
+    return response
 
 import os
 

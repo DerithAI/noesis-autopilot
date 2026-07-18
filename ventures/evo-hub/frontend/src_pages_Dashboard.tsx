@@ -201,7 +201,49 @@ const Dashboard: React.FC = () => {
   if (loading) {
     return (
       <div className={styles.dashboard}>
-        <div className={styles.loading}>🔄 Loading EVO-DASH...</div>
+        <header className={styles.header}>
+          <div className={styles.skeletonHeader} />
+          <div className={styles.skeletonSubtitle} />
+        </header>
+
+        {/* Skeleton Status Bar */}
+        <section className={styles.statusBar}>
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className={styles.skeletonCard} />
+          ))}
+        </section>
+
+        {/* Skeleton Pipeline */}
+        <section className={styles.pipeline}>
+          <div className={styles.skeletonHeader} />
+          <div className={styles.skeletonPipelineSteps} />
+        </section>
+
+        {/* Skeleton ITDD Scoreboard */}
+        <section className={styles.itddSection}>
+          <div className={styles.skeletonHeader} />
+          <div className={styles.itddGrid}>
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <div key={i} className={styles.skeletonITDDCard} />
+            ))}
+          </div>
+        </section>
+
+        {/* Skeleton Ventures Grid */}
+        <section className={styles.venturesSection}>
+          <div className={styles.skeletonHeader} />
+          <div className={styles.venturesGrid}>
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <div key={i} className={styles.skeletonVentureCard} />
+            ))}
+          </div>
+        </section>
+
+        {/* Skeleton Action Bar */}
+        <section className={styles.actionBar}>
+          <div className={styles.skeletonHeader} />
+          <div className={styles.skeletonActionButtons} />
+        </section>
       </div>
     );
   }
