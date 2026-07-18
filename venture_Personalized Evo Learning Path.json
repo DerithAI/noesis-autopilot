@@ -1,0 +1,62 @@
+{
+  "seed": "evo hub",
+  "ideas": [
+    "Personalized evo learning path",
+    "Interactive evo challenge platform",
+    "Evo community forum and news"
+  ],
+  "architecture": {
+    "product": "Personalized Evo Learning Path",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "User Profiling",
+      "Content Recommendation",
+      "Progress Tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Personalized Evo Learning Path\\main.py",
+    "forge-fastapi api for Personalized Evo Learning Path\\README.md",
+    "forge-fastapi api for Personalized Evo Learning Path\\tests_test_main.py",
+    "forge-react dashboard for Personalized Evo Learning Path\\README.md",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_App.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_components_Card.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_components_Chart.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_components_Header.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_components_index.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_components_Table.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_index.test.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_pages_Charts.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_pages_Dashboard.tsx",
+    "forge-react dashboard for Personalized Evo Learning Path\\src_pages_Tables.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 11,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 111.59138941764832,
+  "timestamp": "2026-07-03T23:14:57.025344"
+}
