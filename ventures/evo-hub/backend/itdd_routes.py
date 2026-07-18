@@ -11,22 +11,24 @@ from typing import Dict, List
 router = APIRouter(prefix="/api/itdd", tags=["itdd"])
 
 REPO_ROOT = Path(__file__).parent.parent.parent.parent
+VENTURES_DIR = REPO_ROOT / "ventures"
 
-VENTURE_TEST_MAP = {
-    "Task priority notifier": REPO_ROOT / "ventures" / "task-priority-notifier",
-    "Quiz generator bot": REPO_ROOT / "ventures" / "quiz-generator-bot",
-    "LeadGenTrackerAPI": REPO_ROOT / "ventures" / "leadgentrackerapi",
-    "Auto-fill private keys scanner": REPO_ROOT / "ventures" / "auto-fill-private-keys-scanner",
-    "personalized_workout": REPO_ROOT / "ventures" / "personalized_workout",
-    "Personalized Evo Learning Path": REPO_ROOT / "ventures" / "personalized-evo-learning-path",
-    "evo-hub": REPO_ROOT / "ventures" / "evo-hub",
-}
+
+def discover_ventures() -> Dict[str, Path]:
+    """Scan ventures/ for actual venture directories.
+
+    The previous hardcoded map used slugified names (e.g. task-priority-notifier)
+    that never existed on disk, so 6/7 ventures were scored against wrong paths.
+    """
+    if not VENTURES_DIR.exists():
+        return {}
+    return {d.name: d for d in sorted(VENTURES_DIR.iterdir()) if d.is_dir()}
 
 @router.get("/scoreboard")
 async def itdd_scoreboard() -> List[Dict]:
     """ITDD compliance per venture — red/green badges."""
     results = []
-    for name, path in VENTURE_TEST_MAP.items():
+    for name, path in discover_ventures().items():
         entry = {"venture": name, "path": str(path), "compliant": False, "tests": 0, "passed": 0, "failed": 0}
         if not path.exists():
             entry["note"] = "no_tests_directory"
