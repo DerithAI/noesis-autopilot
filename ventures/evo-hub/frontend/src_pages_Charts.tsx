@@ -1,4 +1,3 @@
-```tsx
 import React from 'react';
 import Chart from '../components/Chart';
 
@@ -12,4 +11,3 @@ const Charts: React.FC = () => {
 };
 
 export default Charts;
-```

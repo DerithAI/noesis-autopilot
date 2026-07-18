@@ -1,4 +1,3 @@
-```tsx
 import React from 'react';
 import Table from '../components/Table';
 
@@ -12,4 +11,3 @@ const Tables: React.FC = () => {
 };
 
 export default Tables;
-```
