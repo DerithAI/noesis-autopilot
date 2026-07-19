@@ -65,32 +65,40 @@ python noesis_autopilot.py --cycles 5  # sanity check
 
 ---
 
-## Phase 2: EVO-HUB v1.1 — Production Hardening 🔄 IN PROGRESS
+## Phase 2: EVO-HUB v1.1 — Production Hardening 🟢 8/10 DONE (2026-07-18)
 
-**Target:** 2026-07-11
+**Target:** 2026-07-11 → delivered 2026-07-18 (one week late)
 **Goal:** Fix remaining Self-Critique issues, add missing tests, secure for production
 
 ### Tasks
-| # | Task | Priority | Self-Critique Finding |
-|---|------|----------|----------------------|
-| 2.1 | Fix remaining `any` in legacy files | HIGH | `src_pages_Charts.tsx`, `src_pages_Tables.tsx` |
-| 2.2 | Add skeleton screens for loading states | MEDIUM | Missing placeholder UI during data fetch |
-| 2.3 | Add structured logging (winston/pino) | MEDIUM | Console.log in production |
-| 2.4 | Add input validation schemas (zod/pydantic) | MEDIUM | No runtime validation on API inputs |
-| 2.5 | Add retry logic for fetch calls | MEDIUM | Error handling only logs to console |
-| 2.6 | Add tests for 6 missing ventures | HIGH | 6/7 ventures have 0 tests |
-| 2.7 | Add E2E tests for Dashboard actions | HIGH | No E2E coverage for Generate/Test/Howl |
-| 2.8 | Fix CORS for production domain | CRITICAL | Currently only localhost whitelist |
-| 2.9 | Add HTTPS redirect middleware | CRITICAL | Plain HTTP in production |
-| 2.10 | Add request logging middleware | MEDIUM | No audit trail for API calls |
+| # | Task | Priority | Status |
+|---|------|----------|--------|
+| 2.1 | Fix remaining `any` in legacy files | HIGH | ✅ was already done in `c540bab`; markdown-fence defect in Charts/Tables fixed (`a8328e2`) |
+| 2.2 | Add skeleton screens for loading states | MEDIUM | ✅ `90837b1` |
+| 2.3 | Add structured logging (loguru) | MEDIUM | ✅ `90837b1` — console + daily JSON file + error file |
+| 2.4 | Add input validation schemas (pydantic) | MEDIUM | ✅ `80d6551` — Field/Query constraints, invalid input → 422 |
+| 2.5 | Add retry logic for fetch calls | MEDIUM | ⬜ remaining |
+| 2.6 | Add tests for 6 missing ventures | HIGH | ✅ `0f470a9` — scaffold tests (ventures have no app code); ITDD 7/7 compliant |
+| 2.7 | Add E2E tests for Dashboard actions | HIGH | ⬜ remaining |
+| 2.8 | Fix CORS for production domain | CRITICAL | ✅ `80d6551` — `EVO_HUB_CORS_ORIGINS` env var, wildcard rejected |
+| 2.9 | Add HTTPS redirect middleware | CRITICAL | ✅ `80d6551` — behind `EVO_HUB_FORCE_HTTPS`, default off |
+| 2.10 | Add request logging middleware | MEDIUM | ✅ `90837b1` |
+
+Bonus fixes outside the task list: ITDD scoreboard scanned nonexistent slug paths (`fbf8ff9`);
+omega dispatch `target_node` was URL-interpolated unvalidated (`80d6551`); MISSION.md created (`0773fee`).
 
 ### Verification Criteria
-- [ ] 0 TypeScript `any` across all `.tsx` files
-- [ ] 14/14 ventures have at least 1 test
+- [x] 0 TypeScript `any` across all `.tsx` files
+- [x] 7/7 ventures have at least 1 test (scaffold-level; ventures contain no app code)
 - [ ] E2E test: generate venture → verify files created → run tests → deploy
-- [ ] CORS allows production domain + localhost
-- [ ] All API inputs validated (Pydantic models cover 100% of endpoints)
-- [ ] Structured logs written to file (not just console)
+- [x] CORS allows production domain + localhost
+- [x] All API inputs validated (Pydantic models cover POST bodies + query params)
+- [x] Structured logs written to file (not just console)
+
+### Known issues carried forward
+- Port 8000 occupied by LUMEN MEGA-PLATFORM — EVO-HUB backend can't bind its default port
+- Frontend is a flat scaffold (no `package.json`/`tsconfig.json`, `src_*` flat filenames) — cannot build; restructure in v1.2
+- Venture `docker-compose.yml` service names contain spaces — `docker compose up` will reject them
 
 ---
 
@@ -258,6 +266,6 @@ python noesis_autopilot.py --cycles 5  # sanity check
 
 ---
 
-*Last updated: 2026-07-04*
-*Version: EVO-DASH v1.0*
-*Next review: 2026-07-11*
+*Last updated: 2026-07-19*
+*Version: EVO-DASH v1.1 (8/10 tasks)*
+*Next review: start of v1.2 — first candidates: frontend build structure (package.json + real src/ tree), 2.5 retry logic, 2.7 E2E*

@@ -15,9 +15,9 @@ Three systems in one repo:
 - Kernel: **12/12 organ self-tests pass** (`driver.py`, verified today).
 - forge-bot: **23/23 tests pass** (verified today, ~1s).
 - EVO-HUB ITDD: **7 passed, 1 skipped** (verified today).
-- **EVO-HUB v1.1 (Production Hardening) in progress** — ~1 week behind ROADMAP (target was 2026-07-11).
-  - Done: 2.2 skeleton screens, 2.3 structured logging (loguru), 2.10 request logging (commit `90837b1`), plus ITDD scoreboard path fix (`fbf8ff9`).
-  - Remaining: 2.1 TS `any` cleanup, 2.4 input validation, 2.5 retry logic, 2.6/2.7 venture + E2E tests, 2.8 CORS prod, 2.9 HTTPS.
+- **EVO-HUB v1.1 (Production Hardening): 8/10 done, delivered 2026-07-18** (see ROADMAP Phase 2 for per-task commits).
+  - Remaining: 2.5 fetch retry logic, 2.7 E2E test (generate→test→deploy).
+  - ITDD scoreboard: 7/7 ventures with tests, compliance 1.0 (scaffold-level tests — ventures have no app code).
 
 ## Architektura (skrót)
 
@@ -63,7 +63,10 @@ cd ventures/evo-hub && F:\Python311\python.exe -m pytest tests/test_itdd.py -q  
 
 ## Aktualny focus
 
-Finish v1.1: input validation (2.4), CORS/HTTPS (2.8/2.9), TS `any` cleanup (2.1), venture scaffold tests (2.6/2.7) — **being worked in a parallel session 2026-07-18; coordinate before touching those files.** Then v1.2 frontend polish (ROADMAP Phase 3).
+v1.2 (ROADMAP Phase 3) — but first the structural blocker: the frontend is a flat
+scaffold (no `package.json`/`tsconfig.json`, flat `src_*` filenames) and cannot build.
+Restructure it before any polish tasks. Leftovers from v1.1: 2.5 fetch retry, 2.7 E2E.
+Open decision: port 8000 conflict with LUMEN (stop LUMEN vs move EVO-HUB).
 
 ## Znane problemy
 
