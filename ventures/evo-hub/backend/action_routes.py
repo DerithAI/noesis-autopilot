@@ -9,7 +9,7 @@ import os
 import time
 from pathlib import Path
 from fastapi import APIRouter, HTTPException, Request
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
 
 router = APIRouter(prefix="/api", tags=["actions"])
@@ -32,17 +32,17 @@ def rate_limit(request: Request):
 REPO_ROOT = Path(__file__).parent.parent.parent.parent
 
 class GenerateRequest(BaseModel):
-    seed: str
-    model: str = "qwen2.5:7b"
-    stack: str = "auto"
+    seed: str = Field(min_length=1, max_length=200)
+    model: str = Field(default="qwen2.5:7b", min_length=1, max_length=100)
+    stack: str = Field(default="auto", min_length=1, max_length=50)
 
 class CognitiveRequest(BaseModel):
-    input: str
-    mode: str = "chat"
+    input: str = Field(min_length=1, max_length=10_000)
+    mode: str = Field(default="chat", min_length=1, max_length=50)
 
 class HowlRequest(BaseModel):
-    message: str
-    frequency: str = "medium"
+    message: str = Field(min_length=1, max_length=2_000)
+    frequency: str = Field(default="medium", min_length=1, max_length=50)
 
 @router.post("/action/generate")
 async def action_generate(req: GenerateRequest, request: Request) -> Dict:

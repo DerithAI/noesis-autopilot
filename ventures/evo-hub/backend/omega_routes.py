@@ -6,7 +6,7 @@ OMEGA runs distributed multi-AI coordination. This module probes its gateway.
 """
 from fastapi import APIRouter
 from typing import Dict, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 router = APIRouter(prefix="/api/omega", tags=["omega"])
 
@@ -47,7 +47,8 @@ class OmegaBridge:
             return {"success": False, "error": str(e)}
 
 class DispatchPayload(BaseModel):
-    target_node: str
+    # target_node is interpolated into the gateway URL path — restrict to safe chars
+    target_node: str = Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9._-]+$")
     task_data: dict
 
 @router.get("/health")

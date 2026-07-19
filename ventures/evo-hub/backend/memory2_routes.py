@@ -22,7 +22,10 @@ async def memory_status() -> Dict:
     return {"available": True, **mem.status()}
 
 @router.get("/search")
-async def memory_search(query: str = Query(...), limit: int = 5) -> Dict:
+async def memory_search(
+    query: str = Query(..., min_length=1, max_length=500),
+    limit: int = Query(5, ge=1, le=100),
+) -> Dict:
     """Semantic search across M-AI-SELF vector memory + local SQLite."""
     if not MEM_AVAILABLE:
         return {"error": "not_available"}
@@ -36,7 +39,7 @@ async def memory_search(query: str = Query(...), limit: int = 5) -> Dict:
     }
 
 @router.get("/episodes")
-async def memory_episodes(limit: int = 10) -> Dict:
+async def memory_episodes(limit: int = Query(10, ge=1, le=100)) -> Dict:
     """Get episodic memories from M-AI-SELF."""
     if not MEM_AVAILABLE:
         return {"error": "not_available"}
@@ -45,7 +48,7 @@ async def memory_episodes(limit: int = 10) -> Dict:
     return {"count": len(episodes), "episodes": episodes}
 
 @router.get("/checkpoints")
-async def memory_checkpoints(limit: int = 5) -> Dict:
+async def memory_checkpoints(limit: int = Query(5, ge=1, le=100)) -> Dict:
     """Get system checkpoints from M-AI-SELF."""
     if not MEM_AVAILABLE:
         return {"error": "not_available"}
@@ -54,7 +57,7 @@ async def memory_checkpoints(limit: int = 5) -> Dict:
     return {"count": len(checkpoints), "checkpoints": checkpoints}
 
 @router.get("/conversation")
-async def memory_conversation(limit: int = 20) -> Dict:
+async def memory_conversation(limit: int = Query(20, ge=1, le=200)) -> Dict:
     """Get conversation history from M-AI-SELF."""
     if not MEM_AVAILABLE:
         return {"error": "not_available"}

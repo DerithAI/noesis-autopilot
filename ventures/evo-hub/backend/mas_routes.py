@@ -2,9 +2,9 @@
 M-AI-SELF Routes — exposes M-AI-SELF API through EVO-HUB.
 Step 1 of 4: Bridge EVO-DASH ↔ M-AI-SELF
 """
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
 from typing import Dict, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 router = APIRouter(prefix="/api/mas", tags=["m-ai-self"])
 
@@ -16,11 +16,11 @@ except ImportError:
     MAS_AVAILABLE = False
 
 class ProcessPayload(BaseModel):
-    text: str
+    text: str = Field(min_length=1, max_length=10_000)
 
 class BindPayload(BaseModel):
-    path: str
-    name: Optional[str] = None
+    path: str = Field(min_length=1, max_length=500)
+    name: Optional[str] = Field(default=None, max_length=200)
 
 @router.get("/health")
 async def mas_health() -> Dict:
@@ -55,7 +55,10 @@ async def mas_semantic() -> Dict:
     return MAISelfBridge().get_semantic_memory()
 
 @router.get("/memory/search")
-async def mas_search(query: str, top_k: int = 5) -> Dict:
+async def mas_search(
+    query: str = Query(..., min_length=1, max_length=500),
+    top_k: int = Query(5, ge=1, le=50),
+) -> Dict:
     if not MAS_AVAILABLE:
         return {"error": "not_available"}
     return MAISelfBridge().search_semantic_memory(query, top_k)

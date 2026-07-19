@@ -1,6 +1,7 @@
-from fastapi import FastAPI, Depends, HTTPException, Request
+from fastapi import FastAPI, Depends, HTTPException, Request, Query
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
+from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
 import sys
 import time
@@ -39,8 +40,29 @@ async def log_requests(request: Request, call_next):
 
 import os
 
-# CORS whitelist — never use ["*"] in production
-CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000,http://localhost:5173,http://127.0.0.1:5173").split(",")
+# CORS whitelist — never use ["*"] in production.
+# Localhost defaults are always present; extra origins come from
+# EVO_HUB_CORS_ORIGINS (comma-separated), e.g. "https://hub.example.com".
+_DEFAULT_CORS_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+def build_cors_origins() -> List[str]:
+    """Merge localhost defaults with EVO_HUB_CORS_ORIGINS env var. Never '*'."""
+    origins = list(_DEFAULT_CORS_ORIGINS)
+    extra = os.getenv("EVO_HUB_CORS_ORIGINS", "")
+    for origin in extra.split(","):
+        origin = origin.strip().rstrip("/")
+        if not origin or origin == "*":
+            continue  # wildcard is never allowed
+        if origin not in origins:
+            origins.append(origin)
+    return origins
+
+CORS_ORIGINS = build_cors_origins()
 
 app.add_middleware(
     CORSMiddleware,
@@ -50,14 +72,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# HTTPS redirect — production only, gated behind env var (default OFF for local dev)
+if os.getenv("EVO_HUB_FORCE_HTTPS", "0").strip().lower() in ("1", "true", "yes", "on"):
+    app.add_middleware(HTTPSRedirectMiddleware)
+    logger.info("HTTPS redirect enabled (EVO_HUB_FORCE_HTTPS)")
+
 class HealthResponse(BaseModel):
     status: str
     lumen_connected: bool
     version: str
 
 class CognitiveRequest(BaseModel):
-    input: str
-    mode: str = "chat"
+    input: str = Field(min_length=1, max_length=10_000)
+    mode: str = Field(default="chat", min_length=1, max_length=50)
 
 class CognitiveResponse(BaseModel):
     stages: List[Dict]
@@ -81,7 +108,10 @@ async def cognitive_loop(req: CognitiveRequest):
     return {"stages": result.get("stages", []), "lumen_available": True}
 
 @app.get("/memory/search")
-async def memory_search(query: str, limit: int = 5):
+async def memory_search(
+    query: str = Query(..., min_length=1, max_length=500),
+    limit: int = Query(5, ge=1, le=100),
+):
     if not LUMEN_AVAILABLE:
         return {"results": [], "lumen_available": False}
     lumen = LumenBridge()

@@ -5,7 +5,7 @@ Exposes SUPERPOWERS L3 Council Pattern as a service.
 import sys
 from pathlib import Path
 from fastapi import APIRouter
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
 
 router = APIRouter(prefix="/api/council", tags=["council"])
@@ -20,8 +20,8 @@ except ImportError:
     EVO_AVAILABLE = False
 
 class DeliberateRequest(BaseModel):
-    decision: str
-    context: Optional[str] = ""
+    decision: str = Field(min_length=1, max_length=2_000)
+    context: Optional[str] = Field(default="", max_length=5_000)
     require_unanimous: bool = False
 
 class VoiceResult(BaseModel):
