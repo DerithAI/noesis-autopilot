@@ -1,0 +1,12 @@
+.card {
+  background: var(--surface, #1a1d27);
+  border: 1px solid var(--border, #2a2e3d);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary, #9aa1b5);
+}

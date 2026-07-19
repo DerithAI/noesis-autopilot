@@ -517,11 +517,6 @@
   }
 }
 
-.modalActions button {
-    width: 100%;
-  }
-}
-
 /* Skeleton Loading Screens */
 .skeletonHeader {
   height: 32px;
