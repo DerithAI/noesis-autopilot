@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { apiFetch } from '../lib/api';
 import { useToast } from '../components/Toast';
 import styles from './Tables.module.css';
@@ -24,6 +25,8 @@ type SortKey = keyof Venture;
 type SortDir = 'asc' | 'desc';
 
 const Tables = () => {
+  const navigate = useNavigate();
+  const toast = useToast();
   const [ventures, setVentures] = useState<Venture[]>([]);
   const [itdd, setItdd] = useState<ITDDEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -110,7 +113,7 @@ const Tables = () => {
             {sorted.map((v) => {
               const it = getItdd(v.name);
               return (
-                <tr key={v.name}>
+                <tr key={v.name} onClick={() => navigate(`/venture/${encodeURIComponent(v.name)}`)} style={{ cursor: 'pointer' }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') navigate(`/venture/${encodeURIComponent(v.name)}`); }}>
                   <td>{v.name}</td>
                   <td>{v.seed}</td>
                   <td>{v.stack}</td>

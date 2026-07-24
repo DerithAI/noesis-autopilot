@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Charts from './pages/Charts';
 import Tables from './pages/Tables';
 import Council from './pages/Council';
+import VentureDetail from './pages/VentureDetail';
 import { ThemeMode } from './types';
 
 const App: React.FC = () => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
               <Route path="/council" element={<Council />} />
               <Route path="/charts" element={<Charts />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/venture/:name" element={<VentureDetail />} />
             </Routes>
           </main>
         </ToastProvider>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Dashboard.module.css';
 import { apiFetch, API_BASE } from '../lib/api';
 import { useToast } from '../components/Toast';
@@ -41,6 +42,7 @@ interface TestSuite {
 }
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   const toast = useToast();
   const [ventures, setVentures] = useState<Venture[]>([]);
   const [itddBoard, setItddBoard] = useState<ITDDEntry[]>([]);
@@ -309,7 +311,16 @@ const Dashboard: React.FC = () => {
         <h2>🧪 ITDD Compliance Scoreboard</h2>
         <div className={styles.itddGrid}>
           {itddBoard.map((entry, i) => (
-            <div key={i} className={`${styles.itddCard} ${entry.compliant ? styles.itddGreen : entry.tests > 0 ? styles.itddRed : styles.itddGray}`}>
+            <div
+              key={i}
+              className={`${styles.itddCard} ${entry.compliant ? styles.itddGreen : entry.tests > 0 ? styles.itddRed : styles.itddGray}`}
+              onClick={() => navigate(`/venture/${encodeURIComponent(entry.venture)}`)}
+              style={{ cursor: 'pointer' }}
+              role="button"
+              tabIndex={0}
+              aria-label={`View details for ${entry.venture}`}
+              onKeyDown={(e) => { if (e.key === 'Enter') navigate(`/venture/${encodeURIComponent(entry.venture)}`); }}
+            >
               <div className={styles.itddHeader}>
                 <span className={styles.itddIcon}>{entry.compliant ? '✅' : entry.tests > 0 ? '❌' : '⚪'}</span>
                 <span className={styles.itddName}>{entry.venture}</span>
@@ -336,7 +347,7 @@ const Dashboard: React.FC = () => {
           {ventures.map((v, i) => {
             const itdd = getItddFor(v.name);
             return (
-              <div key={i} className={styles.ventureCard}>
+              <div key={i} className={styles.ventureCard} onClick={() => navigate(`/venture/${encodeURIComponent(v.name)}`)} style={{ cursor: 'pointer' }} role="button" tabIndex={0} aria-label={`View details for ${v.name}`} onKeyDown={(e) => { if (e.key === 'Enter') navigate(`/venture/${encodeURIComponent(v.name)}`); }}>
                 <div className={styles.ventureHeader}>
                   <h3>{v.name}</h3>
                   <span className={`${styles.badge} ${v.status === 'live' ? styles.badgeLive : styles.badgeDeployed}`}>
@@ -354,8 +365,8 @@ const Dashboard: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  <div className={styles.ventureActions}>
-                    <button className={styles.btnPrimary} aria-label={`Open ${v.name}`}>Open</button>
+                  <div className={styles.ventureActions} onClick={(e) => e.stopPropagation()}>
+                    <button className={styles.btnPrimary} aria-label={`Open ${v.name}`} onClick={() => navigate(`/venture/${encodeURIComponent(v.name)}`)}>Open</button>
                     <button className={styles.btnSecondary} aria-label={`Test ${v.name}`}>Test</button>
                     <button className={styles.btnSecondary} aria-label={`Deploy ${v.name}`}>Deploy</button>
                   </div>
