@@ -47,7 +47,7 @@ const Sidebar: React.FC = () => {
           ))}
         </nav>
         <div className={styles.footer}>
-          <span className={styles.version}>v1.0.0</span>
+          <span className={styles.version}>v1.1.0</span>
           <span className={styles.status}>🟢 Live</span>
         </div>
       </aside>
