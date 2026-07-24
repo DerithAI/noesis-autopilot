@@ -1,6 +1,7 @@
 """
 Action Routes — real backends for EVO-DASH action buttons.
 Używa lokalnych agentów, skilli i narzędzi. Zero API zewnętrznych.
+Phase 2.4: Input validation with pydantic
 """
 import subprocess
 import sys
@@ -8,9 +9,14 @@ import json
 import os
 import time
 from pathlib import Path
-from fastapi import APIRouter, HTTPException, Request
-from pydantic import BaseModel, Field
+from fastapi import APIRouter, HTTPException, Request, status
 from typing import Dict, List, Optional
+
+# Import validation schemas
+from validation_schemas import (
+    GenerateRequest, CognitiveRequest, HowlRequest,
+    ValidationError, validate_request,
+)
 
 router = APIRouter(prefix="/api", tags=["actions"])
 
@@ -26,26 +32,24 @@ def rate_limit(request: Request):
     now = time.time()
     last = _rate_limit_store.get(key, 0)
     if now - last < RATE_LIMIT_SECONDS:
-        raise HTTPException(status_code=429, detail=f"Rate limited. Wait {RATE_LIMIT_SECONDS - int(now - last)}s.")
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=f"Rate limited. Wait {RATE_LIMIT_SECONDS - int(now - last)}s."
+        )
     _rate_limit_store[key] = now
 
 REPO_ROOT = Path(__file__).parent.parent.parent.parent
 
-class GenerateRequest(BaseModel):
-    seed: str = Field(min_length=1, max_length=200)
-    model: str = Field(default="qwen2.5:7b", min_length=1, max_length=100)
-    stack: str = Field(default="auto", min_length=1, max_length=50)
+# Import validation schemas at module level
+from validation_schemas import (
+    GenerateRequest as ValidGenerateRequest,
+    CognitiveRequest as ValidCognitiveRequest,
+    HowlRequest as ValidHowlRequest,
+    MemorySearchRequest,
+)
 
-class CognitiveRequest(BaseModel):
-    input: str = Field(min_length=1, max_length=10_000)
-    mode: str = Field(default="chat", min_length=1, max_length=50)
-
-class HowlRequest(BaseModel):
-    message: str = Field(min_length=1, max_length=2_000)
-    frequency: str = Field(default="medium", min_length=1, max_length=50)
-
-@router.post("/action/generate")
-async def action_generate(req: GenerateRequest, request: Request) -> Dict:
+@router.post("/action/generate", response_model=Dict)
+async def action_generate(req: ValidGenerateRequest, request: Request) -> Dict:
     rate_limit(request)
     """Trigger Venture-Swarm generation for a new venture."""
     cmd = [
@@ -107,7 +111,7 @@ async def action_run_tests(request: Request) -> Dict:
     }
 
 @router.post("/action/cognitive")
-async def action_cognitive(req: CognitiveRequest, request: Request) -> Dict:
+async def action_cognitive(req: ValidCognitiveRequest, request: Request) -> Dict:
     rate_limit(request)
     """Run EVO Agent cognitive loop via LUMEN or local fallback."""
     try:
@@ -124,7 +128,7 @@ async def action_cognitive(req: CognitiveRequest, request: Request) -> Dict:
         return {"error": str(e)}
 
 @router.post("/action/howl")
-async def action_howl(req: HowlRequest, request: Request) -> Dict:
+async def action_howl(req: ValidHowlRequest, request: Request) -> Dict:
     rate_limit(request)
     """Send WOLF howl to pack."""
     try:

@@ -40,7 +40,7 @@
   align-items: center;
   gap: 12px;
   padding: 16px;
-  background: rgba(51, 65, 85, 0.5);
+  background: var(--evo-card-bg, rgba(51, 65, 85, 0.5));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 8px;
   transition: all 150ms ease-out;
@@ -82,7 +82,7 @@
 
 /* Pipeline */
 .pipeline {
-  background: rgba(51, 65, 85, 0.3);
+  background: var(--evo-panel-bg, rgba(51, 65, 85, 0.3));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 12px;
   padding: 24px;
@@ -104,7 +104,7 @@
 
 .step {
   padding: 8px 16px;
-  background: rgba(51, 65, 85, 0.8);
+  background: var(--evo-chip-bg, rgba(51, 65, 85, 0.8));
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
@@ -141,7 +141,7 @@
 }
 
 .ventureCard {
-  background: rgba(51, 65, 85, 0.5);
+  background: var(--evo-card-bg, rgba(51, 65, 85, 0.5));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 8px;
   padding: 16px;
@@ -215,7 +215,7 @@
 }
 
 .btnPrimary:hover {
-  background: #0284c7;
+  background: var(--evo-primary-hover, #0284c7);
   transform: scale(1.05);
 }
 
@@ -238,7 +238,7 @@
 
 /* Action Bar */
 .actionBar {
-  background: rgba(51, 65, 85, 0.3);
+  background: var(--evo-panel-bg, rgba(51, 65, 85, 0.3));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 12px;
   padding: 24px;
@@ -294,7 +294,7 @@
   padding: 16px;
   border-radius: 8px;
   border: 1px solid var(--evo-border, #334155);
-  background: rgba(51, 65, 85, 0.5);
+  background: var(--evo-card-bg, rgba(51, 65, 85, 0.5));
   transition: all 150ms ease-out;
 }
 
@@ -351,7 +351,7 @@
   font-size: 11px;
   padding: 2px 8px;
   border-radius: 4px;
-  background: rgba(51, 65, 85, 0.8);
+  background: var(--evo-chip-bg, rgba(51, 65, 85, 0.8));
   border: 1px solid var(--evo-border, #334155);
 }
 
@@ -439,7 +439,7 @@
 .input {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(51, 65, 85, 0.5);
+  background: var(--evo-card-bg, rgba(51, 65, 85, 0.5));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 8px;
   color: var(--evo-text, #f8fafc);
@@ -457,7 +457,7 @@
 .select {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(51, 65, 85, 0.5);
+  background: var(--evo-card-bg, rgba(51, 65, 85, 0.5));
   border: 1px solid var(--evo-border, #334155);
   border-radius: 8px;
   color: var(--evo-text, #f8fafc);
@@ -515,13 +515,27 @@
   .modalActions button {
     width: 100%;
   }
+
+  .itddGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .statusBar {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 16px;
+  }
 }
 
 /* Skeleton Loading Screens */
 .skeletonHeader {
   height: 32px;
   width: 60%;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 4px;
@@ -531,7 +545,7 @@
 .skeletonSubtitle {
   height: 16px;
   width: 40%;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 4px;
@@ -539,7 +553,7 @@
 
 .skeletonCard {
   padding: 16px;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 8px;
@@ -558,7 +572,7 @@
   content: '';
   flex: 1;
   height: 32px;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 6px;
@@ -566,7 +580,7 @@
 
 .skeletonITDDCard {
   padding: 16px;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 8px;
@@ -575,7 +589,7 @@
 
 .skeletonVentureCard {
   padding: 16px;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 8px;
@@ -596,7 +610,7 @@
   flex: 1;
   min-width: 120px;
   height: 44px;
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, var(--evo-skeleton-base, #1e293b) 25%, var(--evo-skeleton-highlight, #334155) 50%, var(--evo-skeleton-base, #1e293b) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 8px;
@@ -619,7 +633,16 @@
   .btnPrimary,
   .btnSecondary,
   .btnAction,
-  .modal {
+  .modal,
+  .skeletonHeader,
+  .skeletonSubtitle,
+  .skeletonCard,
+  .skeletonITDDCard,
+  .skeletonVentureCard,
+  .skeletonPipelineSteps::before,
+  .skeletonPipelineSteps::after,
+  .skeletonActionButtons::before,
+  .skeletonActionButtons::after {
     transition: none !important;
     animation: none !important;
   }

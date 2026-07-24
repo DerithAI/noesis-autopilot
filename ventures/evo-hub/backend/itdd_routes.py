@@ -34,14 +34,25 @@ async def itdd_scoreboard() -> List[Dict]:
             entry["note"] = "no_tests_directory"
             results.append(entry)
             continue
+        
+        # Find test directories OR test files at root level
         test_dirs = [d for d in [path / "tests", path / "test"] if d.exists()]
-        if not test_dirs:
+        test_files = list(path.glob("test_*.py"))
+        
+        if not test_dirs and not test_files:
             entry["note"] = "no_test_files"
             results.append(entry)
             continue
+        
         try:
+            cmd = [sys.executable, "-m", "pytest", "-q", "--tb=no"]
+            if test_dirs:
+                cmd += [str(d) for d in test_dirs]
+            if test_files:
+                cmd += [str(f) for f in test_files]
+            
             result = subprocess.run(
-                [sys.executable, "-m", "pytest"] + [str(d) for d in test_dirs] + ["-q", "--tb=no"],
+                cmd,
                 capture_output=True, text=True, timeout=60,
                 cwd=str(path)
             )

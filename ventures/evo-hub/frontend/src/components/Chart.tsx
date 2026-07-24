@@ -1,54 +1,36 @@
-import React, { useRef, useEffect } from 'react';
-import ChartJS, { ChartData, ChartOptions } from 'chart.js/auto';
+import { useRef, useEffect } from 'react';
+import ChartJS, { ChartConfiguration, ChartData, ChartOptions, ChartType } from 'chart.js/auto';
 
-interface ChartProps {
-  data?: ChartData<'bar'>;
-  options?: ChartOptions<'bar'>;
+interface ChartProps<TType extends ChartType = 'bar'> {
+  /** Chart.js chart type. Defaults to 'bar' for backwards compatibility. */
+  type?: TType;
+  data?: ChartData<TType>;
+  options?: ChartOptions<TType>;
+  /** Accessible description of what the chart shows. */
+  ariaLabel?: string;
 }
 
-const ChartComponent: React.FC<ChartProps> = ({ data, options }) => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null);
-  const chartInstance = useRef<ChartJS | null>(null);
+function Chart<TType extends ChartType = 'bar'>({ type, data, options, ariaLabel }: ChartProps<TType>) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const instanceRef = useRef<ChartJS<TType> | null>(null);
 
   useEffect(() => {
-    if (data && chartRef.current) {
-      // Destroy previous chart if exists
-      if (chartInstance.current) {
-        chartInstance.current.destroy();
-      }
-      chartInstance.current = new ChartJS(chartRef.current, {
-        type: 'bar',
-        data,
-        options: options || {
-          responsive: true,
-          maintainAspectRatio: false,
-        },
-      });
-    }
-    return () => {
-      if (chartInstance.current) {
-        chartInstance.current.destroy();
-      }
+    if (!data || !canvasRef.current) return;
+    // Destroy previous chart if exists
+    instanceRef.current?.destroy();
+    const config: ChartConfiguration<TType> = {
+      type: (type ?? 'bar') as TType,
+      data,
+      options: options ?? ({ responsive: true, maintainAspectRatio: false } as ChartOptions<TType>),
     };
-  }, [data, options]);
+    instanceRef.current = new ChartJS<TType>(canvasRef.current, config);
+    return () => {
+      instanceRef.current?.destroy();
+      instanceRef.current = null;
+    };
+  }, [type, data, options]);
 
-  return <canvas ref={chartRef} />;
-};
-
-const Chart: React.FC = () => {
-  const data: ChartData<'bar'> = {
-    labels: ['January', 'February', 'March'],
-    datasets: [
-      {
-        label: 'Dataset',
-        data: [65, 59, 80],
-        borderColor: '#4bc0c0',
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      },
-    ],
-  };
-
-  return <ChartComponent data={data} />;
-};
+  return <canvas ref={canvasRef} role="img" aria-label={ariaLabel} />;
+}
 
 export default Chart;

@@ -16,6 +16,7 @@ Commands:
     /wolf <cmd> - Execute WOLF command
     /help - Show help
 """
+from __future__ import annotations
 import os
 import sys
 import json
@@ -43,6 +44,8 @@ try:
     TELEGRAM_AVAILABLE = True
 except ImportError:
     TELEGRAM_AVAILABLE = False
+    Update = None  # type: ignore
+    ContextTypes = None  # type: ignore
     print("[!] python-telegram-bot not installed. Run: pip install python-telegram-bot")
 
 

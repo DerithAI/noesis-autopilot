@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Council.module.css';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+import { apiFetch } from '../lib/api';
 
 interface Voice {
   role: string;
@@ -30,7 +29,7 @@ const Council: React.FC = () => {
     setLoading(true);
     setResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/council/deliberate`, {
+      const data = await apiFetch<DeliberationResult>('/api/council/deliberate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -39,7 +38,6 @@ const Council: React.FC = () => {
           require_unanimous: requireUnanimous
         })
       });
-      const data = await res.json();
       setResult(data);
     } catch (e) {
       console.error('Council error:', e);

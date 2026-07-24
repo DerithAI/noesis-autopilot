@@ -5,6 +5,32 @@
   --text-secondary: #9aa1b5;
   --bg: #0f1117;
   --accent: #6c5ce7;
+
+  /* Semantic status colors */
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  /* EVO palette (Dashboard / Council / Sidebar) — dark values match the
+     previously hardcoded slate palette, so dark mode stays pixel-identical. */
+  --evo-surface: #0f172a;
+  --evo-border: #334155;
+  --evo-text: #f8fafc;
+  --evo-muted: #94a3b8;
+  --evo-primary: #0ea5e9;
+  --evo-primary-hover: #0284c7;
+  --evo-secondary: #8b5cf6;
+  --evo-pink: #ec4899;
+  --evo-success: var(--success);
+  --evo-danger: var(--danger);
+  --evo-warning: var(--warning);
+  --evo-panel-bg: rgba(51, 65, 85, 0.3);
+  --evo-card-bg: rgba(51, 65, 85, 0.5);
+  --evo-chip-bg: rgba(51, 65, 85, 0.8);
+  --evo-hover-bg: rgba(51, 65, 85, 0.5);
+  --evo-sidebar-bg: rgba(15, 23, 42, 0.95);
+  --evo-skeleton-base: #1e293b;
+  --evo-skeleton-highlight: #334155;
 }
 
 .app.light {
@@ -13,6 +39,26 @@
   --text-primary: #1a1d27;
   --text-secondary: #5a6072;
   --bg: #f4f5fa;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+
+  --evo-surface: #f4f5fa;
+  --evo-border: #d3d8e4;
+  --evo-text: #1a1d27;
+  --evo-muted: #5a6072;
+  --evo-primary: #0284c7;
+  --evo-primary-hover: #0369a1;
+  --evo-secondary: #7c3aed;
+  --evo-pink: #db2777;
+  --evo-panel-bg: rgba(226, 232, 240, 0.45);
+  --evo-card-bg: #ffffff;
+  --evo-chip-bg: #e2e8f0;
+  --evo-hover-bg: rgba(15, 23, 42, 0.06);
+  --evo-sidebar-bg: rgba(255, 255, 255, 0.97);
+  --evo-skeleton-base: #e2e8f0;
+  --evo-skeleton-highlight: #f1f5f9;
 }
 
 * {

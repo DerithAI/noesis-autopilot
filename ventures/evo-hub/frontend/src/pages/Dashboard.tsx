@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import styles from './Dashboard.module.css';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+import { apiFetch, API_BASE } from '../lib/api';
+import { useToast } from '../components/Toast';
 
 interface Venture {
   name: string;
@@ -41,6 +41,7 @@ interface TestSuite {
 }
 
 const Dashboard: React.FC = () => {
+  const toast = useToast();
   const [ventures, setVentures] = useState<Venture[]>([]);
   const [itddBoard, setItddBoard] = useState<ITDDEntry[]>([]);
   const [sysStatus, setSysStatus] = useState<SystemStatus | null>(null);
@@ -53,7 +54,6 @@ const Dashboard: React.FC = () => {
   const [cogRunning, setCogRunning] = useState(false);
   const [howling, setHowling] = useState(false);
   const [insighting, setInsighting] = useState(false);
-  const [actionResult, setActionResult] = useState<string | null>(null);
   const [showGenModal, setShowGenModal] = useState(false);
   const [genSeed, setGenSeed] = useState('');
   const [genModel, setGenModel] = useState('qwen2.5:7b');
@@ -61,20 +61,17 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [venturesRes, statusRes, pipelineRes, itddRes] = await Promise.all([
-          fetch(`${API_BASE}/api/ventures`).catch(() => null),
-          fetch(`${API_BASE}/api/status`).catch(() => null),
-          fetch(`${API_BASE}/api/pipeline`).catch(() => null),
-          fetch(`${API_BASE}/api/itdd/status`).catch(() => null),
+        const [venturesData, statusData, pipelineData, itddData] = await Promise.all([
+          apiFetch<Venture[]>('/api/ventures').catch(() => null),
+          apiFetch<SystemStatus>('/api/status').catch(() => null),
+          apiFetch<Pipeline>('/api/pipeline').catch(() => null),
+          apiFetch<{ scoreboard?: ITDDEntry[] }>('/api/itdd/status').catch(() => null),
         ]);
 
-        if (venturesRes?.ok) setVentures(await venturesRes.json());
-        if (statusRes?.ok) setSysStatus(await statusRes.json());
-        if (pipelineRes?.ok) setPipeline(await pipelineRes.json());
-        if (itddRes?.ok) {
-          const itddData = await itddRes.json();
-          setItddBoard(itddData.scoreboard || []);
-        }
+        if (venturesData) setVentures(venturesData);
+        if (statusData) setSysStatus(statusData);
+        if (pipelineData) setPipeline(pipelineData);
+        if (itddData) setItddBoard(itddData.scoreboard || []);
       } catch (err) {
         console.error('Dashboard fetch error:', err);
       } finally {
@@ -109,22 +106,21 @@ const Dashboard: React.FC = () => {
   const handleGenerate = async () => {
     if (!genSeed.trim()) return;
     setGenerating(true);
-    setActionResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/action/generate`, {
+      const data = await apiFetch<{ success?: boolean; error?: string; stderr?: string }>('/api/action/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ seed: genSeed, model: genModel })
       });
-      const data = await res.json();
-      setActionResult(data.success
-        ? `✅ Generated venture from seed: "${genSeed}"`
-        : `❌ Failed: ${data.error || data.stderr || 'unknown error'}`
-      );
+      if (data.success) {
+        toast.success(`✅ Generated venture from seed: "${genSeed}"`);
+      } else {
+        toast.error(`❌ Failed: ${data.error || data.stderr || 'unknown error'}`);
+      }
       setShowGenModal(false);
       setGenSeed('');
     } catch (e) {
-      setActionResult(`❌ Error: ${e}`);
+      toast.error(`❌ Error: ${e}`);
     } finally {
       setGenerating(false);
     }
@@ -132,14 +128,17 @@ const Dashboard: React.FC = () => {
 
   const handleTest = async () => {
     setTesting(true);
-    setActionResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/action/tests`);
-      const data = await res.json();
+      const data = await apiFetch<{ total_passed: number; total_suites: number; suites: TestSuite[] }>('/api/action/tests');
       const summary = `${data.total_passed}/${data.total_suites} test suites passed`;
-      setActionResult(`🔄 ${summary}\n${(data.suites as TestSuite[]).map((s) => `${s.passed ? '✅' : '❌'} ${s.suite}`).join('\n')}`);
+      const detail = `🔄 ${summary}\n${data.suites.map((s) => `${s.passed ? '✅' : '❌'} ${s.suite}`).join('\n')}`;
+      if (data.total_passed === data.total_suites) {
+        toast.success(detail);
+      } else {
+        toast.error(detail);
+      }
     } catch (e) {
-      setActionResult(`❌ Error: ${e}`);
+      toast.error(`❌ Error: ${e}`);
     } finally {
       setTesting(false);
     }
@@ -147,17 +146,15 @@ const Dashboard: React.FC = () => {
 
   const handleCognitive = async () => {
     setCogRunning(true);
-    setActionResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/action/cognitive`, {
+      const data = await apiFetch<{ stages?: unknown[] }>('/api/action/cognitive', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ input: 'Analyze current venture portfolio and suggest next priority', mode: 'analyze' })
       });
-      const data = await res.json();
-      setActionResult(`🧠 Cognitive Loop: ${data.stages?.length || 0} stages processed`);
+      toast.success(`🧠 Cognitive Loop: ${data.stages?.length || 0} stages processed`);
     } catch (e) {
-      setActionResult(`❌ Error: ${e}`);
+      toast.error(`❌ Error: ${e}`);
     } finally {
       setCogRunning(false);
     }
@@ -165,17 +162,19 @@ const Dashboard: React.FC = () => {
 
   const handleHowl = async () => {
     setHowling(true);
-    setActionResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/action/howl`, {
+      const data = await apiFetch<{ sent?: boolean; error?: string }>('/api/action/howl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: 'Dashboard action fired: WOLF HOWL', frequency: 'high' })
       });
-      const data = await res.json();
-      setActionResult(data.sent ? '🐺 Howl sent to WOLF pack!' : `❌ Howl failed: ${data.error}`);
+      if (data.sent) {
+        toast.success('🐺 Howl sent to WOLF pack!');
+      } else {
+        toast.error(`❌ Howl failed: ${data.error}`);
+      }
     } catch (e) {
-      setActionResult(`❌ Error: ${e}`);
+      toast.error(`❌ Error: ${e}`);
     } finally {
       setHowling(false);
     }
@@ -183,16 +182,15 @@ const Dashboard: React.FC = () => {
 
   const handleInsights = async () => {
     setInsighting(true);
-    setActionResult(null);
     try {
-      const res = await fetch(`${API_BASE}/api/action/insights`);
-      const data = await res.json();
-      setActionResult(data.generated
-        ? `📊 Insights generated (${data.insights?.length || 0} chars)`
-        : `❌ Insights failed: ${data.error}`
-      );
+      const data = await apiFetch<{ generated?: boolean; insights?: string; error?: string }>('/api/action/insights');
+      if (data.generated) {
+        toast.success(`📊 Insights generated (${data.insights?.length || 0} chars)`);
+      } else {
+        toast.error(`❌ Insights failed: ${data.error}`);
+      }
     } catch (e) {
-      setActionResult(`❌ Error: ${e}`);
+      toast.error(`❌ Error: ${e}`);
     } finally {
       setInsighting(false);
     }
@@ -254,14 +252,6 @@ const Dashboard: React.FC = () => {
         <h1>EVO-DASH</h1>
         <p className={styles.subtitle}>Master Command Center — {ventures.length} Ventures, Live Systems, 1 Brain</p>
       </header>
-
-      {/* Action Result Banner */}
-      {actionResult && (
-        <div className={styles.resultBanner}>
-          <pre>{actionResult}</pre>
-          <button className={styles.closeBtn} onClick={() => setActionResult(null)} aria-label="Dismiss notification">×</button>
-        </div>
-      )}
 
       {/* System Status Bar */}
       {sysStatus && (

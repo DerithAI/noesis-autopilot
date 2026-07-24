@@ -92,6 +92,6 @@ def test_evo_hub_backend_runs():
 def test_evo_hub_frontend_files():
     """Frontend must have React component files."""
     frontend = Path(__file__).parent.parent / "frontend"
-    # Check for generated files (Venture-Swarm naming)
-    app_tsx = list(frontend.glob("src*App*"))
-    assert len(app_tsx) > 0, "No App component found"
+    # Check for App component in src/ (proper React structure)
+    app_tsx = frontend / "src" / "App.tsx"
+    assert app_tsx.exists(), f"No App.tsx found in {frontend}/src/"
