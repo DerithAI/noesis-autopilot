@@ -2,12 +2,14 @@
 Action Routes — real backends for EVO-DASH action buttons.
 Używa lokalnych agentów, skilli i narzędzi. Zero API zewnętrznych.
 Phase 2.4: Input validation with pydantic
+Phase 3.2: WebSocket broadcast for generation progress
 """
 import subprocess
 import sys
 import json
 import os
 import time
+import asyncio
 from pathlib import Path
 from fastapi import APIRouter, HTTPException, Request, status
 from typing import Dict, List, Optional
@@ -17,6 +19,14 @@ from validation_schemas import (
     GenerateRequest, CognitiveRequest, HowlRequest,
     ValidationError, validate_request,
 )
+
+# Import WebSocket broadcast
+try:
+    from ws_routes import broadcast
+    WS_AVAILABLE = True
+except ImportError:
+    WS_AVAILABLE = False
+    async def broadcast(msg): pass
 
 router = APIRouter(prefix="/api", tags=["actions"])
 
@@ -51,7 +61,7 @@ from validation_schemas import (
 @router.post("/action/generate", response_model=Dict)
 async def action_generate(req: ValidGenerateRequest, request: Request) -> Dict:
     rate_limit(request)
-    """Trigger Venture-Swarm generation for a new venture."""
+    """Trigger Venture-Swarm generation for a new venture with real-time progress."""
     cmd = [
         sys.executable, str(REPO_ROOT / "venture-swarm.py"),
         req.seed,
@@ -60,21 +70,62 @@ async def action_generate(req: ValidGenerateRequest, request: Request) -> Dict:
     ]
     if req.stack != "auto":
         cmd += ["--stack", req.stack]
+    
+    # Broadcast start
+    await broadcast({"type": "generation", "seed": req.seed, "stage": "starting", "progress": 0})
+    
     try:
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=300,
+        # Use Popen for line-by-line progress streaming
+        proc = subprocess.Popen(
+            cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
             cwd=str(REPO_ROOT)
         )
-        return {
-            "success": result.returncode == 0,
+        
+        stages = ["research", "architect", "implement", "test", "deploy"]
+        stage_idx = 0
+        
+        # Read output line by line
+        output_lines = []
+        if proc.stdout:
+            for line in proc.stdout:
+                output_lines.append(line)
+                # Detect stage changes from venture-swarm output
+                for i, stage in enumerate(stages):
+                    if stage.lower() in line.lower() and i > stage_idx:
+                        stage_idx = i
+                        progress = int((i / len(stages)) * 100)
+                        await broadcast({
+                            "type": "generation",
+                            "seed": req.seed,
+                            "stage": stage,
+                            "progress": progress,
+                        })
+        
+        proc.wait(timeout=300)
+        stdout = "".join(output_lines)
+        stderr = proc.stderr.read() if proc.stderr else ""
+        
+        # Broadcast completion
+        await broadcast({
+            "type": "generation",
             "seed": req.seed,
-            "stdout": result.stdout[-2000:] if len(result.stdout) > 2000 else result.stdout,
-            "stderr": result.stderr[-500:] if result.stderr else "",
-            "returncode": result.returncode
+            "stage": "complete" if proc.returncode == 0 else "failed",
+            "progress": 100 if proc.returncode == 0 else -1,
+        })
+        
+        return {
+            "success": proc.returncode == 0,
+            "seed": req.seed,
+            "stdout": stdout[-2000:] if len(stdout) > 2000 else stdout,
+            "stderr": stderr[-500:] if stderr else "",
+            "returncode": proc.returncode
         }
     except subprocess.TimeoutExpired:
+        proc.kill()
+        await broadcast({"type": "generation", "seed": req.seed, "stage": "timeout", "progress": -1})
         return {"success": False, "error": "Venture-Swarm timed out after 5min"}
     except Exception as e:
+        await broadcast({"type": "generation", "seed": req.seed, "stage": "error", "progress": -1})
         return {"success": False, "error": str(e)}
 
 @router.get("/action/tests")

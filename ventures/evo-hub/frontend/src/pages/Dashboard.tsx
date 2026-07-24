@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Dashboard.module.css';
 import { apiFetch, API_BASE } from '../lib/api';
 import { useToast } from '../components/Toast';
+import { useWebSocket } from '../lib/useWebSocket';
 
 interface Venture {
   name: string;
@@ -44,11 +45,19 @@ interface TestSuite {
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const toast = useToast();
+  const { connected, generation, status: wsStatus } = useWebSocket();
   const [ventures, setVentures] = useState<Venture[]>([]);
   const [itddBoard, setItddBoard] = useState<ITDDEntry[]>([]);
   const [sysStatus, setSysStatus] = useState<SystemStatus | null>(null);
   const [pipeline, setPipeline] = useState<Pipeline | null>(null);
   const [loading, setLoading] = useState(true);
+
+  // Sync WebSocket status with local state
+  useEffect(() => {
+    if (wsStatus) {
+      setSysStatus((prev) => prev ? { ...prev, ...wsStatus } : wsStatus);
+    }
+  }, [wsStatus]);
 
   // Action states
   const [generating, setGenerating] = useState(false);
@@ -252,8 +261,25 @@ const Dashboard: React.FC = () => {
     <div className={styles.dashboard}>
       <header className={styles.header}>
         <h1>EVO-DASH</h1>
-        <p className={styles.subtitle}>Master Command Center — {ventures.length} Ventures, Live Systems, 1 Brain</p>
+        <p className={styles.subtitle}>
+          Master Command Center — {ventures.length} Ventures, Live Systems, 1 Brain
+          {connected && <span className={styles.wsIndicator}> 🟢 WS</span>}
+        </p>
       </header>
+
+      {/* Generation Progress Bar */}
+      {generation && generation.stage !== 'complete' && generation.stage !== 'failed' && generation.progress >= 0 && (
+        <section className={styles.generationProgress}>
+          <div className={styles.genHeader}>
+            <span>🚀 Generating: <strong>{generation.seed}</strong></span>
+            <span className={styles.genStage}>{generation.stage}</span>
+          </div>
+          <div className={styles.progressBar}>
+            <div className={styles.progressFill} style={{ width: `${generation.progress}%` }} />
+          </div>
+          <span className={styles.genPercent}>{generation.progress}%</span>
+        </section>
+      )}
 
       {/* System Status Bar */}
       {sysStatus && (
