@@ -305,9 +305,8 @@ cat noesis_insights.md
 ## 🌱 Origin
 
 NOESIS was not designed in a lab. It was **distilled** — from two years and
-60+ incarnations of AI agent systems built by a truck driver from Poland who
-never wrote a line of code by hand, orchestrating AI agents through narrative.
-Every design decision here is a scar from a system that died without it:
+60+ incarnations of AI agent systems built through narrative-driven AI
+orchestration. Every design decision here is a scar from a system that died without it:
 
 - **SQLite persistence** — because context windows end and memory must not
 - **Council deliberation** — because a single voice hallucinates; six argue
