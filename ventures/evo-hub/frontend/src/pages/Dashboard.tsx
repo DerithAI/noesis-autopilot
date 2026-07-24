@@ -4,6 +4,8 @@ import styles from './Dashboard.module.css';
 import { apiFetch, API_BASE } from '../lib/api';
 import { useToast } from '../components/Toast';
 import { useWebSocket } from '../lib/useWebSocket';
+import { useKeyboardShortcuts } from '../lib/useKeyboardShortcuts';
+import { ActivityFeed, useActivityFeed } from '../components/ActivityFeed';
 
 interface Venture {
   name: string;
@@ -46,11 +48,13 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const toast = useToast();
   const { connected, generation, status: wsStatus } = useWebSocket();
+  const { entries, add: addActivity } = useActivityFeed();
   const [ventures, setVentures] = useState<Venture[]>([]);
   const [itddBoard, setItddBoard] = useState<ITDDEntry[]>([]);
   const [sysStatus, setSysStatus] = useState<SystemStatus | null>(null);
   const [pipeline, setPipeline] = useState<Pipeline | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showHelp, setShowHelp] = useState(false);
 
   // Sync WebSocket status with local state
   useEffect(() => {
@@ -68,6 +72,14 @@ const Dashboard: React.FC = () => {
   const [showGenModal, setShowGenModal] = useState(false);
   const [genSeed, setGenSeed] = useState('');
   const [genModel, setGenModel] = useState('qwen2.5:7b');
+
+  // Keyboard shortcuts
+  useKeyboardShortcuts({
+    onGenerate: () => setShowGenModal(true),
+    onTest: () => !testing && handleTest(),
+    onCouncil: () => navigate('/council'),
+    onHelp: () => setShowHelp((v) => !v),
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -117,6 +129,7 @@ const Dashboard: React.FC = () => {
   const handleGenerate = async () => {
     if (!genSeed.trim()) return;
     setGenerating(true);
+    addActivity('generate', `Generating venture: "${genSeed}"`);
     try {
       const data = await apiFetch<{ success?: boolean; error?: string; stderr?: string }>('/api/action/generate', {
         method: 'POST',
@@ -125,8 +138,10 @@ const Dashboard: React.FC = () => {
       });
       if (data.success) {
         toast.success(`✅ Generated venture from seed: "${genSeed}"`);
+        addActivity('generate', `Generated "${genSeed}"`, true);
       } else {
         toast.error(`❌ Failed: ${data.error || data.stderr || 'unknown error'}`);
+        addActivity('generate', `Failed: "${genSeed}"`, false);
       }
       setShowGenModal(false);
       setGenSeed('');
@@ -139,17 +154,21 @@ const Dashboard: React.FC = () => {
 
   const handleTest = async () => {
     setTesting(true);
+    addActivity('test', 'Running all test suites...');
     try {
       const data = await apiFetch<{ total_passed: number; total_suites: number; suites: TestSuite[] }>('/api/action/tests');
       const summary = `${data.total_passed}/${data.total_suites} test suites passed`;
       const detail = `🔄 ${summary}\n${data.suites.map((s) => `${s.passed ? '✅' : '❌'} ${s.suite}`).join('\n')}`;
       if (data.total_passed === data.total_suites) {
         toast.success(detail);
+        addActivity('test', `All tests passed: ${summary}`, true);
       } else {
         toast.error(detail);
+        addActivity('test', `Some tests failed: ${summary}`, false);
       }
     } catch (e) {
       toast.error(`❌ Error: ${e}`);
+      addActivity('test', 'Test run failed', false);
     } finally {
       setTesting(false);
     }
@@ -157,6 +176,7 @@ const Dashboard: React.FC = () => {
 
   const handleCognitive = async () => {
     setCogRunning(true);
+    addActivity('cognitive', 'Running cognitive loop analysis...');
     try {
       const data = await apiFetch<{ stages?: unknown[] }>('/api/action/cognitive', {
         method: 'POST',
@@ -164,8 +184,10 @@ const Dashboard: React.FC = () => {
         body: JSON.stringify({ input: 'Analyze current venture portfolio and suggest next priority', mode: 'analyze' })
       });
       toast.success(`🧠 Cognitive Loop: ${data.stages?.length || 0} stages processed`);
+      addActivity('cognitive', `Cognitive loop: ${data.stages?.length || 0} stages`, true);
     } catch (e) {
       toast.error(`❌ Error: ${e}`);
+      addActivity('cognitive', 'Cognitive loop failed', false);
     } finally {
       setCogRunning(false);
     }
@@ -173,6 +195,7 @@ const Dashboard: React.FC = () => {
 
   const handleHowl = async () => {
     setHowling(true);
+    addActivity('howl', 'Sending WOLF howl...');
     try {
       const data = await apiFetch<{ sent?: boolean; error?: string }>('/api/action/howl', {
         method: 'POST',
@@ -181,11 +204,14 @@ const Dashboard: React.FC = () => {
       });
       if (data.sent) {
         toast.success('🐺 Howl sent to WOLF pack!');
+        addActivity('howl', 'Howl sent to pack', true);
       } else {
         toast.error(`❌ Howl failed: ${data.error}`);
+        addActivity('howl', 'Howl failed', false);
       }
     } catch (e) {
       toast.error(`❌ Error: ${e}`);
+      addActivity('howl', 'Howl failed', false);
     } finally {
       setHowling(false);
     }
@@ -193,15 +219,19 @@ const Dashboard: React.FC = () => {
 
   const handleInsights = async () => {
     setInsighting(true);
+    addActivity('insights', 'Generating NOESIS insights...');
     try {
       const data = await apiFetch<{ generated?: boolean; insights?: string; error?: string }>('/api/action/insights');
       if (data.generated) {
         toast.success(`📊 Insights generated (${data.insights?.length || 0} chars)`);
+        addActivity('insights', `Insights: ${data.insights?.length || 0} chars`, true);
       } else {
         toast.error(`❌ Insights failed: ${data.error}`);
+        addActivity('insights', 'Insights failed', false);
       }
     } catch (e) {
       toast.error(`❌ Error: ${e}`);
+      addActivity('insights', 'Insights failed', false);
     } finally {
       setInsighting(false);
     }
@@ -451,6 +481,9 @@ const Dashboard: React.FC = () => {
         </div>
       </section>
 
+      {/* Activity Feed */}
+      <ActivityFeed entries={entries} />
+
       {/* Generate Venture Modal */}
       {showGenModal && (
         <div className={styles.modalOverlay} onClick={() => setShowGenModal(false)} role="presentation">
@@ -490,6 +523,24 @@ const Dashboard: React.FC = () => {
               <button className={styles.btnSecondary} onClick={() => setShowGenModal(false)} aria-label="Cancel generation">
                 Cancel
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Help Modal */}
+      {showHelp && (
+        <div className={styles.modalOverlay} onClick={() => setShowHelp(false)} role="presentation">
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
+            <h3 id="help-modal-title">⌨️ Keyboard Shortcuts</h3>
+            <div className={styles.helpGrid}>
+              <div className={styles.helpItem}><kbd>G</kbd> Generate Venture</div>
+              <div className={styles.helpItem}><kbd>T</kbd> Run Tests</div>
+              <div className={styles.helpItem}><kbd>C</kbd> Open Council</div>
+              <div className={styles.helpItem}><kbd>?</kbd> Toggle Help</div>
+            </div>
+            <div className={styles.modalActions}>
+              <button className={styles.btnSecondary} onClick={() => setShowHelp(false)} aria-label="Close help">Close</button>
             </div>
           </div>
         </div>
