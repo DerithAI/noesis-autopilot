@@ -2,7 +2,7 @@
 Pydantic Validation Schemas for EVO-HUB API
 Phase 2.4: Input validation for all endpoints
 """
-from pydantic import BaseModel, Field, EmailStr, HttpUrl, validator
+from pydantic import BaseModel, Field, EmailStr, HttpUrl, field_validator, ConfigDict
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from enum import Enum
@@ -45,9 +45,7 @@ class ModelComplexity(str, Enum):
 # ── Base Models ──
 
 class BaseRequest(BaseModel):
-    class Config:
-        str_strip_whitespace = True
-        validate_assignment = True
+    model_config = ConfigDict(str_strip_whitespace=True, validate_assignment=True)
 
 # ── Venture Schemas ──
 
@@ -57,7 +55,8 @@ class VentureSeed(BaseModel):
     stack: str = Field(default="auto", pattern=r"^(auto|fastapi|fastapi\+react|nextjs|django|express)$")
     complexity: ModelComplexity = Field(default=ModelComplexity.MEDIUM)
 
-    @validator("seed")
+    @field_validator("seed")
+    @classmethod
     def validate_seed(cls, v: str) -> str:
         if not v or not v.strip():
             raise ValueError("Seed cannot be empty")
