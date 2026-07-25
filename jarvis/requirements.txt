@@ -1,0 +1,16 @@
+# JARVIS Dependencies
+# Core — zero dependencies
+# Optional modules:
+
+# Voice
+# whisper  # STT (optional, for speech-to-text)
+# pyttsx3  # TTS (optional, for text-to-speech)
+
+# Home
+# paho-mqtt  # MQTT for smart home
+# requests   # REST API integrations
+
+# Dashboard
+# fastapi
+# uvicorn
+# react  # Frontend (separate build)
