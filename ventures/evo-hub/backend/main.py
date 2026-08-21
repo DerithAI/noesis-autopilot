@@ -91,7 +91,7 @@ class CognitiveRequest(BaseModel):
     mode: str = Field(default="chat", min_length=1, max_length=50)
 
 class CognitiveResponse(BaseModel):
-    stages: List[Dict]
+    stages: List[str]
     lumen_available: bool
 
 @app.get("/health", response_model=HealthResponse)

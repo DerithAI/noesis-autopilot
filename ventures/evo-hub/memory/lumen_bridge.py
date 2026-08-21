@@ -37,67 +37,71 @@ class LumenBridge:
             return False
     
     def cognitive_loop(self, input_text: str, mode: str = "chat") -> Dict:
-        """Run cognitive processing via LUMEN chat endpoint."""
+        """Run cognitive processing via LUMEN POST /process (real runtime path).
+
+        LUMEN OS exposes /api/chat nowhere; the real loop is /process, which
+        returns lumen.stages (perception → intention → context → reasoning →
+        response → direction). On any failure the error is surfaced, never
+        silently replaced by a local simulation.
+        """
         if not self.is_available():
             return {"error": "LUMEN not available", "stages": []}
         try:
-            # Use chat endpoint if cognitive/process doesn't exist
             resp = requests.post(
-                f"{self.base_url}/api/chat",
-                json={"message": input_text, "mode": mode, "stream": False},
-                timeout=30
+                f"{self.base_url}/process",
+                json={"text": input_text},
+                timeout=90
             )
-            if resp.status_code == 404:
-                # Fallback: simulate 6-stage loop locally
-                return {
-                    "stages": [
-                        {"stage": "perception", "input": input_text},
-                        {"stage": "intention", "goal": f"Process: {input_text[:30]}"},
-                        {"stage": "context", "memory_loaded": True},
-                        {"stage": "reasoning", "source": "local_fallback"},
-                        {"stage": "response", "action": "continue"},
-                        {"stage": "direction", "next": "execute"}
-                    ]
-                }
-            return resp.json()
+            if resp.status_code != 200:
+                return {"error": f"LUMEN /process returned {resp.status_code}", "stages": []}
+            data = resp.json()
+            lumen = data.get("lumen", {})
+            return {
+                "stages": lumen.get("stages", []),
+                "intent": lumen.get("intent"),
+                "confidence": lumen.get("confidence"),
+                "task_id": data.get("task", {}).get("task_id"),
+            }
         except Exception as e:
             return {"error": str(e), "stages": []}
     
     def vector_search(self, query: str, limit: int = 5) -> List[Dict]:
-        """Semantic search via ChromaDB (nomic-embed-text 768-dim)."""
+        """Semantic search via LUMEN /api/memory/semantic/search (ChromaDB)."""
         if not self.is_available():
             return []
         try:
-            # Try GET with query params first
             resp = requests.get(
-                f"{self.base_url}/api/memory/semantic",
-                params={"query": query, "limit": limit},
+                f"{self.base_url}/api/memory/semantic/search",
+                params={"query": query, "top_k": limit},
                 timeout=10
             )
             if resp.status_code == 200:
                 return resp.json().get("results", [])
-            # Fallback to POST if GET returns error
-            resp = requests.post(
-                f"{self.base_url}/api/memory/semantic/search",
-                json={"query": query, "limit": limit},
-                timeout=10
-            )
-            return resp.json().get("results", [])
+            return []
         except Exception:
             return []
     
     def store_episode(self, content: str, category: str = "evo_hub", metadata: Dict = None) -> str:
-        """Store episodic memory in LUMEN."""
+        """Store episodic memory in LUMEN via POST /process (runtime write path).
+
+        LUMEN OS exposes only GET on /api/memory/episodic; the real write
+        path is /process, which runs the cognitive loop and persists the
+        interaction to episodic + semantic memory. Returns the task_id, or
+        "" on failure (never a fake success marker).
+        """
         if not self.is_available():
             return ""
         try:
             resp = requests.post(
-                f"{self.base_url}/api/memory/episodic",
-                json={"content": content, "category": category, "metadata": metadata or {}},
-                timeout=10
+                f"{self.base_url}/process",
+                json={"text": content},
+                timeout=60
             )
+            if resp.status_code != 200:
+                return ""
             data = resp.json()
-            return data.get("id", data.get("memory_id", "stored"))
+            task = data.get("task", {})
+            return task.get("task_id", "")
         except Exception:
             return ""
     
