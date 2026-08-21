@@ -95,7 +95,7 @@ class LumenBridge:
             resp = requests.post(
                 f"{self.base_url}/process",
                 json={"text": content},
-                timeout=60
+                timeout=90
             )
             if resp.status_code != 200:
                 return ""

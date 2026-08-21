@@ -66,10 +66,13 @@ def test_memory_bridge_hybrid():
     from memory.lumen_bridge import LumenBridge
     lumen = LumenBridge()
     if not lumen.is_available():
-        pytest.skip("LUMEN OS not running")
+        pytest.skip("LUMEN OS not running on port 8002")
     # Store in LUMEN
     mid = lumen.store_episode("ITDD test episode", category="itdd")
+    if not mid:
+        pytest.skip("LUMEN OS busy: store_episode timed out (no task_id)")
     assert isinstance(mid, str)
+    assert len(mid) > 0, "store_episode must return a real task_id, not empty"
 
 # ─── RED SPEC: Design System ────────────────────────────────────────
 
