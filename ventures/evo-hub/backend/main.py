@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
 import sys
 import time
+import os
 from pathlib import Path
 
 # Add parent to path for memory bridge
@@ -38,7 +39,6 @@ async def log_requests(request: Request, call_next):
     )
     return response
 
-import os
 
 # CORS whitelist — never use ["*"] in production.
 # Localhost defaults are always present; extra origins come from
@@ -63,6 +63,10 @@ def build_cors_origins() -> List[str]:
     return origins
 
 CORS_ORIGINS = build_cors_origins()
+
+def get_backend_port() -> int:
+    """Return backend port from EVO_HUB_PORT env var, default 8000."""
+    return int(os.environ.get("EVO_HUB_PORT", "8000"))
 
 app.add_middleware(
     CORSMiddleware,
@@ -183,4 +187,4 @@ except ImportError:
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=get_backend_port())

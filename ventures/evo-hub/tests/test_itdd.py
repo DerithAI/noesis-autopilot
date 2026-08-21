@@ -80,9 +80,11 @@ def test_design_system_exists():
 
 def test_evo_hub_backend_runs():
     """FastAPI backend must respond to /health."""
+    import os
     try:
         import requests
-        resp = requests.get("http://127.0.0.1:8000/health", timeout=5)
+        port = os.environ.get("EVO_HUB_PORT", "8000")
+        resp = requests.get(f"http://127.0.0.1:{port}/health", timeout=5)
         assert resp.status_code == 200
         data = resp.json()
         assert data.get("status") == "healthy"
