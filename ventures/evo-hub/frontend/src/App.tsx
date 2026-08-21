@@ -8,6 +8,8 @@ import Charts from './pages/Charts';
 import Tables from './pages/Tables';
 import Council from './pages/Council';
 import VentureDetail from './pages/VentureDetail';
+import CognitiveLoop from './pages/CognitiveLoop';
+import MemorySearch from './pages/MemorySearch';
 import { ThemeMode } from './types';
 
 const App: React.FC = () => {
@@ -28,6 +30,8 @@ const App: React.FC = () => {
               <Route path="/charts" element={<Charts />} />
               <Route path="/tables" element={<Tables />} />
               <Route path="/venture/:name" element={<VentureDetail />} />
+              <Route path="/cognitive" element={<CognitiveLoop />} />
+              <Route path="/memory" element={<MemorySearch />} />
             </Routes>
           </main>
         </ToastProvider>
