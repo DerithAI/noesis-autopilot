@@ -1,0 +1,57 @@
+{
+  "seed": "AI-powered expense tracker based on receipt OCR",
+  "ideas": [
+    "Expense digest AI app",
+    "Receipt scan & categorize tool",
+    "Automated expense review service"
+  ],
+  "architecture": {
+    "product": "Expense digest AI app",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "expense tracking",
+      "category recognition",
+      "budget suggestions"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense digest AI app\\docker-compose.yml",
+    "forge-fastapi api for Expense digest AI app\\main.py",
+    "forge-fastapi api for Expense digest AI app\\README.md",
+    "forge-fastapi api for Expense digest AI app\\tests_test_main.py",
+    "forge-react dashboard for Expense digest AI app\\README.md",
+    "forge-react dashboard for Expense digest AI app\\src_App.test.tsx",
+    "forge-react dashboard for Expense digest AI app\\src_components_Cards_TotalExpensesCard.tsx",
+    "forge-react dashboard for Expense digest AI app\\src_components_Charts_ExpenseChart.tsx",
+    "forge-react dashboard for Expense digest AI app\\src_layout_Layout.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 55.69903802871704,
+  "timestamp": "2026-08-13T01:20:05.454655"
+}

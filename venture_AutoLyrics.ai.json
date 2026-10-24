@@ -1,0 +1,57 @@
+{
+  "seed": "AI song lyricist",
+  "ideas": [
+    "AutoLyrics.ai",
+    "SongGeniusPro",
+    "ComposeWithMeBot"
+  ],
+  "architecture": {
+    "product": "AutoLyrics.ai",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      " Lyrics Search and Display",
+      " User Authentication"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AutoLyrics.ai\\main.py",
+    "forge-fastapi api for AutoLyrics.ai\\main_test.py",
+    "forge-fastapi api for AutoLyrics.ai\\README.md",
+    "forge-react dashboard for AutoLyrics.ai\\README.md",
+    "forge-react dashboard for AutoLyrics.ai\\src_App.tsx",
+    "forge-react dashboard for AutoLyrics.ai\\src_components_Card.tsx",
+    "forge-react dashboard for AutoLyrics.ai\\src_components_Chart.tsx",
+    "forge-react dashboard for AutoLyrics.ai\\src_components_Layout.tsx",
+    "forge-react dashboard for AutoLyrics.ai\\src_config.ts",
+    "forge-react dashboard for AutoLyrics.ai\\__tests___App.test.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 76.88933444023132,
+  "timestamp": "2026-07-31T13:20:29.549327"
+}

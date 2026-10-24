@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered resume summarizer",
+  "ideas": [
+    "QuickSum AI",
+    "AutoResume Pro",
+    "SmartRecruit AI"
+  ],
+  "architecture": {
+    "product": "QuickSum AI",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Natural Language Processing",
+      "Summarization"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for QuickSum AI\\main.py",
+    "forge-fastapi api for QuickSum AI\\README.md",
+    "forge-fastapi api for QuickSum AI\\test_test_main.py",
+    "forge-fastapi api for QuickSum AI\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 407.8169414997101,
+  "timestamp": "2026-09-16T05:25:53.650171"
+}

@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated workout video summarizer",
+  "ideas": [
+    "Shortened workout summary app",
+    "Voice-activated fitness highlighter",
+    "Video digest for quick workouts"
+  ],
+  "architecture": {
+    "product": "shortened_workout_su",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for shortened_workout_su\\fastapi_api_for_shortened_workout_su.py",
+    "forge-fastapi api for shortened_workout_su\\README.md",
+    "forge-fastapi api for shortened_workout_su\\test_fastapi_api_for_shortened_workout_su.py",
+    "forge-react dashboard for shortened_workout_su\\Dashboard.test.tsx",
+    "forge-react dashboard for shortened_workout_su\\Dashboard.tsx",
+    "forge-react dashboard for shortened_workout_su\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 67.13307332992554,
+  "timestamp": "2026-07-31T21:20:26.730727"
+}

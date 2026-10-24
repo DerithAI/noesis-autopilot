@@ -1,0 +1,61 @@
+{
+  "seed": "AI-driven recipe difficulty adjuster",
+  "ideas": [
+    "EasyCook AI",
+    "RecipeEase Pro",
+    "ChefSkill Adjuster"
+  ],
+  "architecture": {
+    "product": "EasyCook AI",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Recipe Suggestions",
+      "Nutritional Information"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for EasyCook AI\\app.py",
+    "forge-fastapi api for EasyCook AI\\auth.py",
+    "forge-fastapi api for EasyCook AI\\models.py",
+    "forge-fastapi api for EasyCook AI\\README.md",
+    "forge-fastapi api for EasyCook AI\\routers_recipes.py",
+    "forge-fastapi api for EasyCook AI\\routers_users.py",
+    "forge-fastapi api for EasyCook AI\\tests_test_users.py",
+    "forge-react dashboard for EasyCook AI\\dashboard_README.md",
+    "forge-react dashboard for EasyCook AI\\dashboard_src_components_Chart.tsx",
+    "forge-react dashboard for EasyCook AI\\dashboard_src_components_Header.tsx",
+    "forge-react dashboard for EasyCook AI\\dashboard_src_components_Layout.tsx",
+    "forge-react dashboard for EasyCook AI\\dashboard_src_components_MainContent.tsx",
+    "forge-react dashboard for EasyCook AI\\dashboard_src_utils_DarkModeToggle.tsx",
+    "forge-react dashboard for EasyCook AI\\dashboard_src___tests___Layout.test.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 84.08752799034119,
+  "timestamp": "2026-08-08T13:20:29.269395"
+}

@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated grocery list meal planner",
+  "ideas": [
+    "Weekly menu generator",
+    "Meal plan AI assistant",
+    "Grocery list AI buddy"
+  ],
+  "architecture": {
+    "product": "weekly_menu_generato",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for weekly_menu_generato\\fastapi_api_for_weekly_menu_generato.py",
+    "forge-fastapi api for weekly_menu_generato\\README.md",
+    "forge-fastapi api for weekly_menu_generato\\test_fastapi_api_for_weekly_menu_generato.py",
+    "forge-react dashboard for weekly_menu_generato\\react_dashboard_for_weekly_menu_generato.test.tsx",
+    "forge-react dashboard for weekly_menu_generato\\react_dashboard_for_weekly_menu_generato.tsx",
+    "forge-react dashboard for weekly_menu_generato\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 70.32519602775574,
+  "timestamp": "2026-08-18T09:20:24.229058"
+}

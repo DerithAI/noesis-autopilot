@@ -1,0 +1,60 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "Expense Scanbot",
+    "Smart Expense Categorizer",
+    "AI Receipt Classifier"
+  ],
+  "architecture": {
+    "product": "Expense Scanbot",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Expense scanning",
+      "Category recognition",
+      "Reimbursement claim generation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense Scanbot\\expense_scanbot.py",
+    "forge-fastapi api for Expense Scanbot\\expense_scanbot_api.py",
+    "forge-fastapi api for Expense Scanbot\\expense_scanbot_api_test.py",
+    "forge-fastapi api for Expense Scanbot\\expense_scanbot_test.py",
+    "forge-fastapi api for Expense Scanbot\\main.py",
+    "forge-fastapi api for Expense Scanbot\\README.md",
+    "forge-fastapi api for Expense Scanbot\\test_main.py",
+    "forge-Expense Scanbot bot\\expense_scanbot.py",
+    "forge-Expense Scanbot bot\\Expense_Scanbot_bot.py",
+    "forge-Expense Scanbot bot\\expense_scanbot_test.py",
+    "forge-Expense Scanbot bot\\README.md",
+    "forge-Expense Scanbot bot\\test_Expense_Scanbot_bot.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 7,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "bot",
+        "status": "FAIL",
+        "files": 5,
+        "reason": "SyntaxError in forge-Expense Scanbot bot\\Expense_Scanbot_bot.py: invalid syntax (Expense_Scanbot_bot.py, line 16)"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 654.574533700943,
+  "timestamp": "2026-09-18T17:30:08.217311"
+}

@@ -1,0 +1,48 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Voice-to-text dictation tool",
+    "Smart meeting summary assistant",
+    "AI-enhanced note summarizer"
+  ],
+  "architecture": {
+    "product": "Voice-to-text",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Real-time transcription",
+      "Voice command recognition",
+      "Text editing"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice-to-text\\README.md",
+    "forge-fastapi api for Voice-to-text\\test_voice_to_text_api.py",
+    "forge-fastapi api for Voice-to-text\\test_voice_to_text_api_test_main.py",
+    "forge-fastapi api for Voice-to-text\\voice_to_text_api.py",
+    "forge-fastapi api for Voice-to-text\\voice_to_text_api_main.py",
+    "forge-fastapi api for Voice-to-text\\voice_to_text_api_README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 6,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 334.50883054733276,
+  "timestamp": "2026-09-22T21:24:33.834406"
+}

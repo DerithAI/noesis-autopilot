@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense bot with auto-sync",
+    "Receipt OCR expense manager",
+    "Smart expense report generator"
+  ],
+  "architecture": {
+    "product": "Expense bot with auto-sync",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Auto-sync expenses",
+      "Expense categorization",
+      "Budget tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense bot with auto-sync\\fastapi_api_for_Expense_bot_with_auto-sync.py",
+    "forge-fastapi api for Expense bot with auto-sync\\README.md",
+    "forge-fastapi api for Expense bot with auto-sync\\test_fastapi_api_for_Expense_bot_with_auto-sync.py",
+    "forge-Expense bot with auto-sync bot\\Expense_bot_with_auto-sync_bot.py",
+    "forge-Expense bot with auto-sync bot\\README.md",
+    "forge-Expense bot with auto-sync bot\\test_Expense_bot_with_auto-sync_bot.py"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "bot",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 57.306997537612915,
+  "timestamp": "2026-08-19T09:20:08.001705"
+}

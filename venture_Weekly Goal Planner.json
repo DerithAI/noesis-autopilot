@@ -1,0 +1,54 @@
+{
+  "seed": "Grocery list optimizer",
+  "ideas": [
+    "Weekly goal planner",
+    "Synced grocery lists",
+    "Auto-save recipes"
+  ],
+  "architecture": {
+    "product": "Weekly Goal Planner",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "User authentication",
+      "Goal setting",
+      "Progress tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Weekly Goal Planner\\weekly_goal_planner_api_main.py",
+    "forge-fastapi api for Weekly Goal Planner\\weekly_goal_planner_api_README.md",
+    "forge-fastapi api for Weekly Goal Planner\\test_weekly_goal_planner_api_tests_test_main.py",
+    "forge-react dashboard for Weekly Goal Planner\\README.md",
+    "forge-react dashboard for Weekly Goal Planner\\WeeklyGoalPlannerDashboard.test.tsx",
+    "forge-react dashboard for Weekly Goal Planner\\WeeklyGoalPlannerDashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 673.8299617767334,
+  "timestamp": "2026-10-23T05:30:18.950307"
+}

@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Real-time summary recorder",
+    "Meeting highlight extractor",
+    "Automated note summarizer"
+  ],
+  "architecture": {
+    "product": "Real-time Summary Recorder",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Real-time transcription",
+      "Automatic summarization",
+      "User authentication"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Real-time Summary Recorder\\README.md",
+    "forge-fastapi api for Real-time Summary Recorder\\summary_recorder_api.py",
+    "forge-fastapi api for Real-time Summary Recorder\\test_summary_recorder_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 434.33469676971436,
+  "timestamp": "2026-09-16T21:26:21.144593"
+}

@@ -1,0 +1,62 @@
+{
+  "seed": "AI travel itinerary optimizer",
+  "ideas": [
+    "Personalized flight scheduler",
+    "Real-time hotel recommender",
+    "Automated tourist guide AI"
+  ],
+  "architecture": {
+    "product": "personalized_flight_",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for personalized_flight_\\main.py",
+    "forge-fastapi api for personalized_flight_\\README.md",
+    "forge-fastapi api for personalized_flight_\\skill_documentation.md",
+    "forge-fastapi api for personalized_flight_\\tests_test_main.py",
+    "forge-react dashboard for personalized_flight_\\README.md",
+    "forge-react dashboard for personalized_flight_\\src_cards.tsx",
+    "forge-react dashboard for personalized_flight_\\src_charts.tsx",
+    "forge-react dashboard for personalized_flight_\\src_Dashboard.tsx",
+    "forge-react dashboard for personalized_flight_\\src_filters.tsx",
+    "forge-react dashboard for personalized_flight_\\src_header.tsx",
+    "forge-react dashboard for personalized_flight_\\src_index.tsx",
+    "forge-react dashboard for personalized_flight_\\src_layout.tsx",
+    "forge-react dashboard for personalized_flight_\\src_sidebar.tsx",
+    "forge-react dashboard for personalized_flight_\\src_tables.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 10,
+        "has_tests": false
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 133.19576573371887,
+  "timestamp": "2026-07-30T21:21:36.331995"
+}

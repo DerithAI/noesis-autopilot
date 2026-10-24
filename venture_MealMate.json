@@ -1,0 +1,54 @@
+{
+  "seed": "AI meal plan generator based on pantry and dietary preferences",
+  "ideas": [
+    "AI meal plan generator based on pantry and dietary preferences automation tool",
+    "AI-powered AI meal plan generator based on pantry and dietary preferences platform",
+    "Smart AI meal plan generator based on pantry and dietary preferences assistant"
+  ],
+  "architecture": {
+    "product": "MealMate",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Dietary preference input",
+      "Pantry item scanning",
+      "Meal plan generation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for MealMate\\fastapi_api_for_MealMate.py",
+    "forge-fastapi api for MealMate\\README.md",
+    "forge-fastapi api for MealMate\\test_fastapi_api_for_MealMate.py",
+    "forge-react dashboard for MealMate\\MealMateChartTest.tsx",
+    "forge-react dashboard for MealMate\\MealMateDashboard.tsx",
+    "forge-react dashboard for MealMate\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 67.73124194145203,
+  "timestamp": "2026-08-02T05:20:42.890987"
+}

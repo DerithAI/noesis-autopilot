@@ -1,0 +1,48 @@
+{
+  "seed": "AI meeting summary chatbot",
+  "ideas": [
+    "Meeting minute AI assistant",
+    "Voice activated summary tool",
+    "Real-time meeting recorder"
+  ],
+  "architecture": {
+    "product": "MeetingMinuteAI",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Automated transcription",
+      "Meeting summary generation",
+      "Q&A functionality"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for MeetingMinuteAI\\app.py",
+    "forge-fastapi api for MeetingMinuteAI\\models.py",
+    "forge-fastapi api for MeetingMinuteAI\\README.md",
+    "forge-fastapi api for MeetingMinuteAI\\routes.py",
+    "forge-fastapi api for MeetingMinuteAI\\schemas.py",
+    "forge-fastapi api for MeetingMinuteAI\\tests_test_meeting_minute.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 6,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 63.549394369125366,
+  "timestamp": "2026-08-07T09:20:12.637855"
+}

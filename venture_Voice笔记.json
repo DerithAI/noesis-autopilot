@@ -1,0 +1,44 @@
+{
+  "seed": "AI-driven meeting summarizer",
+  "ideas": [
+    "Voice笔记",
+    "智能会议纪要器",
+    "语音摘要助手"
+  ],
+  "architecture": {
+    "product": "Voice笔记",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "语音转文字",
+      "笔记保存"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice笔记\\fastapi_api_for_Voice__.py",
+    "forge-fastapi api for Voice笔记\\README.md",
+    "forge-fastapi api for Voice笔记\\test_fastapi_api_for_Voice__.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 67.17948746681213,
+  "timestamp": "2026-08-21T05:20:21.537100"
+}

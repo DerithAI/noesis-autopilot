@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "AI-powered expense receipt OCR and categorizer automation tool",
+    "AI-powered AI-powered expense receipt OCR and categorizer platform",
+    "Smart AI-powered expense receipt OCR and categorizer assistant"
+  ],
+  "architecture": {
+    "product": "ExpenseOcr",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "OCR",
+      "Expense Categorization"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for ExpenseOcr\\expense_ocr_api_main.py",
+    "forge-fastapi api for ExpenseOcr\\expense_ocr_api_test.py",
+    "forge-fastapi api for ExpenseOcr\\README.md",
+    "forge-fastapi api for ExpenseOcr\\test_expense_ocr_api_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 388.35652923583984,
+  "timestamp": "2026-09-12T05:25:31.367101"
+}

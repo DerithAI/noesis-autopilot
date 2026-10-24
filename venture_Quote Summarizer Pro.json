@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated movie quote dialogue summarizer",
+  "ideas": [
+    "Quote Summarizer Pro",
+    "AI Movie Quote Finder",
+    "Quick Dialogue Extractor"
+  ],
+  "architecture": {
+    "product": "Quote Summarizer Pro",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Automatic summarization",
+      "User login and settings",
+      "Summary export options"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Quote Summarizer Pro\\quote_summarizer_pro_api_main.py",
+    "forge-fastapi api for Quote Summarizer Pro\\test_quote_summarizer_pro_api_tests_test_main.py",
+    "forge-fastapi api for Quote Summarizer Pro\\quote_summarizer_pro_README.md",
+    "forge-react dashboard for Quote Summarizer Pro\\QuoteSummarizerProDashboard.test.tsx",
+    "forge-react dashboard for Quote Summarizer Pro\\QuoteSummarizerProDashboard.tsx",
+    "forge-react dashboard for Quote Summarizer Pro\\README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 687.9138646125793,
+  "timestamp": "2026-09-20T01:30:29.918280"
+}

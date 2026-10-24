@@ -1,0 +1,54 @@
+{
+  "seed": "AI movie plot outline generator",
+  "ideas": [
+    "AI movie plot outline generator automation tool",
+    "AI-powered AI movie plot outline generator platform",
+    "Smart AI movie plot outline generator assistant"
+  ],
+  "architecture": {
+    "product": "ai_movie_plot_outlin",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for ai_movie_plot_outlin\\fastapi_api_for_ai_movie_plot_outlin.py",
+    "forge-fastapi api for ai_movie_plot_outlin\\README.md",
+    "forge-fastapi api for ai_movie_plot_outlin\\test_fastapi_api_for_ai_movie_plot_outlin.py",
+    "forge-react dashboard for ai_movie_plot_outlin\\Dashboard.test.tsx",
+    "forge-react dashboard for ai_movie_plot_outlin\\dashboard.tsx",
+    "forge-react dashboard for ai_movie_plot_outlin\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 275.2387201786041,
+  "timestamp": "2026-07-31T09:24:02.138100"
+}

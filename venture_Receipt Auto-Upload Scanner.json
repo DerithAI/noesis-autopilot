@@ -1,0 +1,46 @@
+{
+  "seed": "AI-powered expense tracker based on receipt OCR",
+  "ideas": [
+    "Receipt auto-upload scanner",
+    "Expense categorization AI buddy",
+    "Financial insights automation tool"
+  ],
+  "architecture": {
+    "product": "Receipt Auto-Upload Scanner",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "",
+    "features": [
+      "Auto-upload receipts from photos or scans",
+      "OCR for text extraction",
+      "Image resizing and compression for storage efficiency"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/receipt/upload"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Receipt Auto-Upload Scanner\\app_main.py",
+    "forge-fastapi api for Receipt Auto-Upload Scanner\\app_routers_receipts.py",
+    "forge-fastapi api for Receipt Auto-Upload Scanner\\README.md",
+    "forge-fastapi api for Receipt Auto-Upload Scanner\\tests_test_receipts.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 36.29027247428894,
+  "timestamp": "2026-08-09T09:19:36.768019"
+}

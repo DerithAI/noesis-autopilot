@@ -1,0 +1,53 @@
+{
+  "seed": "Meeting Note Keytake Bot",
+  "ideas": [
+    "Note summarization bot",
+    "Real-time summary generator",
+    "AI-enhanced meeting recorder"
+  ],
+  "architecture": {
+    "product": "Note summarization bot",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Summarize notes",
+      "Save summaries"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Note summarization bot\\main.py",
+    "forge-fastapi api for Note summarization bot\\README.md",
+    "forge-fastapi api for Note summarization bot\\test_test_main.py",
+    "forge-Note summarization bot bot\\note_summarization_bot.py",
+    "forge-Note summarization bot bot\\README.md",
+    "forge-Note summarization bot bot\\test_note_summarization_bot.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "bot",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 656.5303192138672,
+  "timestamp": "2026-10-24T21:36:54.678537"
+}

@@ -1,0 +1,45 @@
+{
+  "seed": "AI-generated recipe ingredient converter",
+  "ideas": [
+    "Recipe AI unit translator",
+    "Grocery list auto updater",
+    "Meal planner smart ingredient mixer"
+  ],
+  "architecture": {
+    "product": "Recipe AI unit translator",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "AI translation of recipe units to user's preferred language",
+      "Support for multiple measurement systems (e.g., imperial and metric)"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Recipe AI unit translator\\main.py",
+    "forge-fastapi api for Recipe AI unit translator\\README.md",
+    "forge-fastapi api for Recipe AI unit translator\\skill_documentation.md",
+    "forge-fastapi api for Recipe AI unit translator\\tests_test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 35.226322174072266,
+  "timestamp": "2026-08-12T17:19:40.663046"
+}

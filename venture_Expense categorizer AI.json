@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense categorizer AI",
+    "Receipt OCR integration",
+    "Expense notification alert"
+  ],
+  "architecture": {
+    "product": "Expense categorizer AI",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Expense recognition",
+      "Category assignment"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/categorize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense categorizer AI\\main.py",
+    "forge-fastapi api for Expense categorizer AI\\README.md",
+    "forge-fastapi api for Expense categorizer AI\\skill_document.md",
+    "forge-fastapi api for Expense categorizer AI\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 55.449761152267456,
+  "timestamp": "2026-08-23T13:20:05.022489"
+}

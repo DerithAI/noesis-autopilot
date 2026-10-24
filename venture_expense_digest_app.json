@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered expense tracker based on receipt OCR",
+  "ideas": [
+    "Expense digest app",
+    "Receipt recognition wallet",
+    "Auto expense categorizer"
+  ],
+  "architecture": {
+    "product": "expense_digest_app",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for expense_digest_app\\expense_digest_app.py",
+    "forge-fastapi api for expense_digest_app\\expense_digest_app_test.py",
+    "forge-fastapi api for expense_digest_app\\README.md",
+    "forge-react dashboard for expense_digest_app\\dashboard.tsx",
+    "forge-react dashboard for expense_digest_app\\README.md",
+    "forge-react dashboard for expense_digest_app\\test-dashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 48.993021726608276,
+  "timestamp": "2026-08-04T13:19:58.976256"
+}

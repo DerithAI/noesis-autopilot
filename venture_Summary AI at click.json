@@ -1,0 +1,48 @@
+{
+  "seed": "AI meeting summary chatbot",
+  "ideas": [
+    "Summary AI at click",
+    "Auto-summarize meetings",
+    "AI notetaker chatbot"
+  ],
+  "architecture": {
+    "product": "Summary AI at click",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Text summarization",
+      "User input interface"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Summary AI at click\\.dockerfile",
+    "forge-fastapi api for Summary AI at click\\.dockerignore",
+    "forge-fastapi api for Summary AI at click\\.env",
+    "forge-fastapi api for Summary AI at click\\main.py",
+    "forge-fastapi api for Summary AI at click\\pyproject.toml",
+    "forge-fastapi api for Summary AI at click\\README.md",
+    "forge-fastapi api for Summary AI at click\\tests_test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 34.09731936454773,
+  "timestamp": "2026-08-10T17:19:44.127280"
+}

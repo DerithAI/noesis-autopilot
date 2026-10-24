@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered recipe cook time estimator",
+  "ideas": [
+    "Recipe cook time AI",
+    "AI cook timer app",
+    "Recipe timing predictor"
+  ],
+  "architecture": {
+    "product": "Recipe cook time AI",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Recipe parsing",
+      "Cook time prediction"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Recipe cook time AI\\main.py",
+    "forge-fastapi api for Recipe cook time AI\\README.md",
+    "forge-fastapi api for Recipe cook time AI\\skill_document.md",
+    "forge-fastapi api for Recipe cook time AI\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 52.54833722114563,
+  "timestamp": "2026-08-15T13:20:10.104513"
+}

@@ -1,0 +1,55 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense auto-upload scanner",
+    "Receipt OCR expense categorizer",
+    "Smart expense summary generator"
+  ],
+  "architecture": {
+    "product": "Expense auto-upload scanner",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "none",
+    "features": [
+      "Automated expense image upload",
+      "Expense categorization",
+      "Monthly expense summary"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/upload",
+      "/api/summary"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense auto-upload scanner\\fastapi_api_for_Expense_auto-upload_scanner.py",
+    "forge-fastapi api for Expense auto-upload scanner\\README.md",
+    "forge-fastapi api for Expense auto-upload scanner\\test_fastapi_api_for_Expense_auto-upload_scanner.py",
+    "forge-react dashboard for Expense auto-upload scanner\\react_dashboard_for_Expense_auto-upload_scanner.test.tsx",
+    "forge-react dashboard for Expense auto-upload scanner\\react_dashboard_for_Expense_auto-upload_scanner.tsx",
+    "forge-react dashboard for Expense auto-upload scanner\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 124.6452283859253,
+  "timestamp": "2026-08-27T05:22:22.283091"
+}

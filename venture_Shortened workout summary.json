@@ -1,0 +1,53 @@
+{
+  "seed": "AI-generated fitness workout video summarizer",
+  "ideas": [
+    "Shortened workout summary",
+    "AI clip selection tool",
+    "Fitness routine highlighter"
+  ],
+  "architecture": {
+    "product": "Shortened workout summary",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Workout summarization",
+      "User profile management"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Shortened workout summary\\fastapi_api_for_Shortened_workout_summary.py",
+    "forge-fastapi api for Shortened workout summary\\README.md",
+    "forge-fastapi api for Shortened workout summary\\test_fastapi_api_for_Shortened_workout_summary.py",
+    "forge-react dashboard for Shortened workout summary\\Dashboard.test.tsx",
+    "forge-react dashboard for Shortened workout summary\\Dashboard.tsx",
+    "forge-react dashboard for Shortened workout summary\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 66.12534594535828,
+  "timestamp": "2026-08-23T05:20:08.921880"
+}

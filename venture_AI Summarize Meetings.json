@@ -1,0 +1,46 @@
+{
+  "seed": "AI-generated meeting note summarizer",
+  "ideas": [
+    "AI Summarize Meetings",
+    "Quick Note Taker AI",
+    "Smart Meeting Recorder"
+  ],
+  "architecture": {
+    "product": "AI Summarize Meetings",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Meeting transcription",
+      "Summary generation",
+      "Automated meeting notes"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Summarize Meetings\\main.py",
+    "forge-fastapi api for AI Summarize Meetings\\README.md",
+    "forge-fastapi api for AI Summarize Meetings\\skill_documentation.md",
+    "forge-fastapi api for AI Summarize Meetings\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 39.755117654800415,
+  "timestamp": "2026-08-21T17:19:55.338397"
+}

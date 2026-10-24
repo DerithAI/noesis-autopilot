@@ -1,0 +1,58 @@
+{
+  "seed": "AI novel chapter outline generator",
+  "ideas": [
+    "Novel AI Outline Pro",
+    "Quick Chapter Generator AI",
+    "Author Assist Creative Prompt"
+  ],
+  "architecture": {
+    "product": "Novel AI Outline Pro",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "AI outline generation",
+      "text summarization"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Novel AI Outline Pro\\main.py",
+    "forge-fastapi api for Novel AI Outline Pro\\README.md",
+    "forge-fastapi api for Novel AI Outline Pro\\tests_test_main.py",
+    "forge-react dashboard for Novel AI Outline Pro\\README.md",
+    "forge-react dashboard for Novel AI Outline Pro\\src_App.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_ChartCard.test.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_ChartCard.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_Header.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_MainContent.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_Sidebar.tsx",
+    "forge-react dashboard for Novel AI Outline Pro\\src_components_TableCard.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 8,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 59.26716732978821,
+  "timestamp": "2026-08-13T13:20:04.092005"
+}

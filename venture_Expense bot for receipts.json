@@ -1,0 +1,55 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense bot for receipts",
+    "Smart expense categorizer app",
+    "Auto-tagging receipt scanner"
+  ],
+  "architecture": {
+    "product": "Expense bot for receipts",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Receipt scanning",
+      "Expense categorization",
+      "Expense tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense bot for receipts\\expense_bot.py",
+    "forge-fastapi api for Expense bot for receipts\\README.md",
+    "forge-fastapi api for Expense bot for receipts\\receipt_processor.py",
+    "forge-fastapi api for Expense bot for receipts\\test_expense_bot.py",
+    "forge-Expense bot for receipts bot\\expense_bot.py",
+    "forge-Expense bot for receipts bot\\README.md",
+    "forge-Expense bot for receipts bot\\test_expense_bot.py"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 4,
+        "has_tests": true
+      },
+      {
+        "component": "bot",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 75.33560037612915,
+  "timestamp": "2026-08-22T21:20:44.318961"
+}

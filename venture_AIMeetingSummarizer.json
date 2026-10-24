@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "AI-powered meeting note summarizer automation tool",
+    "AI-powered AI-powered meeting note summarizer platform",
+    "Smart AI-powered meeting note summarizer assistant"
+  ],
+  "architecture": {
+    "product": "AIMeetingSummarizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Automated meeting note summarization",
+      "Real-time chat integration",
+      "User profile management"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AIMeetingSummarizer\\app_main.py",
+    "forge-fastapi api for AIMeetingSummarizer\\README.md",
+    "forge-fastapi api for AIMeetingSummarizer\\test_test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 324.7230200767517,
+  "timestamp": "2026-09-08T05:24:27.149174"
+}

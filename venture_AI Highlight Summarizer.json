@@ -1,0 +1,44 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "AI highlight summarizer",
+    "Smart note recorder assistant",
+    "Quick summary AI tool"
+  ],
+  "architecture": {
+    "product": "AI Highlight Summarizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Summarize text",
+      "Save summaries"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Highlight Summarizer\\main.py",
+    "forge-fastapi api for AI Highlight Summarizer\\README.md",
+    "forge-fastapi api for AI Highlight Summarizer\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 335.2521560192108,
+  "timestamp": "2026-09-08T21:24:45.552008"
+}

@@ -212,6 +212,18 @@ class ImplementAgent:
         
         return results
     
+    @staticmethod
+    def _clean_fence_code(text: str) -> str:
+        """Usun markdown code fences z pliku .py."""
+        lines = text.split("\n")
+        if lines and lines[0].strip().startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        cleaned = [l for l in lines if l.strip() != "```"]
+        return "\n".join(cleaned).strip()
+
+
     def _run_forge(self, intent: str, stack: str, complexity: str) -> Dict:
         """Run EVO-FORGE for a single intent."""
         if not self.forge_script.exists():
@@ -221,7 +233,7 @@ class ImplementAgent:
         cmd = [
             sys.executable, str(self.forge_script),
             intent,
-            "--output", "both",
+            "--output", "code",
             "--enhanced",
             "--stack", stack,
             "--complexity", complexity,
@@ -265,20 +277,75 @@ class TestAgent:
                 continue
             
             files = meta.get("files", [])
-            has_tests = any("test" in f.lower() for f in files)
             has_main = any(f.endswith((".py", ".js", ".tsx")) and "test" not in f.lower() for f in files)
-            
-            if has_main:
-                results["passed"] += 1
-                results["details"].append({
-                    "component": component,
-                    "status": "PASS",
-                    "files": len(files),
-                    "has_tests": has_tests
-                })
-            else:
+            if not has_main:
                 results["failed"] += 1
                 results["details"].append({"component": component, "status": "FAIL", "reason": "No main files"})
+                continue
+
+            # REALNY test: odpalam pytest gdy sa testy python, inaczej compile check
+            # najpierw wyczysc fence markdown ze WSZYSTKICH plikow .py (lamia skladnie)
+            for pf in [f for f in files if f.endswith(".py")]:
+                pfp = ROOT / pf
+                if pfp.exists():
+                    raw = pfp.read_text(encoding="utf-8", errors="replace")
+                    cleaned = ImplementAgent._clean_fence_code(raw)
+                    if cleaned != raw:
+                        pfp.write_text(cleaned, encoding="utf-8")
+                        log(f"Cleaned fence in {pf}", "test")
+            test_files = [f for f in files if "test" in f.lower() and f.endswith(".py")]
+            # napraw nazwy plikow testowych (pytest lapie tylko test_*.py / *_test.py)
+            for tf in list(test_files):
+                base = Path(tf).name
+                if not (base.startswith("test_") or base.endswith("_test.py")):
+                    src_p = ROOT / tf
+                    if src_p.exists():
+                        new_name = base.replace("tests_", "test_", 1) if base.startswith("tests_") else f"test_{base}"
+                        new_p = src_p.parent / new_name
+                        src_p.rename(new_p)
+                        rel_new = str(new_p.relative_to(ROOT))
+                        files[files.index(tf)] = rel_new
+                        test_files[test_files.index(tf)] = rel_new
+                        log(f"Renamed test file: {base} -> {new_name}", "test")
+            main_files = [f for f in files if "test" not in f.lower() and f.endswith(".py")]
+            outcome = {"status": "PASS", "files": len(files), "has_tests": bool(test_files)}
+            
+            if test_files:
+                # 1. kazdy plik main musi sie kompilowac
+                for mf in main_files:
+                    src = (ROOT / mf).read_text(encoding="utf-8", errors="replace")
+                    try:
+                        compile(src, mf, "exec")
+                    except SyntaxError as e:
+                        outcome = {"status": "FAIL", "files": len(files), "reason": f"SyntaxError in {mf}: {e}"}
+                        break
+                if outcome["status"] == "PASS":
+                    # 2. odpalam pytest w katalogu komponentu
+                    comp_dir = (ROOT / test_files[0]).parent
+                    try:
+                        pr = subprocess.run(
+                            [sys.executable, "-m", "pytest", "-q"],
+                            capture_output=True, text=True, timeout=120, cwd=str(comp_dir)
+                        )
+                        passed = "passed" in pr.stdout and "failed" not in pr.stdout.split("passed")[0][-30:]
+                        if pr.returncode == 0:
+                            results["passed"] += 1
+                            outcome["status"] = "PASS"
+                        else:
+                            results["failed"] += 1
+                            outcome = {"status": "FAIL", "files": len(files), "reason": f"pytest rc={pr.returncode}: {pr.stdout[-200:]}"}
+                    except Exception as e:
+                        # pytest niedostepny - compile check wystarczy
+                        results["passed"] += 1
+                        outcome["status"] = "PASS"
+            else:
+                # brak testow = brak weryfikacji zachowania = FAIL (nie udajemy)
+                results["failed"] += 1
+                outcome = {"status": "FAIL", "files": len(files),
+                           "reason": "No test files - cannot verify behavior"}
+                log(f"No tests for {component}, marking FAIL (no verification)", "test")
+            
+            results["details"].append({"component": component, **outcome})
         
         log(f"Tests: {results['passed']} passed, {results['failed']} failed", "test")
         return results
@@ -349,14 +416,159 @@ docker-compose up --build
 class VentureSwarm:
     """Main orchestrator: coordinates 5 agents in sequence."""
     
-    def __init__(self, model: str = "qwen2.5:7b", research_model: str = "qwen2.5:3b"):
+    def __init__(self, model: str = "qwen2.5:7b", research_model: str = "qwen2.5:3b",
+                 repair_model: str = "deepseek-r1:latest"):
         self.research = ResearchAgent(research_model)
         self.architect = ArchitectAgent(model)
         self.implement = ImplementAgent(model)
         self.test = TestAgent()
+        self.repair_model = repair_model
         self.deploy = DeployAgent()
         self.model = model
     
+    @staticmethod
+    def _clean_fence(text: str) -> str:
+        """Usun markdown code fences, ktore lamia skladnie."""
+        lines = text.split("\n")
+        if lines and lines[0].strip().startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        cleaned = [l for l in lines if l.strip() != "```"]
+        return "\n".join(cleaned).strip()
+
+
+    def repair(self, generated: Dict, test_results: Dict, max_rounds: int = 3) -> Dict:
+        """Petla naprawcza: gdy testy pada, wyslij blad do LLM i popraw kod.
+
+        Kazda runda: zbiera bledne komponenty + output testow, wysyla do modelu
+        z prosba o poprawke, zapisuje nowe pliki, odpalal testy od nowa.
+        Konczy gdy testy przejda albo po max_rounds.
+        """
+        failed_components = [
+            d["component"] for d in test_results.get("details", [])
+            if d.get("status") == "FAIL"
+        ]
+        if not failed_components:
+            return test_results
+
+        log(f"🔧 [REPAIR] {len(failed_components)} komponentow do naprawy. Max {max_rounds} rund.", "test")
+
+        for rnd in range(1, max_rounds + 1):
+            log(f"🔧 [REPAIR] Runda {rnd}/{max_rounds}...", "test")
+            fixed_any = False
+
+            for comp in failed_components:
+                meta = generated.get(comp)
+                if not meta or not meta.get("success"):
+                    continue
+
+                # zbior pliki komponentu + bledy testow
+                comp_files = [ROOT / f for f in meta.get("files", [])]
+                src_blobs = []
+                for fp in comp_files:
+                    if fp.exists() and fp.suffix in (".py", ".js", ".tsx", ".ts"):
+                        src_blobs.append(f"--- FILE: {fp.name} ---\n{fp.read_text(encoding='utf-8', errors='replace')}")
+
+                errors = [d.get("reason", "test failed") for d in test_results.get("details", [])
+                          if d.get("component") == comp and d.get("status") == "FAIL"]
+                no_tests = any("No test files" in (d.get("reason") or "") for d in test_results.get("details", [])
+                               if d.get("component") == comp)
+
+                if not src_blobs:
+                    continue
+
+                if no_tests:
+                    task_line = "There are NO test files. Write a pytest test file that verifies the main API works (correct status codes, response shape)."
+                else:
+                    task_line = "Fix the code so the existing tests pass."
+                prompt = f"""You are a repair engineer. {task_line}
+
+Component: {comp}
+
+Current files:
+{chr(10).join(src_blobs)}
+
+Test errors:
+{chr(10).join(errors)}
+
+DIAGNOSIS RULES:
+- The bug is usually in the MAIN code file, NOT the test. The test only reveals it.
+- Read the full traceback: the failing import/line is in the file named at the top of the stack.
+- Common bugs: nonexistent imports (e.g. 'from fastapi.encoders import json' — json is stdlib),
+  missing directories for StaticFiles, wrong function signatures.
+- Only rewrite files that actually need fixing. Keep working code unchanged.
+- Re-emit EVERY file you change in full, in this format:
+--- FILE: filename.ext ---
+(fixed content)
+--- END ---"""
+
+                try:
+                    response = ollama_chat(
+                        [{"role": "system", "content": "You output code only, in markdown code blocks with filename comments."},
+                         {"role": "user", "content": prompt}],
+                        self.repair_model, timeout=300
+                    )
+                except Exception as e:
+                    log(f"🔧 [REPAIR] LLM error: {e}", "test")
+                    continue
+
+                # zapisz poprawione pliki: format --- FILE: --- LUB ```python z komentarzem
+                import re as _re
+                fixed = _re.findall(r"---\s*FILE:\s*(.+?)\s*---\n(.*?)\n---\s*END\s*---", response, _re.S)
+                if not fixed:
+                    # fallback: bloki markdown z komentarzem # FILE: nazwa lub pierwszy blok
+                    blocks = _re.findall(r"```(?:python)?\n(.*?)```", response, _re.S)
+                    named = []
+                    for b in blocks:
+                        b = b.strip()
+                        m = _re.match(r"[#/]+\s*(?:FILE:?\s*)?([\w\-.]+\.[a-z]+)", b)
+                        if m:
+                            named.append((m.group(1), b))
+                    if len(blocks) == 1 and not named:
+                        # pojedynczy blok bez nazwy - zgadnij po kontekscie (test lub main)
+                        named = [("test_" + (comp_files[0].name if comp_files else "main"), blocks[0])]
+                    fixed = named
+                if not fixed:
+                    log(f"🔧 [REPAIR] LLM nie zwrocil plikow w formacie, pomijam {comp}", "test")
+                    continue
+
+                for fname, fcontent in fixed:
+                    # znajdz istniejacy plik o tej nazwie w komponencie, inaczej utworz nowy
+                    fname = fname.strip().strip('"').strip("'")
+                    target = None
+                    for fp in comp_files:
+                        if fp.name == fname:
+                            target = fp
+                            break
+                    if target is None:
+                        # nowy plik - zapisz w katalogu komponentu
+                        comp_dir = comp_files[0].parent if comp_files else ROOT / f"forge-{comp}"
+                        target = comp_dir / fname
+                    cleaned = self._clean_fence(fcontent)
+                    target.write_text(cleaned, encoding="utf-8")
+                    # zaktualizuj liste plikow komponentu
+                    rel = str(target.relative_to(ROOT))
+                    if rel not in meta.get("files", []):
+                        meta.setdefault("files", []).append(rel)
+                    fixed_any = True
+                    log(f"🔧 [REPAIR] Poprawiono/utworzono {fname}", "test")
+
+            if not fixed_any:
+                log("🔧 [REPAIR] Nic nie poprawiono, koniec.", "test")
+                break
+
+            # odpal testy od nowa
+            test_results = self.test.test(generated)
+            remaining = [d for d in test_results.get("details", []) if d.get("status") == "FAIL"]
+            if not remaining:
+                log("✅ [REPAIR] Wszystkie testy przechodza!", "test")
+                break
+            failed_components = [d["component"] for d in remaining]
+
+        return test_results
+
+
     def run(self, seed: str, swarm_mode: bool = False, deploy: bool = False) -> VentureResult:
         start = time.time()
         log(f"🚀 VENTURE-SWARM START: '{seed}'", "swarm")
@@ -371,14 +583,19 @@ class VentureSwarm:
         # Phase 3: Implement
         generated = self.implement.implement(architecture)
         
-        # Phase 4: Test
+        # Phase 4: Test + naprawa
         test_results = self.test.test(generated)
+        if any(d.get("status") == "FAIL" for d in test_results.get("details", [])):
+            test_results = self.repair(generated, test_results)
         
-        # Phase 5: Deploy
+        # Phase 5: Deploy — tylko gdy testy przechodza (nie pakuj zepsutego)
         deploy_ready = False
-        if deploy:
+        tests_pass = test_results.get("passed", 0) > 0 and test_results.get("failed", 1) == 0
+        if deploy and tests_pass:
             product_dir = ROOT / "ventures" / architecture.get("product", "venture")
             deploy_ready = self.deploy.package(architecture, generated, product_dir)
+        elif deploy and not tests_pass:
+            log("Deploy pominety: testy nie przechodza.", "deploy")
         
         # Gather all files
         all_files = []

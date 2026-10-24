@@ -1,0 +1,54 @@
+{
+  "seed": "AI-fueled expense tracker via receipt OCR",
+  "ideas": [
+    "Expense summary AI app",
+    "Receipt OCR auto-upload tool",
+    "Expense categorization AI assistant"
+  ],
+  "architecture": {
+    "product": "Expense Summary AI",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "expense categorization",
+      "budget tracking",
+      "expense prediction"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense Summary AI\\app_main.py",
+    "forge-fastapi api for Expense Summary AI\\app_tests_test_main.py",
+    "forge-fastapi api for Expense Summary AI\\README.md",
+    "forge-react dashboard for Expense Summary AI\\Dashboard.test.tsx",
+    "forge-react dashboard for Expense Summary AI\\ExpenseSummaryDashboard.tsx",
+    "forge-react dashboard for Expense Summary AI\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 51.21662259101868,
+  "timestamp": "2026-08-11T05:20:02.498688"
+}

@@ -1,0 +1,59 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "AI-powered expense receipt OCR and categorizer automation tool",
+    "AI-powered AI-powered expense receipt OCR and categorizer platform",
+    "Smart AI-powered expense receipt OCR and categorizer assistant"
+  ],
+  "architecture": {
+    "product": "ai-powered_expense_r",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for ai-powered_expense_r\\expense_r_api.py",
+    "forge-fastapi api for ai-powered_expense_r\\expense_r_api_main.py",
+    "forge-fastapi api for ai-powered_expense_r\\expense_r_api_test.py",
+    "forge-fastapi api for ai-powered_expense_r\\test_expense_r_api_tests_test_main.py",
+    "forge-fastapi api for ai-powered_expense_r\\README.md",
+    "forge-react dashboard for ai-powered_expense_r\\Dashboard.test.tsx",
+    "forge-react dashboard for ai-powered_expense_r\\Dashboard.tsx",
+    "forge-react dashboard for ai-powered_expense_r\\DashboardContext.tsx",
+    "forge-react dashboard for ai-powered_expense_r\\DashboardContextProvider.tsx",
+    "forge-react dashboard for ai-powered_expense_r\\DashboardTypes.tsx",
+    "forge-react dashboard for ai-powered_expense_r\\README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 5,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 6,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 823.2525544166565,
+  "timestamp": "2026-09-20T09:32:55.432143"
+}

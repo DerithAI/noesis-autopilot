@@ -1,0 +1,61 @@
+{
+  "seed": "AI meeting note summarizer",
+  "ideas": [
+    "Voice activated summary tool",
+    "Real-time meeting recorder",
+    "Automatic transcript generator"
+  ],
+  "architecture": {
+    "product": "VoiceSum",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Transcription",
+      "Summary Generation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for VoiceSum\\main.py",
+    "forge-fastapi api for VoiceSum\\README.md",
+    "forge-fastapi api for VoiceSum\\skill_document.md",
+    "forge-fastapi api for VoiceSum\\tests_test_main.py",
+    "forge-fastapi api for VoiceSum\\test_main.py",
+    "forge-react dashboard for VoiceSum\\README.md",
+    "forge-react dashboard for VoiceSum\\src_App.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_AnalyticsCard.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_AnalyticsChart.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_AnalyticsFilter.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_AnalyticsTable.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_Header.tsx",
+    "forge-react dashboard for VoiceSum\\src_components_Sidebar.tsx",
+    "forge-react dashboard for VoiceSum\\src___tests___App.test.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 9,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 90.42962098121643,
+  "timestamp": "2026-08-04T21:20:38.015165"
+}

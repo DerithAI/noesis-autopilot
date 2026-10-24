@@ -1,0 +1,53 @@
+{
+  "seed": "AI-powered meal plan generator using recipe OCR",
+  "ideas": [
+    "AI-powered meal plan generator using recipe OCR automation tool",
+    "AI-powered AI-powered meal plan generator using recipe OCR platform",
+    "Smart AI-powered meal plan generator using recipe OCR assistant"
+  ],
+  "architecture": {
+    "product": "AI Meal Plan Generator",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "Recipe OCR",
+      "Meal Plan Generation",
+      "User Preferences"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Meal Plan Generator\\main.py",
+    "forge-fastapi api for AI Meal Plan Generator\\tests_test_main.py",
+    "forge-react dashboard for AI Meal Plan Generator\\react_dashboard_for_AI_Meal_Plan_Generator.test.tsx",
+    "forge-react dashboard for AI Meal Plan Generator\\react_dashboard_for_AI_Meal_Plan_Generator.tsx",
+    "forge-react dashboard for AI Meal Plan Generator\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 2,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 120.08113288879395,
+  "timestamp": "2026-08-21T21:21:19.400962"
+}

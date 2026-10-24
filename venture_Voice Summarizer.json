@@ -1,0 +1,45 @@
+{
+  "seed": "AI book summary app",
+  "ideas": [
+    "Voice activated summaries",
+    "Auto chapter highlights",
+    "Book fact quizzes"
+  ],
+  "architecture": {
+    "product": "Voice Summarizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice Input",
+      "Text Output",
+      "Summary Generation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice Summarizer\\main.py",
+    "forge-fastapi api for Voice Summarizer\\README.md",
+    "forge-fastapi api for Voice Summarizer\\tests_test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 29.420141458511353,
+  "timestamp": "2026-07-27T21:19:32.473408"
+}

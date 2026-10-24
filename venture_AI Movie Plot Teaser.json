@@ -1,0 +1,44 @@
+{
+  "seed": "AI-generated movie plot spoiler summarizer",
+  "ideas": [
+    "AI Movie Plot Teaser",
+    "Plot Spoiler Summary Bot",
+    "AI Movie Plot Unveiler"
+  ],
+  "architecture": {
+    "product": "AI Movie Plot Teaser",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Generate plot teasers",
+      "User feedback loop"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Movie Plot Teaser\\main.py",
+    "forge-fastapi api for AI Movie Plot Teaser\\README.md",
+    "forge-fastapi api for AI Movie Plot Teaser\\test_test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 406.89317536354065,
+  "timestamp": "2026-09-09T21:26:13.433126"
+}

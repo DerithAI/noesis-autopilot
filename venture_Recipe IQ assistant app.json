@@ -1,0 +1,62 @@
+{
+  "seed": "AI-driven recipe difficulty adjuster",
+  "ideas": [
+    "Recipe IQ assistant app",
+    "EasyFit cooking guide",
+    "ChefIQ recipe simplifier"
+  ],
+  "architecture": {
+    "product": "Recipe IQ assistant app",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Recipe suggestion based on ingredients",
+      "Nutritional information lookup",
+      "User recipe book management"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Recipe IQ assistant app\\main.py",
+    "forge-fastapi api for Recipe IQ assistant app\\README.md",
+    "forge-fastapi api for Recipe IQ assistant app\\tests_test_main.py",
+    "forge-react dashboard for Recipe IQ assistant app\\src_App.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Analytics.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Cards.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Charts.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Filters.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Header.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Layout.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Sidebar.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_Tables.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_components_ThemeContext.tsx",
+    "forge-react dashboard for Recipe IQ assistant app\\src_index.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 11,
+        "has_tests": false
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 59.683929681777954,
+  "timestamp": "2026-08-13T17:20:05.074491"
+}

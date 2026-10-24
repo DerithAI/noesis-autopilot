@@ -1,0 +1,44 @@
+{
+  "seed": "AI-generated haiku poet",
+  "ideas": [
+    "HaikuCraft AI generator",
+    "Poetic Muse AI companion",
+    "Haikulus AI haiku creator"
+  ],
+  "architecture": {
+    "product": "HaikuCraft AI generator",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Generate haikus",
+      "Train model with new data"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for HaikuCraft AI generator\\app_main.py",
+    "forge-fastapi api for HaikuCraft AI generator\\README.md",
+    "forge-fastapi api for HaikuCraft AI generator\\tests_test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 38.6346333026886,
+  "timestamp": "2026-08-06T13:19:56.285977"
+}

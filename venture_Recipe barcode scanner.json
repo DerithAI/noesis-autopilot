@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered recipe ingredient converter",
+  "ideas": [
+    "Recipe barcode scanner",
+    "AI taste prediction tool",
+    "Grocery list auto-populator"
+  ],
+  "architecture": {
+    "product": "Recipe barcode scanner",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": null,
+    "features": [
+      "Scan barcodes",
+      "Fetch recipes",
+      "Save to database"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/scanner"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Recipe barcode scanner\\fastapi_api_for_Recipe_barcode_scanner.py",
+    "forge-fastapi api for Recipe barcode scanner\\README.md",
+    "forge-fastapi api for Recipe barcode scanner\\test_fastapi_api_for_Recipe_barcode_scanner.py",
+    "forge-react dashboard for Recipe barcode scanner\\react_dashboard_for_Recipe_barcode_scanner.test.tsx",
+    "forge-react dashboard for Recipe barcode scanner\\react_dashboard_for_Recipe_barcode_scanner.tsx",
+    "forge-react dashboard for Recipe barcode scanner\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 93.28003001213074,
+  "timestamp": "2026-08-19T17:20:45.577047"
+}

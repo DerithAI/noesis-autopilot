@@ -1,0 +1,53 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Summary Assistant Pro",
+    "AI NoteTaker+",
+    "QuickSummarize Bot"
+  ],
+  "architecture": {
+    "product": "Summary Assistant Pro",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "Summarize Text",
+      "Generate Insights"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Summary Assistant Pro\\README.md",
+    "forge-fastapi api for Summary Assistant Pro\\summary_assistant_pro_api.py",
+    "forge-fastapi api for Summary Assistant Pro\\summary_assistant_pro_api_test.py",
+    "forge-react dashboard for Summary Assistant Pro\\README.md",
+    "forge-react dashboard for Summary Assistant Pro\\SummaryAssistantProDashboard.test.tsx",
+    "forge-react dashboard for Summary Assistant Pro\\SummaryAssistantProDashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 702.9556715488434,
+  "timestamp": "2026-09-09T13:31:25.111980"
+}

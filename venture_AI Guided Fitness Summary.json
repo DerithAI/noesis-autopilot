@@ -1,0 +1,55 @@
+{
+  "seed": "AI gym workout video summarizer",
+  "ideas": [
+    "AI guided fitness summary",
+    "Voice activated workout highlighter",
+    "Fitness routine auto recorder"
+  ],
+  "architecture": {
+    "product": "AI Guided Fitness Summary",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "User Profile Creation",
+      "Fitness Goal Setting",
+      "Real-time Chat for Guidance",
+      "Progress Tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Guided Fitness Summary\\fitness_api.py",
+    "forge-fastapi api for AI Guided Fitness Summary\\README.md",
+    "forge-fastapi api for AI Guided Fitness Summary\\tests_test_firebase_api.py",
+    "forge-react dashboard for AI Guided Fitness Summary\\dashboard.test.tsx",
+    "forge-react dashboard for AI Guided Fitness Summary\\dashboard.tsx",
+    "forge-react dashboard for AI Guided Fitness Summary\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 58.857436656951904,
+  "timestamp": "2026-08-09T21:20:10.279163"
+}

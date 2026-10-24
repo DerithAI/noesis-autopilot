@@ -1,0 +1,55 @@
+{
+  "seed": "AI-generated book summary social media posts",
+  "ideas": [
+    "AI BookSnap",
+    "SocialRead",
+    "SmartSum"
+  ],
+  "architecture": {
+    "product": "AI BookSnap",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "BookSnap Detection",
+      "Text Summarization",
+      "User Feedback"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI BookSnap\\booksnap_api.py",
+    "forge-fastapi api for AI BookSnap\\booksnap_api_test.py",
+    "forge-fastapi api for AI BookSnap\\README.md",
+    "forge-react dashboard for AI BookSnap\\Dashboard.test.tsx",
+    "forge-react dashboard for AI BookSnap\\Dashboard.tsx",
+    "forge-react dashboard for AI BookSnap\\README.md",
+    "forge-react dashboard for AI BookSnap\\test_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 918.464457988739,
+  "timestamp": "2026-09-20T21:34:23.904651"
+}

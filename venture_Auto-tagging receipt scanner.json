@@ -1,0 +1,46 @@
+{
+  "seed": "Quick receipt OCR and categorizer",
+  "ideas": [
+    "Auto-tagging receipt scanner",
+    "Quick receipt sorter app",
+    "Receipt OCR integration tool"
+  ],
+  "architecture": {
+    "product": "Auto-tagging receipt scanner",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Image upload",
+      "Auto-tagging",
+      "Receipt storage"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Auto-tagging receipt scanner\\README.md",
+    "forge-fastapi api for Auto-tagging receipt scanner\\receipt_tagger_api.py",
+    "forge-fastapi api for Auto-tagging receipt scanner\\receipt_tagger_api_test.py",
+    "forge-fastapi api for Auto-tagging receipt scanner\\test_README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 461.74644660949707,
+  "timestamp": "2026-09-30T13:26:49.039639"
+}

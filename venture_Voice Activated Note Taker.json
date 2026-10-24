@@ -1,0 +1,50 @@
+{
+  "seed": "AI meeting note summarizer",
+  "ideas": [
+    "Voice activated note taker",
+    "Real-time summary generator",
+    "Meeting summary AI assistant"
+  ],
+  "architecture": {
+    "product": "Voice Activated Note Taker",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice Recognition",
+      "Note Taking",
+      "Text to Speech"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice Activated Note Taker\\config.py",
+    "forge-fastapi api for Voice Activated Note Taker\\design-tokens.json",
+    "forge-fastapi api for Voice Activated Note Taker\\figma-export.json",
+    "forge-fastapi api for Voice Activated Note Taker\\main.py",
+    "forge-fastapi api for Voice Activated Note Taker\\noesis-integration.json",
+    "forge-fastapi api for Voice Activated Note Taker\\README.md",
+    "forge-fastapi api for Voice Activated Note Taker\\test_test_main.py",
+    "forge-fastapi api for Voice Activated Note Taker\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 8,
+        "reason": "SyntaxError in forge-fastapi api for Voice Activated Note Taker\\config.py: invalid syntax (config.py, line 1)"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 34.26229906082153,
+  "timestamp": "2026-09-06T15:23:29.448251"
+}

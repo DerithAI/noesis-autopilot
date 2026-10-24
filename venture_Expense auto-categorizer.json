@@ -1,0 +1,53 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "Expense auto-categorizer",
+    "AI invoice recognizer",
+    "Expense summary generator"
+  ],
+  "architecture": {
+    "product": "Expense auto-categorizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Automatic expense categorization",
+      "User-defined categories"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense auto-categorizer\\expense_auto_categorizer_api_main.py",
+    "forge-fastapi api for Expense auto-categorizer\\expense_auto_categorizer_api_test.py",
+    "forge-fastapi api for Expense auto-categorizer\\expense_auto_categorizer_main.py",
+    "forge-fastapi api for Expense auto-categorizer\\expense_auto_categorizer_README.md",
+    "forge-fastapi api for Expense auto-categorizer\\expense_categorizer_api.py",
+    "forge-fastapi api for Expense auto-categorizer\\expense_categorizer_api_main.py",
+    "forge-fastapi api for Expense auto-categorizer\\expense_categorizer_api_test.py",
+    "forge-fastapi api for Expense auto-categorizer\\test_expense_categorizer_api_test_main.py",
+    "forge-fastapi api for Expense auto-categorizer\\main.py",
+    "forge-fastapi api for Expense auto-categorizer\\README.md",
+    "forge-fastapi api for Expense auto-categorizer\\test_expense_auto_categorizer_test_main.py",
+    "forge-fastapi api for Expense auto-categorizer\\test_test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 12,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 339.36337089538574,
+  "timestamp": "2026-09-23T17:24:49.544986"
+}

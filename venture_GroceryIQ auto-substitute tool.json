@@ -1,0 +1,58 @@
+{
+  "seed": "AI-driven recipe ingredient subtituter for pantry shortages",
+  "ideas": [
+    "GroceryIQ auto-substitute tool",
+    "PantryPro AI recipe adapter",
+    "RecipeRevive missing ingredient helper"
+  ],
+  "architecture": {
+    "product": "GroceryIQ auto-substitute tool",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Product recognition",
+      "Substitution suggestions",
+      "User feedback integration"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for GroceryIQ auto-substitute tool\\main.py",
+    "forge-fastapi api for GroceryIQ auto-substitute tool\\README.md",
+    "forge-fastapi api for GroceryIQ auto-substitute tool\\tests_test_main.py",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_components_Card.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_components_Chart.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_components_Header.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_components_Sidebar.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_components_Table.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_Dashboard.test.tsx",
+    "forge-react dashboard for GroceryIQ auto-substitute tool\\src_Dashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 52.73039531707764,
+  "timestamp": "2026-08-04T17:20:02.771390"
+}

@@ -1,0 +1,49 @@
+{
+  "seed": "Meeting note summarizer",
+  "ideas": [
+    "Voice activated note summarizer",
+    "Collaborative meeting summary tool",
+    "Smart meeting minutes generator"
+  ],
+  "architecture": {
+    "product": "Voice activated note summarizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice input",
+      "Text summarization",
+      "Save summarization"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice activated note summarizer\\design-tokens.json",
+    "forge-fastapi api for Voice activated note summarizer\\figma-export.json",
+    "forge-fastapi api for Voice activated note summarizer\\main.py",
+    "forge-fastapi api for Voice activated note summarizer\\noesis-integration.json",
+    "forge-fastapi api for Voice activated note summarizer\\README.md",
+    "forge-fastapi api for Voice activated note summarizer\\tests_main_test.py",
+    "forge-fastapi api for Voice activated note summarizer\\test_test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 7,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 341.68418979644775,
+  "timestamp": "2026-10-11T13:24:56.038673"
+}

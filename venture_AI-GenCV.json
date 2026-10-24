@@ -1,0 +1,56 @@
+{
+  "seed": "AI-generated resume bullet points generator",
+  "ideas": [
+    "AI-generated resume bullet points generator automation tool",
+    "AI-powered AI-generated resume bullet points generator platform",
+    "Smart AI-generated resume bullet points generator assistant"
+  ],
+  "architecture": {
+    "product": "AI-GenCV",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Generate bullet points based on job description",
+      "Save generated bullet points",
+      "Export to PDF"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/generate-resume-bullets"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI-GenCV\\main.py",
+    "forge-fastapi api for AI-GenCV\\README.md",
+    "forge-fastapi api for AI-GenCV\\tests_test_main.py",
+    "forge-react dashboard for AI-GenCV\\src_App.tsx",
+    "forge-react dashboard for AI-GenCV\\src_components_DarkModeProvider.tsx",
+    "forge-react dashboard for AI-GenCV\\src_components_Header.tsx",
+    "forge-react dashboard for AI-GenCV\\src_components_Layout.tsx",
+    "forge-react dashboard for AI-GenCV\\src_components_MainContent.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": false
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 59.75401329994202,
+  "timestamp": "2026-07-27T04:14:59.798710"
+}

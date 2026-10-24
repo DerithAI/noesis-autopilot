@@ -1,0 +1,56 @@
+{
+  "seed": "AI-generated workout video summarizer",
+  "ideas": [
+    "AI-generated workout video summarizer automation tool",
+    "AI-powered AI-generated workout video summarizer platform",
+    "Smart AI-generated workout video summarizer assistant"
+  ],
+  "architecture": {
+    "product": "ai-generated_workout",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for ai-generated_workout\\main.py",
+    "forge-fastapi api for ai-generated_workout\\README.md",
+    "forge-fastapi api for ai-generated_workout\\test_main.py",
+    "forge-react dashboard for ai-generated_workout\\src_App.test.tsx",
+    "forge-react dashboard for ai-generated_workout\\src_App.tsx",
+    "forge-react dashboard for ai-generated_workout\\src_components_Header_Header.tsx",
+    "forge-react dashboard for ai-generated_workout\\src_components_Sidebar_Sidebar.tsx",
+    "forge-react dashboard for ai-generated_workout\\src_components_Workouts_Workouts.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 79.80167007446289,
+  "timestamp": "2026-08-11T21:20:36.272372"
+}

@@ -1,0 +1,53 @@
+{
+  "seed": "AI gym workout video summarizer",
+  "ideas": [
+    "Compact AI summary app",
+    "Voice activated workouts guide",
+    "Fitness progress tracker tool"
+  ],
+  "architecture": {
+    "product": "CompactAI",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "Ollama model",
+    "features": [
+      "Text summarization",
+      "User authentication"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for CompactAI\\main.py",
+    "forge-fastapi api for CompactAI\\README.md",
+    "forge-fastapi api for CompactAI\\tests_test_main.py",
+    "forge-react dashboard for CompactAI\\Dashboard.test.tsx",
+    "forge-react dashboard for CompactAI\\Dashboard.tsx",
+    "forge-react dashboard for CompactAI\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 92.3704936504364,
+  "timestamp": "2026-08-15T01:20:43.914919"
+}

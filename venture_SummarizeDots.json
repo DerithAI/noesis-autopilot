@@ -1,0 +1,44 @@
+{
+  "seed": "Meeting note summarizer",
+  "ideas": [
+    "SummarizeDots",
+    "QuickMeetNotes",
+    "BriefSync"
+  ],
+  "architecture": {
+    "product": "SummarizeDots",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Text summarization",
+      "User input validation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for SummarizeDots\\README.md",
+    "forge-fastapi api for SummarizeDots\\summarize_dots_api.py",
+    "forge-fastapi api for SummarizeDots\\test_summarize_dots_api_tests.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 339.8917570114136,
+  "timestamp": "2026-09-29T05:24:44.487921"
+}

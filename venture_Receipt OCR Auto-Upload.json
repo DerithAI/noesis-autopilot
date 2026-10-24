@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered expense tracker based on receipt OCR",
+  "ideas": [
+    "Receipt OCR auto-upload",
+    "Expense AI categorization",
+    "Bill payment reminder system"
+  ],
+  "architecture": {
+    "product": "Receipt OCR Auto-Upload",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "none",
+    "features": [
+      "Image Upload",
+      "OCR Text Extraction",
+      "Auto-Upload"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/upload"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Receipt OCR Auto-Upload\\fastapi_api_for_Receipt_OCR_Auto-Upload.py",
+    "forge-fastapi api for Receipt OCR Auto-Upload\\README.md",
+    "forge-fastapi api for Receipt OCR Auto-Upload\\test_fastapi_api_for_Receipt_OCR_Auto-Upload.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 57.999696493148804,
+  "timestamp": "2026-08-16T21:20:14.008081"
+}

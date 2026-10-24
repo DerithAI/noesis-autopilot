@@ -1,0 +1,57 @@
+{
+  "seed": "AI-powered grocery list optimizer",
+  "ideas": [
+    "Grocery list auto-sync",
+    "AI recipe suggestion app",
+    "Smart grocery order reminder"
+  ],
+  "architecture": {
+    "product": "Grocery list auto-sync",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "none",
+    "features": [
+      "Auto-sync across devices",
+      "Real-time updates",
+      "User authentication"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/grocery-list"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Grocery list auto-sync\\grocery_list_api.py",
+    "forge-fastapi api for Grocery list auto-sync\\grocery_list_api_main.py",
+    "forge-fastapi api for Grocery list auto-sync\\README.md",
+    "forge-fastapi api for Grocery list auto-sync\\test_grocery_list_api.py",
+    "forge-fastapi api for Grocery list auto-sync\\test_grocery_list_api_test_main.py",
+    "forge-react dashboard for Grocery list auto-sync\\GroceryListDashboard.test.tsx",
+    "forge-react dashboard for Grocery list auto-sync\\GroceryListDashboard.tsx",
+    "forge-react dashboard for Grocery list auto-sync\\README.md",
+    "forge-react dashboard for Grocery list auto-sync\\test_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 5,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 964.5285687446594,
+  "timestamp": "2026-09-28T21:35:14.770559"
+}

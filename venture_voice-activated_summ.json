@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Voice-activated summary recorder",
+    "AI-enhanced meeting recorder",
+    "Real-time meeting note summarizer"
+  ],
+  "architecture": {
+    "product": "voice-activated_summ",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for voice-activated_summ\\fastapi_api_for_voice-activated_summ.py",
+    "forge-fastapi api for voice-activated_summ\\README.md",
+    "forge-fastapi api for voice-activated_summ\\test_fastapi_api_for_voice-activated_summ.py",
+    "forge-react dashboard for voice-activated_summ\\react_dashboard_for_voice-activated_summ.test.tsx",
+    "forge-react dashboard for voice-activated_summ\\react_dashboard_for_voice-activated_summ.tsx",
+    "forge-react dashboard for voice-activated_summ\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 87.72581601142883,
+  "timestamp": "2026-08-20T09:20:38.673273"
+}

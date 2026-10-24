@@ -1,0 +1,45 @@
+{
+  "seed": "Quick receipt OCR and categorizer",
+  "ideas": [
+    "Invoice OCR scanner",
+    "Receipt auto-categorizer",
+    "Expense OCR integrator"
+  ],
+  "architecture": {
+    "product": "Invoice OCR scanner",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "none",
+    "features": [
+      "Invoice image upload",
+      "Text recognition",
+      "Data extraction"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/ocr"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Invoice OCR scanner\\invoice_ocr_api.py",
+    "forge-fastapi api for Invoice OCR scanner\\README.md",
+    "forge-fastapi api for Invoice OCR scanner\\test_test_invoice_ocr_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 440.8255455493927,
+  "timestamp": "2026-10-24T13:26:22.082025"
+}

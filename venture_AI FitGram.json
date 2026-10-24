@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated fitness workout video summarizer",
+  "ideas": [
+    "AI FitGram",
+    "Workout Video Quick Recap",
+    "Fitness Summary Assistant"
+  ],
+  "architecture": {
+    "product": "AI FitGram",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "Personalized workout plans",
+      "Nutritional advice",
+      "Progress tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI FitGram\\fastapi_api_for_AI_FitGram.py",
+    "forge-fastapi api for AI FitGram\\README.md",
+    "forge-fastapi api for AI FitGram\\test_fastapi_api_for_AI_FitGram.py",
+    "forge-react dashboard for AI FitGram\\react_dashboard_for_AI_FitGram.test.tsx",
+    "forge-react dashboard for AI FitGram\\react_dashboard_for_AI_FitGram.tsx",
+    "forge-react dashboard for AI FitGram\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 62.323567152023315,
+  "timestamp": "2026-08-24T13:20:11.806712"
+}

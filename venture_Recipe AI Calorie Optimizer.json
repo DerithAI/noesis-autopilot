@@ -1,0 +1,45 @@
+{
+  "seed": "AI recipe calorie adjuster",
+  "ideas": [
+    "Recipe AI Calorie Optimizer",
+    "Meal Prep AI Nutritional Adjuster",
+    "Cooking Companion Smart Nutrition"
+  ],
+  "architecture": {
+    "product": "Recipe AI Calorie Optimizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Calorie Calculation",
+      "Ingredient Substitution",
+      "Personalized Recommendations"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Recipe AI Calorie Optimizer\\main.py",
+    "forge-fastapi api for Recipe AI Calorie Optimizer\\README.md",
+    "forge-fastapi api for Recipe AI Calorie Optimizer\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 40.90096735954285,
+  "timestamp": "2026-08-07T13:19:48.298989"
+}

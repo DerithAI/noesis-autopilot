@@ -1,0 +1,44 @@
+{
+  "seed": "Receipt summarizer",
+  "ideas": [
+    "Brief receipt notifier",
+    "Auto-summarize receipts app",
+    "Receipts to expense tracker"
+  ],
+  "architecture": {
+    "product": "Brief receipt notifier",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Notify user of receipt",
+      "Store receipt data"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Brief receipt notifier\\main.py",
+    "forge-fastapi api for Brief receipt notifier\\test_main_tests.py",
+    "forge-fastapi api for Brief receipt notifier\\README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 429.62208104133606,
+  "timestamp": "2026-10-22T13:26:11.188965"
+}

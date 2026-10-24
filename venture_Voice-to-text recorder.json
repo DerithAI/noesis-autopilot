@@ -1,0 +1,44 @@
+{
+  "seed": "Meeting note summarizer",
+  "ideas": [
+    "Voice-to-text recorder",
+    "Smart summary generator",
+    "Sync meeting notes app"
+  ],
+  "architecture": {
+    "product": "Voice-to-text recorder",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice recording",
+      "Transcription",
+      "Save transcription"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/transcribe"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice-to-text recorder\\test_voice_to_text_api.py",
+    "forge-fastapi api for Voice-to-text recorder\\voice_to_text_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 2,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 533.2263691425323,
+  "timestamp": "2026-10-22T21:28:00.882959"
+}

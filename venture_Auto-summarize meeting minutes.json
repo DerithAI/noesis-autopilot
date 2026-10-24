@@ -1,0 +1,44 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Auto-summarize meeting minutes",
+    "Voice-to-text transcription tool",
+    "Real-time summary generator"
+  ],
+  "architecture": {
+    "product": "Auto-summarize meeting minutes",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Auto-summarization",
+      "User authentication"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Auto-summarize meeting minutes\\main.py",
+    "forge-fastapi api for Auto-summarize meeting minutes\\README.md",
+    "forge-fastapi api for Auto-summarize meeting minutes\\test_test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 331.6842851638794,
+  "timestamp": "2026-09-26T21:24:34.644298"
+}

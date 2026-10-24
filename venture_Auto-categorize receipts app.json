@@ -1,0 +1,46 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "Auto-categorize receipts app",
+    "Expense AI scanner tool",
+    "Quick expense categorization platform"
+  ],
+  "architecture": {
+    "product": "Auto-categorize receipts app",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "image recognition",
+      "expense categorization"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Auto-categorize receipts app\\main.py",
+    "forge-fastapi api for Auto-categorize receipts app\\README.md",
+    "forge-fastapi api for Auto-categorize receipts app\\receipts_api.py",
+    "forge-fastapi api for Auto-categorize receipts app\\receipts_api_test.py",
+    "forge-fastapi api for Auto-categorize receipts app\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 5,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 328.9780857563019,
+  "timestamp": "2026-09-28T09:24:32.386373"
+}

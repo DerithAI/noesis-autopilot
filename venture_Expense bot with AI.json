@@ -1,0 +1,60 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense bot with AI",
+    "Receipt OCR expense tracker",
+    "Smart categorization assistant"
+  ],
+  "architecture": {
+    "product": "Expense bot with AI",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Expense tracking",
+      "Expense categorization",
+      "Expense summary"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense bot with AI\\fastapi_api_for_Expense_bot_with_AI.py",
+    "forge-fastapi api for Expense bot with AI\\README.md",
+    "forge-fastapi api for Expense bot with AI\\test_fastapi_api_for_Expense_bot_with_AI.py",
+    "forge-Expense bot with AI bot\\expense_bot.py",
+    "forge-Expense bot with AI bot\\expense_bot_models.py",
+    "forge-Expense bot with AI bot\\expense_bot_routes.py",
+    "forge-Expense bot with AI bot\\expense_bot_utils.py",
+    "forge-Expense bot with AI bot\\Expense_bot_with_AI_bot.py",
+    "forge-Expense bot with AI bot\\expense_bot___init__.py",
+    "forge-Expense bot with AI bot\\README.md",
+    "forge-Expense bot with AI bot\\test_expense_bot.py",
+    "forge-Expense bot with AI bot\\test_Expense_bot_with_AI_bot.py"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "bot",
+        "status": "PASS",
+        "files": 9,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 77.7640769481659,
+  "timestamp": "2026-08-26T17:20:31.898203"
+}

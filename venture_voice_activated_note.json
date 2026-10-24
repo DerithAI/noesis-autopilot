@@ -1,0 +1,61 @@
+{
+  "seed": "AI meeting note summarizer",
+  "ideas": [
+    "Voice activated note summarizer",
+    "Smart meeting recorder",
+    "AI-powered meeting summary generator"
+  ],
+  "architecture": {
+    "product": "voice_activated_note",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for voice_activated_note\\design-tokens.json",
+    "forge-fastapi api for voice_activated_note\\Dockerfile",
+    "forge-fastapi api for voice_activated_note\\figma-export.json",
+    "forge-fastapi api for voice_activated_note\\main.py",
+    "forge-fastapi api for voice_activated_note\\noesis-integration.json",
+    "forge-fastapi api for voice_activated_note\\requirements.txt",
+    "forge-react dashboard for voice_activated_note\\design-tokens.json",
+    "forge-react dashboard for voice_activated_note\\figma-export.json",
+    "forge-react dashboard for voice_activated_note\\noesis-integration.json",
+    "forge-react dashboard for voice_activated_note\\react dashboard for voice_activated_note-preview.html",
+    "forge-react dashboard for voice_activated_note\\react_dashboard_for_voice_activated_note.test.tsx",
+    "forge-react dashboard for voice_activated_note\\react_dashboard_for_voice_activated_note.tsx",
+    "forge-react dashboard for voice_activated_note\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 6,
+        "has_tests": false
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": false
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 169.7043445110321,
+  "timestamp": "2026-09-06T15:30:59.162246"
+}

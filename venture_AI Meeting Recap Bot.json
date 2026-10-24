@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated meeting note summarizer",
+  "ideas": [
+    "AI Meeting Recap Bot",
+    "Quick Summarize Notes",
+    "Smart Meeting Summary Tool"
+  ],
+  "architecture": {
+    "product": "AI Meeting Recap Bot",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Transcribes audio",
+      "Summarizes meeting content",
+      "Sends recap via email"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Meeting Recap Bot\\fastapi_api_for_AI_Meeting_Recap_Bot.py",
+    "forge-fastapi api for AI Meeting Recap Bot\\README.md",
+    "forge-fastapi api for AI Meeting Recap Bot\\test_fastapi_api_for_AI_Meeting_Recap_Bot.py",
+    "forge-AI Meeting Recap Bot bot\\AI_Meeting_Recap_Bot_bot.py",
+    "forge-AI Meeting Recap Bot bot\\README.md",
+    "forge-AI Meeting Recap Bot bot\\test_AI_Meeting_Recap_Bot_bot.py"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "bot",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 59.83092260360718,
+  "timestamp": "2026-08-15T21:20:13.286820"
+}

@@ -1,0 +1,54 @@
+{
+  "seed": "AI-generated workout routine video summarizer",
+  "ideas": [
+    "AI Workout Summarizer",
+    "Fitness routine explainer",
+    "AI workout digest"
+  ],
+  "architecture": {
+    "product": "AI Workout Summarizer",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Workout summarization",
+      "User authentication",
+      "Progress tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Workout Summarizer\\fastapi_api_for_AI_Workout_Summarizer.py",
+    "forge-fastapi api for AI Workout Summarizer\\README.md",
+    "forge-fastapi api for AI Workout Summarizer\\test_fastapi_api_for_AI_Workout_Summarizer.py",
+    "forge-react dashboard for AI Workout Summarizer\\react_dashboard_for_AI_Workout_Summarizer.test.tsx",
+    "forge-react dashboard for AI Workout Summarizer\\react_dashboard_for_AI_Workout_Summarizer.tsx",
+    "forge-react dashboard for AI Workout Summarizer\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 142.0154323577881,
+  "timestamp": "2026-08-17T09:21:31.679882"
+}

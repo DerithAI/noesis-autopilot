@@ -1,0 +1,56 @@
+{
+  "seed": "AI-powered expense tracker via receipt OCR",
+  "ideas": [
+    "Expense auto-upload app",
+    "Receipt OCR integration service",
+    "AI expense categorization tool"
+  ],
+  "architecture": {
+    "product": "expense_auto-upload_",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for expense_auto-upload_\\expense_auto_upload_.py",
+    "forge-fastapi api for expense_auto-upload_\\fastapi_api_for_expense_auto-upload_.py",
+    "forge-fastapi api for expense_auto-upload_\\README.md",
+    "forge-fastapi api for expense_auto-upload_\\test_expense_auto_upload_.py",
+    "forge-fastapi api for expense_auto-upload_\\test_fastapi_api_for_expense_auto-upload_.py",
+    "forge-react dashboard for expense_auto-upload_\\Dashboard.test.tsx",
+    "forge-react dashboard for expense_auto-upload_\\Dashboard.tsx",
+    "forge-react dashboard for expense_auto-upload_\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 64.44905161857605,
+  "timestamp": "2026-08-22T13:20:22.143512"
+}

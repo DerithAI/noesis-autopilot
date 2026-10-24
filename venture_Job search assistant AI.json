@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered resume summarizer",
+  "ideas": [
+    "Job search assistant AI",
+    "Resume summary generator",
+    "ATS integration tool"
+  ],
+  "architecture": {
+    "product": "Job search assistant AI",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "Resume analysis",
+      "Job recommendation",
+      "Interview preparation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Job search assistant AI\\job_search_assistant_api.py",
+    "forge-fastapi api for Job search assistant AI\\job_search_assistant_api_test.py",
+    "forge-fastapi api for Job search assistant AI\\README.md",
+    "forge-react dashboard for Job search assistant AI\\JobSearchAssistantAdminPanel.test.tsx",
+    "forge-react dashboard for Job search assistant AI\\JobSearchAssistantAdminPanel.tsx",
+    "forge-react dashboard for Job search assistant AI\\README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 672.0799922943115,
+  "timestamp": "2026-09-17T13:30:10.751076"
+}

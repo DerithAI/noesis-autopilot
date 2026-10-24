@@ -1,0 +1,45 @@
+{
+  "seed": "AI-Powered Receipt Image Captioner",
+  "ideas": [
+    "AI-Powered Receipt Image Captioner automation tool",
+    "AI-powered AI-Powered Receipt Image Captioner platform",
+    "Smart AI-Powered Receipt Image Captioner assistant"
+  ],
+  "architecture": {
+    "product": "AI-Powered Receipt Image Captioner",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Image Captioning",
+      "Text Recognition",
+      "Language Translation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/caption"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI-Powered Receipt Image Captioner\\README.md",
+    "forge-fastapi api for AI-Powered Receipt Image Captioner\\receipt_caption_api.py",
+    "forge-fastapi api for AI-Powered Receipt Image Captioner\\test_receipt_caption_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 379.369815826416,
+  "timestamp": "2026-10-24T01:26:12.402955"
+}

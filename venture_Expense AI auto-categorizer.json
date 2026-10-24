@@ -1,0 +1,59 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "Expense AI auto-categorizer",
+    "Quick OCR receipt scanner",
+    "Smart expense invoice classifier"
+  ],
+  "architecture": {
+    "product": "Expense AI auto-categorizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Auto-categorization",
+      "Expense tracking"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_api.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_auto_categorizer.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_api.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_auth.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_expense_classifier.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_models.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_README.md",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_routers_auth_router.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_routers_expense_router.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer_settings.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\test_expense_ai_categorizer_tests_test_expense_router.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer___init__.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\README.md",
+    "forge-fastapi api for Expense AI auto-categorizer\\test_expense_ai.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\test_expense_ai_api.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\test_expense_ai_auto_categorizer.py",
+    "forge-fastapi api for Expense AI auto-categorizer\\test_expense_ai_categorizer_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 18,
+        "reason": "SyntaxError in forge-fastapi api for Expense AI auto-categorizer\\expense_ai_categorizer___init__.py: invalid syntax (expense_ai_categorizer___init__.py, line 37)"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 339.6109313964844,
+  "timestamp": "2026-09-26T06:45:59.195503"
+}

@@ -1,0 +1,60 @@
+{
+  "seed": "AI meeting note summarizer",
+  "ideas": [
+    "Voice activated summary recorder",
+    "Realtime meeting note generator",
+    "Smart highlight AI summarizer"
+  ],
+  "architecture": {
+    "product": "voice_activated_summ",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for voice_activated_summ\\design-tokens.json",
+    "forge-fastapi api for voice_activated_summ\\fastapi_api_for_voice_activated_summ.py",
+    "forge-fastapi api for voice_activated_summ\\figma-export.json",
+    "forge-fastapi api for voice_activated_summ\\noesis-integration.json",
+    "forge-fastapi api for voice_activated_summ\\README.md",
+    "forge-fastapi api for voice_activated_summ\\test_fastapi_api_for_voice_activated_summ.py",
+    "forge-react dashboard for voice_activated_summ\\DashboardLayout.test.tsx",
+    "forge-react dashboard for voice_activated_summ\\DashboardLayout.tsx",
+    "forge-react dashboard for voice_activated_summ\\design-tokens.json",
+    "forge-react dashboard for voice_activated_summ\\figma-export.json",
+    "forge-react dashboard for voice_activated_summ\\noesis-integration.json",
+    "forge-react dashboard for voice_activated_summ\\react dashboard for voice_activated_summ-preview.html"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 6,
+        "reason": "SyntaxError in forge-fastapi api for voice_activated_summ\\fastapi_api_for_voice_activated_summ.py: invalid syntax (fastapi_api_for_voice_activated_summ.py, line 16)"
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 6,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 355.5892217159271,
+  "timestamp": "2026-09-06T15:37:33.627012"
+}

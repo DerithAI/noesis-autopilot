@@ -1,0 +1,45 @@
+{
+  "seed": "AI-powered expense receipt OCR and categorizer",
+  "ideas": [
+    "Expense Scan & Categorize",
+    "Auto Expense Summary",
+    "AI Tax Deduction Assistant"
+  ],
+  "architecture": {
+    "product": "Expense Scan & Categorize",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Scan receipts",
+      "Categorize expenses",
+      "Store data"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense Scan & Categorize\\expense_scan_categorize_api.py",
+    "forge-fastapi api for Expense Scan & Categorize\\README.md",
+    "forge-fastapi api for Expense Scan & Categorize\\test_expense_scan_categorize_api.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 160.53273558616638,
+  "timestamp": "2026-09-27T13:21:43.112079"
+}

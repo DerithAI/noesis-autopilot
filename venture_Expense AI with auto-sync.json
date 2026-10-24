@@ -1,0 +1,47 @@
+{
+  "seed": "AI-based expense tracker with receipt OCR input",
+  "ideas": [
+    "Expense AI with auto-sync",
+    "Receipt OCR for fast tracking",
+    "AI Expense Manager with learning"
+  ],
+  "architecture": {
+    "product": "Expense AI with auto-sync",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Auto-sync expenses from bank accounts",
+      "Expense categorization and tagging",
+      "Budget tracking and alerts"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense AI with auto-sync\\app_main.py",
+    "forge-fastapi api for Expense AI with auto-sync\\app_tests_test_main.py",
+    "forge-fastapi api for Expense AI with auto-sync\\main.py",
+    "forge-fastapi api for Expense AI with auto-sync\\README.md",
+    "forge-fastapi api for Expense AI with auto-sync\\tests_test_main.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 31.30387258529663,
+  "timestamp": "2026-08-14T05:19:38.032377"
+}

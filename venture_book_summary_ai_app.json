@@ -1,0 +1,55 @@
+{
+  "seed": "AI book summary generator",
+  "ideas": [
+    "Book summary AI app",
+    "Quick AI note maker",
+    "Edu AI study companion"
+  ],
+  "architecture": {
+    "product": "book_summary_ai_app",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for book_summary_ai_app\\book_summary_ai_app_main.py",
+    "forge-fastapi api for book_summary_ai_app\\book_summary_ai_app_README.md",
+    "forge-fastapi api for book_summary_ai_app\\test_book_summary_ai_app_test_main.py",
+    "forge-react dashboard for book_summary_ai_app\\book_summary_ai_app_src_components_Dashboard.md",
+    "forge-react dashboard for book_summary_ai_app\\book_summary_ai_app_src_components_Dashboard.test.tsx",
+    "forge-react dashboard for book_summary_ai_app\\book_summary_ai_app_src_components_Dashboard.tsx",
+    "forge-react dashboard for book_summary_ai_app\\test_api_dashboard.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 1299.1456084251404,
+  "timestamp": "2026-09-06T17:41:34.723087"
+}

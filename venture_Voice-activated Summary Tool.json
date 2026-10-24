@@ -1,0 +1,52 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Voice-activated summary tool",
+    "Real-time meeting recorder",
+    "AI-enhanced note processor"
+  ],
+  "architecture": {
+    "product": "Voice-activated Summary Tool",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice Input",
+      "Text Summarization",
+      "Summary Output"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice-activated Summary Tool\\fastapi_api_for_Voice-activated_Summary_Tool.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\main.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\README.md",
+    "forge-fastapi api for Voice-activated Summary Tool\\skill_document.md",
+    "forge-fastapi api for Voice-activated Summary Tool\\tests_main_test.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\test_fastapi_api_for_Voice-activated_Summary_Tool.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\test_test_main.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\test_voice_summary_api_tests_test_app.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\voice_summary_api_app.py",
+    "forge-fastapi api for Voice-activated Summary Tool\\voice_summary_api_README.md"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 10,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 329.61486744880676,
+  "timestamp": "2026-09-11T01:24:28.920681"
+}

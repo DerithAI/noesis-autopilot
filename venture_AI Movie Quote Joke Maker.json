@@ -1,0 +1,48 @@
+{
+  "seed": "AI-generated movie quote meme creator",
+  "ideas": [
+    "AI Movie Quote Joke Maker",
+    "Memeable Movie Lines App",
+    "AI Movie Snippets Creator"
+  ],
+  "architecture": {
+    "product": "AI Movie Quote Joke Maker",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Generate movie quotes",
+      "Create jokes using quotes"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Movie Quote Joke Maker\\api_main.py",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\api_tests_test_main.py",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\app_main.py",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\app_tests_test_main.py",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\fastapi_api_for_AI_Movie_Quote_Joke_Maker.py",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\README.md",
+    "forge-fastapi api for AI Movie Quote Joke Maker\\test_fastapi_api_for_AI_Movie_Quote_Joke_Maker.py"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 7,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 32.541024923324585,
+  "timestamp": "2026-08-24T01:19:42.934589"
+}

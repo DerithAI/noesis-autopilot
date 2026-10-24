@@ -1,0 +1,53 @@
+{
+  "seed": "AI-generated fitness workout routine video summarizer",
+  "ideas": [
+    "AI FitSum",
+    "Workout VidGen",
+    "AI FitSummarize"
+  ],
+  "architecture": {
+    "product": "AI FitSum",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "postgres",
+    "llm": "ollama model",
+    "features": [
+      "AI Fitness Summary",
+      "User Profile Sync"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI FitSum\\fastapi_api_for_AI_FitSum.py",
+    "forge-fastapi api for AI FitSum\\README.md",
+    "forge-fastapi api for AI FitSum\\test_fastapi_api_for_AI_FitSum.py",
+    "forge-react dashboard for AI FitSum\\react_dashboard_for_AI_FitSum.test.tsx",
+    "forge-react dashboard for AI FitSum\\react_dashboard_for_AI_FitSum.tsx",
+    "forge-react dashboard for AI FitSum\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 73.2629005908966,
+  "timestamp": "2026-08-26T01:21:00.166482"
+}

@@ -1,0 +1,56 @@
+{
+  "seed": "AI novel chapter summarizer",
+  "ideas": [
+    "Chapter summary generator app",
+    "Novel synopsis AI tool",
+    "Book excerpt condenser"
+  ],
+  "architecture": {
+    "product": "chapter_summary_gene",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for chapter_summary_gene\\chapter_summary_gene.py",
+    "forge-fastapi api for chapter_summary_gene\\main.py",
+    "forge-fastapi api for chapter_summary_gene\\README.md",
+    "forge-fastapi api for chapter_summary_gene\\tests_test_main.py",
+    "forge-fastapi api for chapter_summary_gene\\validation_schema.py",
+    "forge-react dashboard for chapter_summary_gene\\ChapterSummaryGeneDashboard.test.tsx",
+    "forge-react dashboard for chapter_summary_gene\\ChapterSummaryGeneDashboard.tsx",
+    "forge-react dashboard for chapter_summary_gene\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 5,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 71.639723777771,
+  "timestamp": "2026-07-30T09:20:10.131667"
+}

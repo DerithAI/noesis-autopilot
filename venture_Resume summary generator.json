@@ -1,0 +1,62 @@
+{
+  "seed": "AI-powered resume rewriter",
+  "ideas": [
+    "Resume summary generator",
+    "Job ad match assistant",
+    "Skill gap filler tool"
+  ],
+  "architecture": {
+    "product": "Resume summary generator",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Generate resume summaries based on input text",
+      "Support for uploading resume files"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Resume summary generator\\main.py",
+    "forge-fastapi api for Resume summary generator\\README.md",
+    "forge-fastapi api for Resume summary generator\\resume_summary_generator.py",
+    "forge-fastapi api for Resume summary generator\\skill_document.md",
+    "forge-fastapi api for Resume summary generator\\tests_test_resume_summary_generator.py",
+    "forge-fastapi api for Resume summary generator\\test_main.py",
+    "forge-react dashboard for Resume summary generator\\Dashboard.test.tsx",
+    "forge-react dashboard for Resume summary generator\\dashboard.tsx",
+    "forge-react dashboard for Resume summary generator\\README.md",
+    "forge-react dashboard for Resume summary generator\\src_charts_ResumeStatsChart.tsx",
+    "forge-react dashboard for Resume summary generator\\src_components_Header.tsx",
+    "forge-react dashboard for Resume summary generator\\src_components_Sidebar.tsx",
+    "forge-react dashboard for Resume summary generator\\src_layout_Layout.tsx",
+    "forge-react dashboard for Resume summary generator\\src_pages_HomePage.tsx",
+    "forge-react dashboard for Resume summary generator\\src___tests___HomePage.test.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 6,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 9,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 50.11308836936951,
+  "timestamp": "2026-08-06T17:20:03.445054"
+}

@@ -1,0 +1,57 @@
+{
+  "seed": "AI-generated workout routine video summarizer",
+  "ideas": [
+    "AI Workout Summary Tool",
+    "Video Fitness Recap App",
+    "AI Gym Routine Highlighter"
+  ],
+  "architecture": {
+    "product": "AI Workout Summary Tool",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Workout Data Collection",
+      "AI Generated Summary",
+      "User Feedback Integration"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Workout Summary Tool\\app_main.py",
+    "forge-fastapi api for AI Workout Summary Tool\\app_tests_test_main.py",
+    "forge-fastapi api for AI Workout Summary Tool\\README.md",
+    "forge-react dashboard for AI Workout Summary Tool\\src_App.tsx",
+    "forge-react dashboard for AI Workout Summary Tool\\src_components_Chart.tsx",
+    "forge-react dashboard for AI Workout Summary Tool\\src_components_Header.tsx",
+    "forge-react dashboard for AI Workout Summary Tool\\src_components_MainContent.tsx",
+    "forge-react dashboard for AI Workout Summary Tool\\src_components_Sidebar.tsx",
+    "forge-react dashboard for AI Workout Summary Tool\\src_README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 6,
+        "has_tests": false
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 75.2465991973877,
+  "timestamp": "2026-08-14T09:20:21.613682"
+}

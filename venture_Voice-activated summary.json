@@ -1,0 +1,66 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Voice-activated summary",
+    "Real-time meeting noter",
+    "AI-enhanced meeting recorder"
+  ],
+  "architecture": {
+    "product": "Voice-activated summary",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice input",
+      "Text summary generation",
+      "Save summary"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice-activated summary\\design-tokens.json",
+    "forge-fastapi api for Voice-activated summary\\figma-export.json",
+    "forge-fastapi api for Voice-activated summary\\noesis-integration.json",
+    "forge-fastapi api for Voice-activated summary\\README.md",
+    "forge-fastapi api for Voice-activated summary\\test_test_voice_summary_api.py",
+    "forge-fastapi api for Voice-activated summary\\test_voice_summary_api.py",
+    "forge-fastapi api for Voice-activated summary\\voice_summary_api.py",
+    "forge-fastapi api for Voice-activated summary\\__pycache__\\test_voice_summary_api.cpython-313-pytest-9.0.3.pyc",
+    "forge-fastapi api for Voice-activated summary\\__pycache__\\voice_summary_api.cpython-313.pyc",
+    "forge-react dashboard for Voice-activated summary\\design-tokens.json",
+    "forge-react dashboard for Voice-activated summary\\figma-export.json",
+    "forge-react dashboard for Voice-activated summary\\noesis-integration.json",
+    "forge-react dashboard for Voice-activated summary\\react dashboard for Voice-activated summary-preview.html",
+    "forge-react dashboard for Voice-activated summary\\README.md",
+    "forge-react dashboard for Voice-activated summary\\VoiceActivatedSummaryDashboard.test.tsx",
+    "forge-react dashboard for Voice-activated summary\\VoiceActivatedSummaryDashboard.tsx",
+    "forge-react dashboard for Voice-activated summary\\VoiceSummaryDashboard.test.tsx",
+    "forge-react dashboard for Voice-activated summary\\VoiceSummaryDashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 9,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 9,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 629.4999868869781,
+  "timestamp": "2026-09-08T13:30:11.145022"
+}

@@ -70,3 +70,8 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+# Append-only runtime event log - every forge run appends to it, so the
+# repository was dirty after every run. Measured 2026-10-24: 284 new lines
+# from a single run.
+evo_forge_events.jsonl

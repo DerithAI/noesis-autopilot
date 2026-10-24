@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered meeting note summarizer",
+  "ideas": [
+    "Voice-activated summary creator",
+    "Real-time summary generator",
+    "Meeting minutes AI assistant"
+  ],
+  "architecture": {
+    "product": "Voice-activated Summary Creator",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Voice Input",
+      "Text Summarization",
+      "Summary Output"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for Voice-activated Summary Creator\\main.py",
+    "forge-fastapi api for Voice-activated Summary Creator\\test_test_main.py",
+    "forge-react dashboard for Voice-activated Summary Creator\\DarkModeContext.tsx",
+    "forge-react dashboard for Voice-activated Summary Creator\\README.md",
+    "forge-react dashboard for Voice-activated Summary Creator\\VoiceSummaryDashboard.test.tsx",
+    "forge-react dashboard for Voice-activated Summary Creator\\VoiceSummaryDashboard.tsx"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 2,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 2,
+        "reason": "pytest rc=1: "
+      },
+      {
+        "component": "frontend",
+        "status": "FAIL",
+        "files": 4,
+        "reason": "No test files - cannot verify behavior"
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 695.5457181930542,
+  "timestamp": "2026-09-07T09:30:46.838555"
+}

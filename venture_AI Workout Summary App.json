@@ -1,0 +1,63 @@
+{
+  "seed": "AI-generated fitness workout routine video summarizer",
+  "ideas": [
+    "AI Workout Summary App",
+    "Fitness Video Briefs",
+    "AI Fitness Summarizer Tool"
+  ],
+  "architecture": {
+    "product": "AI Workout Summary App",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Workout logging",
+      "AI-generated summary",
+      "Nutritional advice"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for AI Workout Summary App\\fastapi_api_for_AI_Workout_Summary_App.py",
+    "forge-fastapi api for AI Workout Summary App\\README.md",
+    "forge-fastapi api for AI Workout Summary App\\test_fastapi_api_for_AI_Workout_Summary_App.py",
+    "forge-react dashboard for AI Workout Summary App\\react_dashboard_for_AI_Workout_Summary_App.test.tsx",
+    "forge-react dashboard for AI Workout Summary App\\react_dashboard_for_AI_Workout_Summary_App.tsx",
+    "forge-react dashboard for AI Workout Summary App\\README.md",
+    "forge-react dashboard for AI Workout Summary App\\src_App.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Cards.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Charts.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_DarkModeToggle.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Filters.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Header.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Sidebar.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_Tables.tsx",
+    "forge-react dashboard for AI Workout Summary App\\src_components_ThemeContext.tsx"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 12,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 60.48206639289856,
+  "timestamp": "2026-08-22T09:20:17.985793"
+}

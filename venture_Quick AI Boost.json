@@ -1,0 +1,43 @@
+{
+  "seed": "AI-generated tweet slogan creator",
+  "ideas": [
+    "Quick AI Boost",
+    "TweetGen IQ+",
+    "SloganBot Pro"
+  ],
+  "architecture": {
+    "product": "Quick AI Boost",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "AI Chatbot"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Quick AI Boost\\app_main.py",
+    "forge-fastapi api for Quick AI Boost\\app_tests_test_main.py",
+    "forge-fastapi api for Quick AI Boost\\README.md"
+  ],
+  "test_results": {
+    "passed": 1,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 32.00714826583862,
+  "timestamp": "2026-08-08T09:19:37.146729"
+}

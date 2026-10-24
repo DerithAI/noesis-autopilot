@@ -1,0 +1,54 @@
+{
+  "seed": "AI-powered personal fitness coach assistant",
+  "ideas": [
+    "AI-powered personal fitness coach assistant automation tool",
+    "AI-powered AI-powered personal fitness coach assistant platform",
+    "Smart AI-powered personal fitness coach assistant assistant"
+  ],
+  "architecture": {
+    "product": "ai-powered_personal_",
+    "backend": "fastapi",
+    "frontend": "react",
+    "database": "sqlite",
+    "llm": "qwen2.5:7b",
+    "features": [
+      "API",
+      "Dashboard",
+      "AI Chat"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/chat"
+    ],
+    "complexity": "medium"
+  },
+  "generated_files": [
+    "forge-fastapi api for ai-powered_personal_\\main.py",
+    "forge-fastapi api for ai-powered_personal_\\README.md",
+    "forge-fastapi api for ai-powered_personal_\\tests_test_main.py",
+    "forge-react dashboard for ai-powered_personal_\\Dashboard.test.tsx",
+    "forge-react dashboard for ai-powered_personal_\\Dashboard.tsx",
+    "forge-react dashboard for ai-powered_personal_\\README.md"
+  ],
+  "test_results": {
+    "passed": 2,
+    "failed": 0,
+    "details": [
+      {
+        "component": "backend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      },
+      {
+        "component": "frontend",
+        "status": "PASS",
+        "files": 3,
+        "has_tests": true
+      }
+    ]
+  },
+  "deploy_ready": true,
+  "duration_sec": 70.37536716461182,
+  "timestamp": "2026-07-30T13:20:28.382255"
+}
