@@ -33,7 +33,6 @@ const Tables = () => {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [filter, setFilter] = useState('');
-  const toast = useToast();
 
   useEffect(() => {
     const load = async () => {

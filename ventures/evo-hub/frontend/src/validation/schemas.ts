@@ -235,7 +235,7 @@ export type OmegaNodesResponse = z.infer<typeof OmegaNodesResponseSchema>;
 
 export const DispatchPayloadSchema = z.object({
   target_node: z.string().min(1),
-  task_data: z.record(z.unknown()),
+  task_data: z.record(z.string(), z.unknown()),
 });
 
 export type DispatchPayload = z.infer<typeof DispatchPayloadSchema>;
@@ -273,7 +273,7 @@ export function validate<T>(schema: z.ZodSchema<T>, data: unknown): {
   }
   return {
     success: false,
-    errors: result.error.errors.map(e => `${e.path.join('.')}: ${e.message}`),
+    errors: result.error.issues.map(e => `${e.path.join('.')}: ${e.message}`),
   };
 }
 
