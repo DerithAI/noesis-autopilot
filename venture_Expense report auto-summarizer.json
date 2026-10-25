@@ -1,0 +1,44 @@
+{
+  "seed": "Expense Note Summarizer",
+  "ideas": [
+    "Expense report auto-summarizer",
+    "Expense note OCR scanner",
+    "Expense log summarization assistant"
+  ],
+  "architecture": {
+    "product": "Expense report auto-summarizer",
+    "backend": "fastapi",
+    "frontend": "none",
+    "database": "sqlite",
+    "llm": "ollama model",
+    "features": [
+      "Expense recognition",
+      "Summary generation"
+    ],
+    "endpoints": [
+      "/api/health",
+      "/api/summarize"
+    ],
+    "complexity": "low"
+  },
+  "generated_files": [
+    "forge-fastapi api for Expense report auto-summarizer\\main.py",
+    "forge-fastapi api for Expense report auto-summarizer\\README.md",
+    "forge-fastapi api for Expense report auto-summarizer\\test_main.py"
+  ],
+  "test_results": {
+    "passed": 0,
+    "failed": 1,
+    "details": [
+      {
+        "component": "backend",
+        "status": "FAIL",
+        "files": 3,
+        "reason": "pytest rc=1: "
+      }
+    ]
+  },
+  "deploy_ready": false,
+  "duration_sec": 565.5283169746399,
+  "timestamp": "2026-10-25T01:28:50.578482"
+}
