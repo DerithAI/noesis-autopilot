@@ -125,11 +125,11 @@ python noesis_insights.py               # Generate report
 python noesis_insights.py --db custom.db # Use custom DB
 ```
 
-### Hermes Integration
+### Hermes sync
 
 ```bash
-python hermes_bridge.py                 # Start bridge server
-# Then in Hermes: @noesis_deliberate("What should I do next?")
+python hermes_live_sync.py              # Record the current Hermes session
+python hermes_live_sync.py --daemon     # Keep recording
 ```
 
 ---
@@ -202,47 +202,71 @@ it is less, until the system has observed and absorbed the change.
 
 ---
 
-## 🔄 Integration Modes
+## How to run
 
-| Mode | Description | Use Case |
-|------|-------------|----------|
-| **Standalone** | `noesis_autopilot.py` alone | Any project, any language |
-| **Hermes Plugin** | Bridge via `@noesis_deliberate` | AI assistant with memory |
-| **Ollama Bridge** | `ollama_bridge.py` | Local LLM + cognition |
-| **Python Module** | `from noesis import NoesisKernel` | Custom applications |
+Python 3.10+. The autopilot and the kernel use the standard library only.
+
+```bash
+# Cognitive autopilot — the live loop. Writes autopilot_memory.db (gitignored).
+python noesis_autopilot.py --cycles 20
+python noesis_autopilot.py --interval 5
+python noesis_autopilot.py --root ./my_project
+
+# Report from that database
+python noesis_insights.py
+python noesis_insights.py --db custom.db
+
+# Sealed kernel. Expect "12/12 organs beat".
+python .claude/skills/run-noesis/driver.py
+python noesis_kernel.py
+python -m pytest tests/test_coherence_flood.py
+
+# Companions, still launched from the repo root
+python noesis_dashboard.py                 # stdlib UI on :8080
+python noesis_engine.py --mode full
+python noesis_watcher.py
+python venture-swarm.py "discord bot" --dry-run
+```
+
+`forge-bot/` and `ventures/evo-hub/` are separate apps with their own dependencies. Startup, ports, and Docker are in `RUNBOOK.md`. `jarvis/` is a newer assistant: `python jarvis/main.py --cycle`.
+
+Hermes session sync is `hermes_live_sync.py`. The `noesis/` directory is a stub: `noesis/autopilot.py` imports a package layout that only exists in old notes. Run the root scripts above.
 
 ---
 
-## 📁 Project Structure
+## Repository layout
 
-```
-noesis/
-├── noesis/
-│   ├── core.py              # Core kernel
-│   ├── bridge.py            # Hermes bridge
-│   ├── cli.py               # Command-line interface
-│   ├── db/
-│   │   ├── database.py      # SQLite engine
-│   │   └── repository.py    # Episodic repository
-│   ├── memory/
-│   │   ├── episodic.py      # Event memory
-│   │   ├── semantic.py      # Concept memory
-│   │   └── reflection.py    # Self-reflection
-│   ├── vector/
-│   │   ├── embeddings.py    # Embedding generation
-│   │   └── store.py         # ChromaDB store
-│   ├── lattice/
-│   │   └── graph.py         # NetworkX graph
-│   └── tools/
-│       ├── filesystem.py    # File operations
-│       ├── python_exec.py   # Python execution
-│       └── hermes_tools.py  # Hermes interface
-├── noesis_autopilot.py      # Standalone autopilot ⭐
-├── noesis_insights.py       # Insight engine ⭐
-├── hermes_bridge.py         # FastAPI bridge
-├── ollama_bridge.py         # Ollama bridge
-└── autopilot_memory.db      # Generated: SQLite memory
-```
+Kernel organs stay as flat modules at the repo root. `GENESIS.md` seals those filenames, `noesis_kernel.py` imports them as top-level modules, and `tests/test_coherence_flood.py` puts the repo root on `sys.path`. `divine_law.py` is immutable and must not be edited.
+
+| Path | Role |
+|------|------|
+| `README.md`, `requirements.txt`, `tests/` | Start here |
+| `noesis_autopilot.py`, `noesis_insights.py` | Cognitive autopilot |
+| `noesis_kernel.py` plus `perception.py`, `truth_stack.py`, `memory_tree.py`, `identity_core.py`, `tribunal.py`, `crown.py`, `counterfactual.py`, `homeostasis.py`, `flood.py`, `evolution.py`, `coherence.py`, `divine_law.py` | Sealed kernel |
+| `noesis_dashboard.py`, `noesis_engine.py`, `noesis_engine_v21.py`, `noesis_watcher.py`, `noesis_self_heal.py`, `hermes_live_sync.py` | Companion entrypoints |
+| `venture-swarm.py` | Five-agent venture generator. New result JSON goes to `archive/ventures/` |
+| `forge-bot/` | Ollama bot, bridges, tests |
+| `ventures/` | Venture packages. `ventures/evo-hub/` is the FastAPI + React dashboard |
+| `jarvis/` | Separate assistant |
+| `noesis/` | Unused stub. Do not import it |
+| `archive/` | Historical dumps moved off the root. Index in `archive/README.md` |
+| `MISSION.md`, `AGENTS.md`, `RUNBOOK.md`, `GENESIS.md`, `ROADMAP.md`, `CLAUDE.md` | Current-state, agent, and ops docs |
+
+`requirements.txt` is a minimal auto-detected list (`pytest`, `typer`, `rich`, `httpx`). It does not cover forge-bot or EVO-HUB. See `ventures/evo-hub/backend/requirements.txt`.
+
+---
+
+## What was archived
+
+These files were moved, not deleted. They are experiment output. Nothing in the running kernel or autopilot imports them. Re-creating them would mean re-running the original sessions, so they stay in git.
+
+| Was at repo root | Now | What it is |
+|------------------|-----|------------|
+| `venture_*.json` (246 files) | `archive/ventures/` | `venture-swarm.py` result records: seed, architecture, generated paths, test summary. `venture-swarm.py` now writes new records here. |
+| `brain_snapshot.json`, `noesis_brain_export.json`, `noesis_brain_v3.json` | `archive/snapshots/` | Point-in-time memory exports from the engine and dashboard |
+| `session-ses_0dc0.md` | `archive/sessions/` | One chat transcript, not product documentation |
+
+The dashboard `GET /api/export` handler writes `brain_exports/noesis_brain_export.json`. That directory is gitignored, so a live export does not reappear on the root. Root copies of the three snapshot names are gitignored for the same reason.
 
 ---
 

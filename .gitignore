@@ -51,6 +51,10 @@ forge-*/
 
 # Runtime artifacts
 brain_exports/
+# Historical copies of these live in archive/snapshots/. Do not re-commit root dumps.
+/noesis_brain_export.json
+/noesis_brain_v3.json
+/brain_snapshot.json
 .claude/
 META_SANDBOX/
 noesis-autopilot/

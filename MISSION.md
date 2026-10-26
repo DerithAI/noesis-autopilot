@@ -59,7 +59,7 @@ cd ventures/evo-hub && F:\Python311\python.exe -m pytest tests/test_itdd.py -q  
 - **`divine_law.py`** — immutable by covenant (GENESIS.md: "supreme & immutable; the system cannot edit it").
 - **`autopilot_memory.db`**, **`nexus_memory.db`** — gitignored but required at runtime; tests fail without `nexus_memory.db`. Delete only if deliberately resetting state.
 - **WOLF_AI / IMPULSE junctions** — `C:\Users\Main\WOLF_AI` → `_VAULT_EXTRACT\WOLF_AI`; IMPULSE path hardcoded in `impulse_bridge.py`. Breaking them breaks forge-bot bridges.
-- **Tracked `venture_*.json`** records at repo root — deploy artifacts kept in git on purpose.
+- **`archive/ventures/venture_*.json`** — venture-swarm result records. Moved off the repo root; still tracked on purpose. New runs write there. Do not delete.
 
 ## Aktualny focus
 

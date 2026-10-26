@@ -104,7 +104,7 @@ cd ventures/evo-hub && python -m pytest tests/test_itdd.py -v
 ```
 
 ### Generated Artifacts
-`forge-*/` directories are gitignored but are created by `venture-swarm.py` and `forge.py`. The **only** forge artifact kept in git is `forge-bot/` (explicit `!forge-bot/` exception in `.gitignore`). `ventures/` deploy packages are also kept.
+`forge-*/` directories are gitignored but are created by `venture-swarm.py` and `forge.py`. The **only** forge artifact kept in git is `forge-bot/` (explicit `!forge-bot/` exception in `.gitignore`). `ventures/` deploy packages are also kept. Swarm result JSON lives in `archive/ventures/` (tracked); do not put new `venture_*.json` files back on the repo root.
 
 ## External Dependencies
 
