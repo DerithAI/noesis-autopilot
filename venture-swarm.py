@@ -26,6 +26,8 @@ from typing import Dict, List, Optional, Any
 # PATHS & CONFIG
 # =============================================================================
 ROOT = Path(__file__).parent
+# Result records are historical experiment dumps. Keep them out of the repo root.
+VENTURE_RECORD_DIR = ROOT / "archive" / "ventures"
 FORGE_DIR = Path.home() / ".claude" / "skills" / "skill-forge"
 EVO_FORGE = FORGE_DIR / "enhanced" / "evo-forge.py"
 WOLF_DIR = Path("C:/Users/Main/WOLF_AI")
@@ -716,8 +718,9 @@ Examples:
     swarm = VentureSwarm(model=args.model, research_model=args.research_model)
     result = swarm.run(args.seed, swarm_mode=args.swarm, deploy=args.deploy)
     
-    # Save result
-    result_file = ROOT / f"venture_{result.architecture.get('product', 'result')}.json"
+    # Save result under archive/ventures/ (tracked history, not repo-root clutter)
+    VENTURE_RECORD_DIR.mkdir(parents=True, exist_ok=True)
+    result_file = VENTURE_RECORD_DIR / f"venture_{result.architecture.get('product', 'result')}.json"
     with open(result_file, "w", encoding="utf-8") as f:
         json.dump(asdict(result), f, indent=2, ensure_ascii=False)
     log(f"Result saved: {result_file}", "swarm")

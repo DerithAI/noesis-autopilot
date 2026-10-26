@@ -176,9 +176,11 @@ class DashboardHandler(BaseHTTPRequestHandler):
             self._json_response({"predictions": self.brain.get_predictions(20)})
         elif self.path == "/api/export":
             data = self.brain.export_json()
-            # Also save to file
-            Path("noesis_brain_export.json").write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
-            self._json_response({"exported": True, "path": "noesis_brain_export.json", "stats": data["stats"]})
+            # Runtime dump. brain_exports/ is gitignored so this does not return to the repo root.
+            export_path = Path(__file__).resolve().parent / "brain_exports" / "noesis_brain_export.json"
+            export_path.parent.mkdir(parents=True, exist_ok=True)
+            export_path.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
+            self._json_response({"exported": True, "path": str(export_path), "stats": data["stats"]})
         elif self.path == "/api/brain":
             self._json_response(self.brain.export_json())
         else:

@@ -20,8 +20,9 @@ AGENTS.md's frontend file names (`src_pages_*.tsx`) are stale too, see below.
 2. **Cognitive autopilot** `noesis_autopilot.py` (stdlib + sqlite3): an OBSERVE→…→EXECUTE loop that
    writes `autopilot_memory.db`. `noesis_insights.py` reads that DB.
 3. **EVO-FORGE**: `venture-swarm.py` (5-agent generator; needs Ollama at 127.0.0.1:11434 and
-   `~/.claude/skills/skill-forge/forge.py`) outputs to `ventures/<name>/` plus root `venture_*.json`
-   records (tracked on purpose). `forge-bot/` holds the Ollama bot, bridges and MCP memory server.
+   `~/.claude/skills/skill-forge/forge.py`) outputs to `ventures/<name>/` plus
+   `archive/ventures/venture_*.json` records (tracked on purpose, kept off the repo root).
+   `forge-bot/` holds the Ollama bot, bridges and MCP memory server.
    `ventures/evo-hub/` is the dashboard: FastAPI `backend/main.py`, which mounts `*_routes.py` routers
    and the `*_bridge.py` clients for M-AI-SELF :8002 and OMEGA :8001 (both degrade gracefully when
    offline). `agents/` holds `evo_agent.py` (Council) and `itdd_agent.py`. `frontend/` is a Vite +
